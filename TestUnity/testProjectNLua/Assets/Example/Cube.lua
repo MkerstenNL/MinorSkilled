@@ -25,9 +25,7 @@ function Update()
 		Angle.z = Angle.z + 1
 	end
 
-	if Input.GetKey(KeyCode.D) then
-		Angle.z = Angle.z - 1
-	end
+	Angle.z = Angle.z - 1
 	if Input.GetKey(KeyCode.L) then
 Speed = 1
 end

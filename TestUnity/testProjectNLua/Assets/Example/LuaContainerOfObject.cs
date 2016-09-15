@@ -2,11 +2,13 @@
 using System.Collections;
 using NLua;
 using System.IO;
+using System;
 
 public class LuaContainerOfObject : MonoBehaviour {
 
 	// Use this for initialization
     Lua env;
+    public Lua Lua { get { return env; } }
     string source = "";
     string stringToEdit = "";
 
@@ -22,7 +24,14 @@ public class LuaContainerOfObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.N) && this.gameObject.name == "World")
+        {
+            if (this.gameObject.name == "World")
+            {
+                GameObject.FindObjectOfType<CreateObjectFromLua>().IsActive = true;
+            }
+            GameObject.FindObjectOfType<CreateObjectFromLua>().ShowOnGUI(source);
+        }
         Call("Update");
 	}
 
@@ -30,12 +39,13 @@ public class LuaContainerOfObject : MonoBehaviour {
     {
         env = new Lua();
         env.LoadCLRPackage();
-        if (!File.Exists(@"/school/troep/testProjectNLua/Assets/Example/" + gameObject.name + ".lua"))
+        Debug.Log(Environment.CurrentDirectory);
+        if (!File.Exists(Environment.CurrentDirectory+"/Assets/Example/" + gameObject.name + ".lua"))
         {
-            File.Create(@"/school/troep/testProjectNLua/Assets/Example/" + gameObject.name + ".lua");
+            File.Create(Environment.CurrentDirectory + "/Assets/Example/" + gameObject.name + ".lua");
         }
-        source = File.ReadAllText(@"/school/troep/testProjectNLua/Assets/Example/" + gameObject.name + ".lua");
-        stringToEdit = File.ReadAllText(@"/school/troep/testProjectNLua/Assets/Example/" + gameObject.name + ".lua");
+        source = File.ReadAllText(Environment.CurrentDirectory + "/Assets/Example/" + gameObject.name + ".lua");
+        stringToEdit = File.ReadAllText(Environment.CurrentDirectory + "/Assets/Example/" + gameObject.name + ".lua");
 
         env["this"] = this; // Give the script access to the gameobject.
         env["transform"] = transform;
@@ -56,11 +66,13 @@ public class LuaContainerOfObject : MonoBehaviour {
         string source = (string.IsNullOrEmpty(e.Source)) ? "<no source>" : e.Source.Substring(0, e.Source.Length - 2);
         return string.Format("{0}\nLua (at {2})", e.Message, string.Empty, source);
     }
-    public void SaveLua(string pStringToEdit, GameObject pGameObject)
+    public void SaveLua(string pStringToEdit, GameObject pGameObject, bool pIsWorld = false)
     {
+        Debug.Log(true);
         Debug.Log(pStringToEdit);
-        File.WriteAllText(@"/school/troep/testProjectNLua/Assets/Example/" + pGameObject.name + ".lua", "");
-        File.WriteAllText(@"/school/troep/testProjectNLua/Assets/Example/" + pGameObject.name + ".lua", pStringToEdit);
+        Debug.Log(pGameObject.name);
+        File.WriteAllText(Environment.CurrentDirectory + "/Assets/Example/" + pGameObject.name + ".lua", "");
+        File.WriteAllText(Environment.CurrentDirectory + "/Assets/Example/" + pGameObject.name + ".lua", pStringToEdit);
         CreateLuaScriptForObject(pGameObject);
     }
     public System.Object[] Call(string function)

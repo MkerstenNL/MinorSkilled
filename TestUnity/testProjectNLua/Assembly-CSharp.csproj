@@ -60,7 +60,11 @@
      <Compile Include="Assets\CUDLR\Scripts\Console.cs" />
      <Compile Include="Assets\CUDLR\Scripts\Extensions.cs" />
      <Compile Include="Assets\CUDLR\Scripts\Server.cs" />
+     <Compile Include="Assets\Example\CreateObjectFromLua.cs" />
      <Compile Include="Assets\Example\ExampleBehaviour.cs" />
+     <Compile Include="Assets\Example\IsClickedOnMouse.cs" />
+     <Compile Include="Assets\Example\LuaContainerOfObject.cs" />
+     <Compile Include="Assets\Example\OnGUIScript.cs" />
      <Compile Include="Assets\Example\SpawnSphere.cs" />
      <Compile Include="Assets\Example\TestBehaviour.cs" />
      <Compile Include="Assets\KeraLua\CharPtr.cs" />
@@ -124,10 +128,10 @@
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="SPluginsNetwork">
- <HintPath>D:/School/troep/testProjectNLua/Assets/SPlugins/RemoteConsole/Plugins/Library/SPluginsNetwork.dll</HintPath>
+ <HintPath>D:/Github/MinorSkilled/TestUnity/testProjectNLua/Assets/SPlugins/RemoteConsole/Plugins/Library/SPluginsNetwork.dll</HintPath>
  </Reference>
  <Reference Include="SRemoteConsole">
- <HintPath>D:/School/troep/testProjectNLua/Assets/SPlugins/RemoteConsole/Plugins/Library/SRemoteConsole.dll</HintPath>
+ <HintPath>D:/Github/MinorSkilled/TestUnity/testProjectNLua/Assets/SPlugins/RemoteConsole/Plugins/Library/SRemoteConsole.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

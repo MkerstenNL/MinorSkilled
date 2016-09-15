@@ -9,16 +9,19 @@ public class IsClickedOnMouse : MonoBehaviour {
     LuaContainerOfObject luaFile;
     bool onMouseDownIsPressed = false;
     OnGUIScript gui;
+    CreateObjectFromLua world;
 	void Start () {
         luaFile = this.GetComponent<LuaContainerOfObject>();
         gui = GameObject.FindObjectOfType<OnGUIScript>();
+        world = GameObject.FindObjectOfType<CreateObjectFromLua>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (gui.IsButtonPressed && gui.SelectedGameObject == this.gameObject)
+        if (gui.IsButtonPressed && gui.SelectedGameObject == this.gameObject && world.IsActive == false)
         {
+            Debug.Log(this.gameObject);
             stringToEdit = gui.StringToEdit;
             luaFile.SaveLua(stringToEdit,this.gameObject);
         }
@@ -27,6 +30,7 @@ public class IsClickedOnMouse : MonoBehaviour {
 
     void OnMouseDown()
     {
+        luaFile.CreateLuaScriptForObject(this.gameObject);
         Debug.Log(luaFile.GetSource());
         Debug.Log(this.gameObject.name);
         string luaCode = luaFile.GetSource();
