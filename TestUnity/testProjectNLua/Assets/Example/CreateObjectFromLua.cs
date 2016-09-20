@@ -37,7 +37,7 @@ public class CreateObjectFromLua : MonoBehaviour {
 
     public static void CreateObject(string pName)
     {
-        Resources.Load(pName);
+        GameObject prefab = (GameObject)Resources.Load(pName);
     }
 
     void GUI()

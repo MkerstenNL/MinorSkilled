@@ -8,7 +8,7 @@ public class LuaContainerOfObject : MonoBehaviour {
 
 	// Use this for initialization
     Lua env;
-    public Lua Lua { get { return env; } }
+    public Lua Lua { get { return env; } set { env = value; } }
     string source = "";
     string stringToEdit = "";
 
@@ -104,5 +104,17 @@ public class LuaContainerOfObject : MonoBehaviour {
             throw e;
         }
         return result;
+    }
+
+    public void CreateObject(string pName)
+    {
+        Debug.Log(pName);
+        GameObject prefab = Resources.Load(pName) as GameObject;
+        Debug.Log(prefab);
+        GameObject gameObject = (GameObject)GameObject.Instantiate(prefab, transform.position, Quaternion.identity);
+        gameObject.AddComponent<IsClickedOnMouse>();
+        gameObject.AddComponent<LuaContainerOfObject>();
+
+
     }
 }
