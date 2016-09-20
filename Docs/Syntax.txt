@@ -1,0 +1,25 @@
+using System;
+
+NameSpace Unity{
+	public Class Program{
+
+		private var _var;
+		protected var var;
+		public var var;
+		
+		public Program(param pVal){
+
+		}
+
+		public void Foo(param pVal){
+			
+			//Code
+		}
+
+		private void foo(param pVal){
+
+			//code
+
+		}
+	}
+}
