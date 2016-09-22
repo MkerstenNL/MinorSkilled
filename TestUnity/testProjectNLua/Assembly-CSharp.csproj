@@ -65,6 +65,7 @@
      <Compile Include="Assets\Example\IsClickedOnMouse.cs" />
      <Compile Include="Assets\Example\LuaContainerOfObject.cs" />
      <Compile Include="Assets\Example\OnGUIScript.cs" />
+     <Compile Include="Assets\Example\SaveCurrentScene.cs" />
      <Compile Include="Assets\Example\SpawnSphere.cs" />
      <Compile Include="Assets\Example\TestBehaviour.cs" />
      <Compile Include="Assets\KeraLua\CharPtr.cs" />

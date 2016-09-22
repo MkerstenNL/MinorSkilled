@@ -23,7 +23,10 @@ public class IsClickedOnMouse : MonoBehaviour {
         {
             Debug.Log(this.gameObject);
             stringToEdit = gui.StringToEdit;
-            luaFile.SaveLua(stringToEdit,this.gameObject);
+            if (this.gameObject.name != "World")
+            {
+                luaFile.SaveLua(stringToEdit,this.gameObject);
+            }
         }
 	
 	}
@@ -35,7 +38,9 @@ public class IsClickedOnMouse : MonoBehaviour {
         Debug.Log(this.gameObject.name);
         string luaCode = luaFile.GetSource();
         stringToEdit = luaCode;
+        world.IsActive = false;
         gui.StringToEdit = stringToEdit;
         gui.SelectedGameObject = this.gameObject;
+        gui.IsOldTextSaved = false;
     }
 }

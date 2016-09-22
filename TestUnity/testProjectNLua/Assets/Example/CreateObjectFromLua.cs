@@ -15,17 +15,19 @@ public class CreateObjectFromLua : MonoBehaviour {
     {
         lua = this.GetComponent<LuaContainerOfObject>();
         gui = GameObject.FindObjectOfType<OnGUIScript>();
-        lua.Lua["create"] = this;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (gui.IsButtonPressed)
+        if (gui.IsButtonPressed && this.gameObject.name == "World" && isActive)
         {
-            Debug.Log(true);
             stringToEdit = gui.StringToEdit;
-            lua.SaveLua(stringToEdit, this.gameObject,true);
+            if (this.gameObject.name == "World")
+            {
+                lua.SaveLua(stringToEdit, this.gameObject,true);
+            }
+            isActive = false;
         }	
 	}
 

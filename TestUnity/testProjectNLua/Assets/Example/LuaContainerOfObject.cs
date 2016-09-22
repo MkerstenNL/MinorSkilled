@@ -11,6 +11,7 @@ public class LuaContainerOfObject : MonoBehaviour {
     public Lua Lua { get { return env; } set { env = value; } }
     string source = "";
     string stringToEdit = "";
+    GameObject gameObject;
 
     public string GetSource()
     {
@@ -24,12 +25,10 @@ public class LuaContainerOfObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.N) && this.gameObject.name == "World")
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.N))
         {
-            if (this.gameObject.name == "World")
-            {
-                GameObject.FindObjectOfType<CreateObjectFromLua>().IsActive = true;
-            }
+            GameObject.FindObjectOfType<CreateObjectFromLua>().IsActive = true;
+            CreateLuaScriptForObject(GameObject.FindObjectOfType<CreateObjectFromLua>().gameObject);
             GameObject.FindObjectOfType<CreateObjectFromLua>().ShowOnGUI(source);
         }
         Call("Update");
@@ -37,10 +36,12 @@ public class LuaContainerOfObject : MonoBehaviour {
 
     public void CreateLuaScriptForObject(GameObject gameObject)
     {
+        
         env = new Lua();
         env.LoadCLRPackage();
-        Debug.Log(Environment.CurrentDirectory);
-        if (!File.Exists(Environment.CurrentDirectory+"/Assets/Example/" + gameObject.name + ".lua"))
+
+
+        if (!File.Exists(Environment.CurrentDirectory + "/Assets/Example/" + gameObject.name + ".lua"))
         {
             File.Create(Environment.CurrentDirectory + "/Assets/Example/" + gameObject.name + ".lua");
         }
@@ -60,6 +61,7 @@ public class LuaContainerOfObject : MonoBehaviour {
         {
             Debug.LogError(FormatException(e), gameObject);
         }
+        
     }
     public static string FormatException(NLua.Exceptions.LuaException e)
     {
@@ -68,7 +70,6 @@ public class LuaContainerOfObject : MonoBehaviour {
     }
     public void SaveLua(string pStringToEdit, GameObject pGameObject, bool pIsWorld = false)
     {
-        Debug.Log(true);
         Debug.Log(pStringToEdit);
         Debug.Log(pGameObject.name);
         File.WriteAllText(Environment.CurrentDirectory + "/Assets/Example/" + pGameObject.name + ".lua", "");
@@ -108,12 +109,22 @@ public class LuaContainerOfObject : MonoBehaviour {
 
     public void CreateObject(string pName)
     {
-        Debug.Log(pName);
-        GameObject prefab = Resources.Load(pName) as GameObject;
-        Debug.Log(prefab);
-        GameObject gameObject = (GameObject)GameObject.Instantiate(prefab, transform.position, Quaternion.identity);
-        gameObject.AddComponent<IsClickedOnMouse>();
-        gameObject.AddComponent<LuaContainerOfObject>();
+        if (!GameObject.Find(pName))
+        {
+            Debug.Log(pName);
+            GameObject prefab = Resources.Load(pName) as GameObject;
+            Debug.Log(prefab);
+            gameObject = (GameObject)GameObject.Instantiate(prefab, transform.position, Quaternion.identity);
+            gameObject.name = gameObject.name.Replace("(Clone)", "");
+        }
+        if (gameObject.GetComponent<IsClickedOnMouse>() != null)
+        {
+            gameObject.AddComponent<IsClickedOnMouse>();
+        }
+        if (gameObject.GetComponent<LuaContainerOfObject>() != null)
+        {
+            gameObject.AddComponent<LuaContainerOfObject>();
+        }
 
 
     }

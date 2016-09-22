@@ -8,8 +8,6 @@ Speed = 100;
 local showEnv = false
 local envScroll = Vector2.zero
 
-ResetLua = false;
-
 function Update()
 	transform:RotateAround(transform.position,Angle,Speed * Time.deltaTime)
 
