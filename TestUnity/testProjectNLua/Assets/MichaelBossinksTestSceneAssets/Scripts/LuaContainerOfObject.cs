@@ -72,7 +72,12 @@ public class LuaContainerOfObject : MonoBehaviour {
         File.WriteAllText(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + pGameObjectName + ".lua", "");
         File.WriteAllText(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + pGameObjectName + ".lua", pStringToEdit);
         _gameObject = GameObject.Find(pGameObjectName);
+        if (pIsWorld)
+        {
+            _gameObject.GetComponent<CreateObjectFromLua>().ShowOnGUI(pStringToEdit);
+        }
         CreateLuaScriptForObject();
+        
     }
     public System.Object[] Call(string function)
     {
@@ -105,46 +110,16 @@ public class LuaContainerOfObject : MonoBehaviour {
         return result;
     }
 
-    public void SetLoadedSaveGame(string pName, string pSource)
-    {
-        GameObject prefab = Resources.Load(pName) as GameObject;
-        //Debug.Log(prefab);
-        if (pName == "World")
-        {
-            _gameObject = GameObject.FindObjectOfType<CreateObjectFromLua>().gameObject;
-            SaveLua(pSource, _gameObject.name, true);
-        }
-        else if (prefab != null)
-        {
-            _gameObject = (GameObject)GameObject.Instantiate(prefab, transform.position, Quaternion.identity);
-            _gameObject.name = _gameObject.name.Replace("(Clone)", "");
-            if (_gameObject.GetComponent<IsClickedOnMouse>() == null)
-            {
-                _gameObject.AddComponent<IsClickedOnMouse>();
-            }
-            if (_gameObject.GetComponent<LuaContainerOfObject>() == null)
-            {
-                _gameObject.AddComponent<LuaContainerOfObject>();
-            }
-            if (_gameObject.GetComponent<Collider>() == null)
-            {
-                _gameObject.AddComponent<MeshCollider>();
-            }
-            if (_gameObject.GetComponent<LuaCSharpFunctions>() == null)
-            {
-                _gameObject.AddComponent<LuaCSharpFunctions>();
-            }
-            SaveLua(pSource, _gameObject.name);
-        }
-    }
-
+    /*
     public LuaCSharpFunctions CreateObject(string pName, string pSource = "")
     {
         GameObject prefab = Resources.Load(pName) as GameObject;
-        //Debug.Log(prefab);
+        Debug.Log(prefab);
         if (pName == "World" && pSource != "")
         {
             _gameObject = GameObject.FindObjectOfType<CreateObjectFromLua>().gameObject;
+            _gameObject.GetComponent<CreateObjectFromLua>().ShowOnGUI(pSource);
+            Debug.Log(pSource);
             SaveLua(pSource, _gameObject.name, true);
         }
         else if (prefab != null && pSource != "")
@@ -253,11 +228,10 @@ public class LuaContainerOfObject : MonoBehaviour {
         //{
         //    gameObject.AddComponent<LuaContainerOfObject>();
         //}
-#endregion
 
 
-    }
-    public LuaCSharpFunctions CreateObject(string pName, float pX, float pY, float pZ)
+    //}
+    public LuaCSharpFunctions CreateObject(string pName, string pSource = "")
     {
         GameObject prefab = Resources.Load(pName) as GameObject;
         //Debug.Log(prefab);
@@ -279,7 +253,6 @@ public class LuaContainerOfObject : MonoBehaviour {
         {
             _gameObject.AddComponent<LuaCSharpFunctions>();
         }
-        _gameObject.transform.position = new Vector3(pX, pY, pZ);
         return _gameObject.GetComponent<LuaCSharpFunctions>();
     }
     

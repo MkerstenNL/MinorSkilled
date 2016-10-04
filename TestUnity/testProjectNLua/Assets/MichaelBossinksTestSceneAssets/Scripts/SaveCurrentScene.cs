@@ -6,10 +6,13 @@ using SimpleJson;
 using System.IO;
 using System;
 
-public class SaveClass
+public struct SaveClass
 {
     public string gameObjectName;
     public string source;
+    public Vector3 originalPosition;
+    public Quaternion originalRotation;
+
 }
 
 public static class SaveCurrentScene {
@@ -34,6 +37,8 @@ public static class SaveCurrentScene {
             SaveClass saveClass = new SaveClass();
             saveClass.gameObjectName = gameObjectInScene.name;
             saveClass.source = luaSource;
+            saveClass.originalPosition = gameObjectInScene.GetComponent<IsClickedOnMouse>().OrignalPosition;
+            saveClass.originalRotation = gameObjectInScene.GetComponent<IsClickedOnMouse>().OrignalRotation;
             jsonString += JsonUtility.ToJson(saveClass);
             jsonString += "\n";
             if (!File.Exists(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/SaveGames/"+pSaveGameName+".json"))

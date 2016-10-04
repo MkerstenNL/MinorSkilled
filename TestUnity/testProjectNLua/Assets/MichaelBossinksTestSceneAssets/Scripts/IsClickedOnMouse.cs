@@ -8,8 +8,13 @@ public class IsClickedOnMouse : MonoBehaviour {
     bool buttonPressed;
     LuaContainerOfObject luaFile;
     bool onMouseDownIsPressed = false;
+    Vector3 orignalPosition;
+    Quaternion origanalRotation;
     OnGUIScript gui;
     CreateObjectFromLua world;
+
+    public Vector3 OrignalPosition { get { return orignalPosition; } set { orignalPosition = value; } }
+    public Quaternion OrignalRotation { get { return origanalRotation; } set { origanalRotation = value; } }
 	void Start () {
         luaFile = this.GetComponent<LuaContainerOfObject>();
         gui = GameObject.FindObjectOfType<OnGUIScript>();
