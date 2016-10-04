@@ -18,15 +18,15 @@ public class PlacementTool : ToolBase {
 
     public override void Activate(GameObject obj) {
         RaycastHit hit;
-        Debug.Log("test");
+       // Debug.Log("test");
         if ( Physics.Raycast(obj.transform.position, obj.transform.forward, out hit, 100) ) {
-            Debug.Log("hit");
-            Debug.Log(hit.collider.name);
-            if(hit.collider.gameObject.name=="Terrain")return;
+          //  Debug.Log("hit");
+          //  Debug.Log(hit.collider.name);
+            
             GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            go.transform.position = new Vector3( Mathf.Round(hit.point.x - obj.transform.forward.x),
-                                                 Mathf.Round(hit.point.y - obj.transform.forward.y) +0.5f,
-                                                 Mathf.Round(hit.point.z - obj.transform.forward.z));
+            go.transform.position = new Vector3( Mathf.Round(hit.point.x - obj.transform.forward.x/100),
+                                                 Mathf.Round(hit.point.y )+0.5f,//- obj.transform.forward.y/100) +0.5f,
+                                                 Mathf.Round(hit.point.z - obj.transform.forward.z/100));
             
 
         }

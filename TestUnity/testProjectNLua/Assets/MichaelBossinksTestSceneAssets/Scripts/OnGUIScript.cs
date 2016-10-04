@@ -35,6 +35,7 @@ public class OnGUIScript : MonoBehaviour {
             }
 
         } 
+        //change this to a run function
         if (buttonPressedStart)
         {
             foreach (IsClickedOnMouse gameObject in GameObject.FindObjectsOfType<IsClickedOnMouse>())
@@ -42,7 +43,7 @@ public class OnGUIScript : MonoBehaviour {
                 gameObject.ActiveScripts();
             }
         }
-        if (buttonPressedSaveGame)
+       /* if (buttonPressedSaveGame)
         {
             SaveCurrentScene.SaveJsonScene(GameObject.FindObjectsOfType<GameObject>().ToList(),saveName);
         }
@@ -53,7 +54,7 @@ public class OnGUIScript : MonoBehaviour {
                 Destroy(destoryedGameObject.gameObject);
             }
             SaveCurrentScene.LoadJsonScene(saveName);
-        }
+        }*/
     //    if (oldText != stringToEdit)
     //    {
     //        string checkOnDot = stringToEdit.Replace(oldText, "");

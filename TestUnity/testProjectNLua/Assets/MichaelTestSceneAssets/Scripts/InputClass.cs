@@ -13,7 +13,7 @@ public class InputClass : MonoBehaviour {
     [SerializeField]PlayerData _playerStats;
     // Use this for initialization
 
-
+    bool InAir = false;
    
     ToolBase _currentTool;
     [SerializeField]private ToolList _tools;
@@ -30,17 +30,28 @@ public class InputClass : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(BehaviourManager.UsingHud)return;
         handleMovementInput();
         handleRotationInput();
         handleToolInput();
 	
 	}
 
+    void OnCollisionEnter(Collision other) {
+        Vector3 diff = other.gameObject.transform.position - this.transform.position;
+        diff.Normalize();
+        if(diff.y<0)InAir = false;
+    }
+
     private void handleMovementInput() {
         if ( Input.GetKey(Forward) )controller.Move(this.transform, this.transform.position+transform.forward*Time.deltaTime*_playerStats.MovementSpeed) ;
         if ( Input.GetKey(Backward) )controller.Move(this.transform, this.transform.position+transform.forward*-1*Time.deltaTime*_playerStats.MovementSpeed) ;
         if ( Input.GetKey(Right) )controller.Move(this.transform, this.transform.position+transform.right*Time.deltaTime*_playerStats.MovementSpeed) ;
         if ( Input.GetKey(Left) )controller.Move(this.transform, this.transform.position+transform.right*-1*Time.deltaTime*_playerStats.MovementSpeed) ;
+        if ( Input.GetKeyDown(KeyCode.Space)&&InAir==false ) {
+            InAir = true;
+            this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 500);
+        }
     }
 
     private void handleRotationInput() {
@@ -60,4 +71,8 @@ public class InputClass : MonoBehaviour {
         if(Input.GetMouseButtonDown(1))_currentTool.DeActivate();
         if(Input.GetKeyDown(KeyCode.E))_currentTool = _tools.getNextTool();
     }
+
+   /* void OnGUI() {
+        GUI.TextField(new Rect(0, 0, 300, 25), "CurrentTool: " + _currentTool.ToString());
+    }*/
 }
