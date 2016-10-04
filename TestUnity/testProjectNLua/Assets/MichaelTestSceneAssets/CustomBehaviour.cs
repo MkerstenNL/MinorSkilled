@@ -6,6 +6,7 @@ using System;
 public class CustomBehaviour : MonoBehaviour {
 
     protected string _name = "null";
+    public bool active = false;
 
     //name of the variable and the value of it. #HackIt420
     protected Dictionary<string, object> variableList = new Dictionary<string, object>();

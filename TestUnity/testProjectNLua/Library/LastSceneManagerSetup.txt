@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/MichaelBossinksProtoScene.unity
+- path: Assets/Scenes/MichaelsTestScene.unity
   isLoaded: 1
   isActive: 1

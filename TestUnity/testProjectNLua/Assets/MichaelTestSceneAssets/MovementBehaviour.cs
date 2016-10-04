@@ -15,8 +15,6 @@ public class MovementBehaviour : CustomBehaviour {
         None
     }
 
-    bool active = false;
-
 	void Awake () {
         _name = "MovementBehaviour";
         variableList.Add("Speed", 0.0f);
