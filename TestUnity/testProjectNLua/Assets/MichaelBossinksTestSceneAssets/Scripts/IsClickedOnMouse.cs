@@ -23,18 +23,30 @@ public class IsClickedOnMouse : MonoBehaviour {
         {
             Debug.Log(this.gameObject);
             stringToEdit = gui.StringToEdit;
-            luaFile.SaveLua(stringToEdit,this.gameObject);
+            if (this.gameObject.name != "World")
+            {
+                luaFile.SaveLua(stringToEdit,this.gameObject.name);
+            }
         }
 	
 	}
 
     void OnMouseDown()
     {
-        luaFile.CreateLuaScriptForObject(this.gameObject);
+        
+        ActiveScripts();
+        //gui.IsOldTextSaved = false;
+    }
+
+    public void ActiveScripts()
+    {
+        luaFile.GameObject = this.gameObject;
+        luaFile.CreateLuaScriptForObject();
         Debug.Log(luaFile.GetSource());
         Debug.Log(this.gameObject.name);
         string luaCode = luaFile.GetSource();
         stringToEdit = luaCode;
+        world.IsActive = false;
         gui.StringToEdit = stringToEdit;
         gui.SelectedGameObject = this.gameObject;
     }

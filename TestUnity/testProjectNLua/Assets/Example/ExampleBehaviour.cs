@@ -102,7 +102,7 @@ end
             Debug.Log(source);
             if (source != "")
             {
-                System.Diagnostics.Process.Start("notepad.exe",@"/school/troep/testProjectNLua/Assets/BehaviourLua.lua");
+                System.Diagnostics.Process.Start("notepad++.exe",@"/school/troep/testProjectNLua/Assets/BehaviourLua.lua");
             }
         }
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.L))
