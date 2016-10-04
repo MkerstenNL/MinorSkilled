@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="AdvancedSaveSystem_EncryptDetails" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\AdvancedSaveSystem_EncryptDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvancedSaveSystem_FileEncryptor" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAABAAAAAAACAAAAAAgIAAAAAAA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\AdvancedSaveSystem_FileEncryptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvancedSaveSystem_MessageSystem" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAEAAIAA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\AdvancedSaveSystem_MessageSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASS_ChangeColor" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAAAAAAAgIAAAAAAAAAABIAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\ExampleScripts\ASS_ChangeColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASS_MoveObject" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIABAAAAAAAAAAAIAQAAAQAAMAAAAQCBCkAAACk=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\ExampleScripts\ASS_MoveObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASS_SaveExample" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\ExampleScripts\ASS_SaveExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvancedSaveSystem_LoadGO" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYDEQAAAACAAAAAQQAAAAAIAIAACAQAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\Save GameObjects\AdvancedSaveSystem_LoadGO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvancedSaveSystem_SaveGO" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQiEAAAAACCAAIAQQAAAAAIAAAACAQAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\Save GameObjects\AdvancedSaveSystem_SaveGO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectID" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\Save GameObjects\GameObjectID.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvancedSaveSystem" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQSEAAAAACAQAIAQQAAAAAIQAAACAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Advanced Save System\Scripts\Save Variables\AdvancedSaveSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectCommands" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\CUDLR\Examples\GameObjectExamples.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectRoutes" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\CUDLR\Examples\GameObjectExamples.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResponseExtension" Collapsed="true">
+    <Position X="16.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAQAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\CUDLR\Scripts\Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreateObjectFromLua" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIBAACAAEAAAEAAAABAABACAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Example\CreateObjectFromLua.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExampleBehaviour" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBQIgCACAAEAIAAAAABAAAQIAAAAAAAACAAAAAQEQ=</HashCode>
+      <FileName>Assets\Example\ExampleBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IsClickedOnMouse" Collapsed="true">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAhAACAAEAAAAAAAAAAAAAAAAAAAIAAAAIAAQAA=</HashCode>
+      <FileName>Assets\Example\IsClickedOnMouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LuaContainerOfObject" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAQAgCACAAEAIAAAAABAAAAAAAAgAAAAAAAAAQAIA=</HashCode>
+      <FileName>Assets\Example\LuaContainerOfObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnGUIScript" Collapsed="true">
+    <Position X="21.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAIAAAAEAAAABAAAACAAAAQQAA=</HashCode>
+      <FileName>Assets\Example\OnGUIScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpawnSphere" Collapsed="true">
+    <Position X="16.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAgCACAABAIAAAAAAAAAAAAAAAAAAACAAAAAAEA=</HashCode>
+      <FileName>Assets\Example\SpawnSphere.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestBehaviour" Collapsed="true">
+    <Position X="20" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAgCACAAAAIAAAAAAAAAAAAAAAAAAACAAAAAAEA=</HashCode>
+      <FileName>Assets\Example\TestBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomBehaviour">
+    <Position X="3.5" Y="6.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAYAAAAAAAAAAAAAAAAAAAAgAAAAAAAAACAAAABEA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\CustomBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovementBehaviour">
+    <Position X="0.5" Y="6.5" Width="2" />
+    <NestedTypes>
+      <Enum Name="MovementBehaviour.Direction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\MichaelTestSceneAssets\MovementBehaviour.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <InheritanceLine Type="CustomBehaviour" FixedFromPoint="true">
+      <Path>
+        <Point X="5.062" Y="6.5" />
+        <Point X="5.062" Y="6.125" />
+        <Point X="3.125" Y="6.125" />
+        <Point X="3.125" Y="9.396" />
+        <Point X="1.5" Y="9.396" />
+        <Point X="1.5" Y="9.021" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAEA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\MovementBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviourSpawner" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Performance test\BehaviourSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoBehaviourHolder" Collapsed="true">
+    <Position X="11.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Performance test\MonoBehaviourHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoBehaviourStressTest" Collapsed="true">
+    <Position X="13" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Performance test\MonoBehaviourStressTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScriptableObjectHolder" Collapsed="true">
+    <Position X="11.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Performance test\ScriptableObjectHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScriptableObjectPerformanceTest" Collapsed="true">
+    <Position X="13" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Performance test\ScriptableObjectPerformanceTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviourList" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAACAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\BehaviourList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviourManager" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAQDAAARAAAMAAAAAIAAAAAEIQAAAAggAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\BehaviourManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DestroyTool" Collapsed="true">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAABAAAIAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\DestroyTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputClass" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABCCAACFAAAEAAwAAAAAAAAAAEAAACACAAAAAAQI=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\InputClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovementController" Collapsed="true">
+    <Position X="14.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\MovementController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlacementTool" Collapsed="true">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAABAAAIAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\PlacementTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerDataCreator" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\PlayerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerData" Collapsed="true">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\PlayerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgrammingTool" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAABAAAIAAQAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\ProgrammingTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolBase">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAABAAAIAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\ToolBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolList" Collapsed="true">
+    <Position X="21.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAABAAAAAAAAAAACAAgA=</HashCode>
+      <FileName>Assets\MichaelTestSceneAssets\Scripts\ToolList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SampleCommand" Collapsed="true">
+    <Position X="20" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAIEAAAAAAAAAAAAAAAAAAAgGAAAAAAEA=</HashCode>
+      <FileName>Assets\SPlugins\RemoteConsole\Examples\Scripts\SampleCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SampleStartClient" Collapsed="true">
+    <Position X="21.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAEAAAAAAAAAAAAACgACACAAAAAAEA=</HashCode>
+      <FileName>Assets\SPlugins\RemoteConsole\Examples\Scripts\SampleStartClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SampleStartHost" Collapsed="true">
+    <Position X="7.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAEAAAAEA=</HashCode>
+      <FileName>Assets\SPlugins\RemoteConsole\Examples\Scripts\SampleStartHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SampleStartLocal" Collapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAEAAAAAAAAAAAAAAAAAAAACAAAAAAEA=</HashCode>
+      <FileName>Assets\SPlugins\RemoteConsole\Examples\Scripts\SampleStartLocal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUDLR.CommandAttribute" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgBAAAAAAAAAAgAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\CUDLR\Scripts\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUDLR.RouteAttribute" Collapsed="true">
+    <Position X="18.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\CUDLR\Scripts\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUDLR.Console" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEQAAAAIAAIQIBAIAACAQAhACECAQAACQABCBAI=</HashCode>
+      <FileName>Assets\CUDLR\Scripts\Console.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUDLR.CommandTree" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIAAAAIAAAIAAAAAAAAAAAAAAAQAACAAEAAQACI=</HashCode>
+      <FileName>Assets\CUDLR\Scripts\Console.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUDLR.RequestContext" Collapsed="true">
+    <Position X="14.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAAEAAASAAAAAAAAgAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\CUDLR\Scripts\Server.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUDLR.Server" Collapsed="true">
+    <Position X="14.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAABAACAIAIABAAACACIAACMAAABAIAAAAAIAICEA=</HashCode>
+      <FileName>Assets\CUDLR\Scripts\Server.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeraLua.DynamicLibraryPath" Collapsed="true">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAAAAAAAABBAgAAAAABAAAAQAAAAAAEAAA=</HashCode>
+      <FileName>Assets\KeraLua\DynamicLibraryPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeraLua.Lua" Collapsed="true">
+    <Position X="20" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AScCgAaSkRhwMAAoAYQEAhOgIiEwDwHLgCCgAIJVJ0A=</HashCode>
+      <FileName>Assets\KeraLua\Lua.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeraLua.NativeMethods" Collapsed="true">
+    <Position X="16.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AScCgAaSkRhwMAAoAYQEAhOgIiEwDwHLgCCgIIJVJ0A=</HashCode>
+      <FileName>Assets\KeraLua\NativeMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeraLua.CLSCompliantAttribute" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\KeraLua\Platform\CLSCompliantAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.CheckType" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAABERgAAAAAAAAoAAhAAQAAABAIgIEAQbAQAJAAAAA=</HashCode>
+      <FileName>Assets\NLua\CheckType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.ClassGenerator" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\GenerateEventAssembly\ClassGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.CodeGeneration" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIASKQAAAQQAAAAQAICBAAACABIAUAAQgCgAAAACAA=</HashCode>
+      <FileName>Assets\NLua\GenerateEventAssembly\CodeGeneration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.DelegateGenerator" Collapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAACAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\GenerateEventAssembly\DelegateGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Lua" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkBEDA0iDCSApAAJCmAiBARDmRDCAkEoAAACKADATEA=</HashCode>
+      <FileName>Assets\NLua\Lua.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="NLua.LuaBase" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAQBAgAAAAAAAAAAAAIAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NLua.LuaFunction" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAEggAAAAAAAAAAAIAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\NLua\LuaFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.LuaGlobalAttribute" Collapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaGlobalAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.LuaHideAttribute" Collapsed="true">
+    <Position X="16.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaHideAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.LuaIndexes" Collapsed="true">
+    <Position X="18.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaLib\LuaIndexes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.LuaLib" Collapsed="true">
+    <Position X="20" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ATMCgAKikxh0MgAoAAAFAgIgICAwhxHLgDIBIIJVJhA=</HashCode>
+      <FileName>Assets\NLua\LuaLib\LuaLib.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.LuaRegistrationHelper" Collapsed="true">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAgACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaRegistrationHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.LuaTable" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAECAgAAAAAAAAAAAAAAAAgAAAACAA=</HashCode>
+      <FileName>Assets\NLua\LuaTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.LuaUserData" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAECAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaUserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.MetaFunctions" Collapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIMRCIgcAESAiFAYCDMJAsAQABKImASEYKBwGwAAEzg=</HashCode>
+      <FileName>Assets\NLua\Metatables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.ObjectTranslator" Collapsed="true">
+    <Position X="18.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACEEAIBFlIJoJRUuEIA0KQRVJBBCAQAQIBwGAAKlg=</HashCode>
+      <FileName>Assets\NLua\ObjectTranslator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.ObjectTranslatorPool" Collapsed="true">
+    <Position X="20" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAABIAAAAQAAAACAAAAA=</HashCode>
+      <FileName>Assets\NLua\ObjectTranslatorPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.CLSCompliantAttribute" Collapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Platform\CLSCompliantAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.ProxyType" Collapsed="true">
+    <Position X="11.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAgEgAAAAAAAAAAAAIAACCAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\ProxyType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Config.Consts" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAEAAAAAAIIAAAAAQAAAAACAgAAE=</HashCode>
+      <FileName>Assets\NLua\Config\NLuaConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Event.DebugHookEventArgs" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\NLua\Event\DebugHookEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Event.HookExceptionEventArgs" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Event\HookExceptionEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Exceptions.LuaException" Collapsed="true">
+    <Position X="9.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Exceptions\LuaException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Exceptions.LuaScriptException" Collapsed="true">
+    <Position X="11.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAIEAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Exceptions\LuaScriptException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Extensions.CheckNull" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Extensions\GeneralExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Extensions.TypeExtensions" Collapsed="true">
+    <Position X="7.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAgAAAABAAAAAAAAIEIAIAEBCAAAAACEAAApUAACAA=</HashCode>
+      <FileName>Assets\NLua\Extensions\GeneralExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Extensions.StringExtensions" Collapsed="true">
+    <Position X="18.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Extensions\GeneralExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Method.EventHandlerContainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Method\EventHandlerContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="NLua.Method.LuaClassHelper" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Method\LuaClassHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Method.LuaDelegate" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAggAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Method\LuaDelegate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Method.LuaEventHandler" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Method\LuaEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Method.LuaMethodWrapper" Collapsed="true">
+    <Position X="21.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAQAAAQAAAEAAAAAAgQAAABAAAAABAAAAAAAEQAAA=</HashCode>
+      <FileName>Assets\NLua\Method\LuaMethodWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NLua.Method.RegisterEventHandler" Collapsed="true">
+    <Position X="13" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAIAAABAAAAAAgIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Method\RegisterEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CUDLR.QueuedCommand" Collapsed="true">
+    <Position X="20" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\CUDLR\Scripts\Console.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="KeraLua.CharPtr" Collapsed="true">
+    <Position X="7.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAYAAAAAAAAAAEAAAAAAAAAAAAACAEAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\KeraLua\CharPtr.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="KeraLua.LuaDebug" Collapsed="true">
+    <Position X="11.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEBAAAAAsAAAYCAAABAAAABAEEAAAAAAAAQAAAAEE=</HashCode>
+      <FileName>Assets\KeraLua\LuaDebug.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="KeraLua.LuaState" Collapsed="true">
+    <Position X="13" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAQAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\KeraLua\LuaState.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="KeraLua.LuaTag" Collapsed="true">
+    <Position X="14.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\KeraLua\LuaTag.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NLua.LuaClassType" Collapsed="true">
+    <Position X="9.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\GenerateEventAssembly\LuaClassType.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NLua.Method.MethodArgs" Collapsed="true">
+    <Position X="16.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAACAAAAAAABAAA=</HashCode>
+      <FileName>Assets\NLua\Method\MethodArgs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NLua.Method.MethodCache" Collapsed="true">
+    <Position X="18.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAIAAABAAAAAAAABEAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\NLua\Method\MethodCache.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="NLua.ILuaGeneratedType" Collapsed="true">
+    <Position X="7.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\GenerateEventAssembly\ILuaGeneratedType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="NLua.GCOptions" Collapsed="true">
+    <Position X="11.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAABgAAAAAAAAQCAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaLib\GCOptions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NLua.LuaEnums" Collapsed="true">
+    <Position X="13" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAASAAAAAAAACACAAAAAAAAAAAEAAABAQQAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaLib\LuaEnums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NLua.LuaTypes" Collapsed="true">
+    <Position X="14.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAQAAAAAAwEAAQAIAAAAAAAAAAAAAAAEIAAA=</HashCode>
+      <FileName>Assets\NLua\LuaLib\LuaTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NLua.References" Collapsed="true">
+    <Position X="16.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\LuaLib\References.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NLua.Event.EventCodes" Collapsed="true">
+    <Position X="7.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAAAAAAAAAAAACIAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Event\EventCodes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NLua.Event.EventMasks" Collapsed="true">
+    <Position X="9.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAQAAAAAAAAKAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Event\EventMasks.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="KeraLua.LuaNativeFunction" Collapsed="true">
+    <Position X="11.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\KeraLua\Lua.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="KeraLua.LuaHook" Collapsed="true">
+    <Position X="9.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\KeraLua\LuaDebug.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="NLua.Method.ExtractValue" Collapsed="true">
+    <Position X="7.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\NLua\Method\LuaMethodWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

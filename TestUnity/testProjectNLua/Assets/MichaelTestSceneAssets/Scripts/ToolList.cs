@@ -20,7 +20,7 @@ public class ToolList : ScriptableObject {
     }
 
     public ToolBase getNextTool() {
-        Debug.Log(tools.Count+"      "+ id);
+      //  Debug.Log(tools.Count+"      "+ id);
         tools[id].DeEquip();
         id = ( id + 1 ) % (tools.Count);
         tools[id].Equip();

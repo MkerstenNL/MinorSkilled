@@ -30,6 +30,7 @@ public class InputClass : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(BehaviourManager.UsingHud)return;
         handleMovementInput();
         handleRotationInput();
         handleToolInput();
@@ -60,4 +61,8 @@ public class InputClass : MonoBehaviour {
         if(Input.GetMouseButtonDown(1))_currentTool.DeActivate();
         if(Input.GetKeyDown(KeyCode.E))_currentTool = _tools.getNextTool();
     }
+
+   /* void OnGUI() {
+        GUI.TextField(new Rect(0, 0, 300, 25), "CurrentTool: " + _currentTool.ToString());
+    }*/
 }
