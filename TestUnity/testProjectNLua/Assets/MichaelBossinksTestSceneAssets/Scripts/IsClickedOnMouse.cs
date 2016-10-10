@@ -47,8 +47,8 @@ public class IsClickedOnMouse : MonoBehaviour {
     {
         luaFile.GameObject = this.gameObject;
         luaFile.CreateLuaScriptForObject();
-        Debug.Log(luaFile.GetSource());
-        Debug.Log(this.gameObject.name);
+       // Debug.Log(luaFile.GetSource());
+        //Debug.Log(this.gameObject.name);
         string luaCode = luaFile.GetSource();
         stringToEdit = luaCode;
         world.IsActive = false;

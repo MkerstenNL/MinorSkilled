@@ -38,11 +38,11 @@ public class LuaContainerOfObject : MonoBehaviour {
     {
         if (_gameObject != null)
         {
-            if (!File.Exists(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + _gameObject.name + ".lua"))
+            if (!File.Exists(Environment.CurrentDirectory + "/Assets/Lua/" + _gameObject.name + ".lua"))
             {
-                File.Create(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + _gameObject.name + ".lua").Dispose();
+                File.Create(Environment.CurrentDirectory + "/Assets/Lua/" + _gameObject.name + ".lua").Dispose();
             }
-            source = File.ReadAllText(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + _gameObject.name + ".lua");
+            source = File.ReadAllText(Environment.CurrentDirectory + "/Assets/Lua/" + _gameObject.name + ".lua");
             //stringToEdit = File.ReadAllText(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + _gameObject.name + ".lua");
 
             env["this"] = this; // Give the script access to the gameobject.
@@ -61,6 +61,7 @@ public class LuaContainerOfObject : MonoBehaviour {
         }
         
     }
+
     public static string FormatException(NLua.Exceptions.LuaException e)
     {
         string source = (string.IsNullOrEmpty(e.Source)) ? "<no source>" : e.Source.Substring(0, e.Source.Length - 2);
@@ -70,8 +71,8 @@ public class LuaContainerOfObject : MonoBehaviour {
     {
         //Debug.Log(pStringToEdit);
         //Debug.Log(pGameObject.name);
-        File.WriteAllText(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + pGameObjectName + ".lua", "");
-        File.WriteAllText(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + pGameObjectName + ".lua", pStringToEdit);
+        File.WriteAllText(Environment.CurrentDirectory + "/Assets/Lua/" + pGameObjectName + ".lua", "");
+        File.WriteAllText(Environment.CurrentDirectory + "/Assets/Lua/" + pGameObjectName + ".lua", pStringToEdit);
         _gameObject = GameObject.Find(pGameObjectName);
         if (pIsWorld)
         {
