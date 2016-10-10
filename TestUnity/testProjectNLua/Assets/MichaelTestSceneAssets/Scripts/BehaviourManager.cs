@@ -8,7 +8,9 @@ public class BehaviourManager : MonoBehaviour {
 
     CustomBehaviour[] _behaviourList;
     GameObject CurrentObject;
-
+    [SerializeField]GameObject empty;
+    [SerializeField]GameObject _variableCanvas;
+    [SerializeField]GameObject _luaCanvas;
 
     [SerializeField]Dropdown _dropDown;
     public static bool UsingHud = false;
@@ -32,6 +34,7 @@ public class BehaviourManager : MonoBehaviour {
         List<string> options = new List<string>();
         _dropDown.options.Clear();
         _dropDown.options.Add(new Dropdown.OptionData("No Behaviour selected"));
+        _dropDown.options.Add(new Dropdown.OptionData("new Lua Behaviour"));
         for (int i = 0; i<_behaviourList.Length; i++ ) {
             //_behaviourList[i].GetName();
             _dropDown.options.Add(new Dropdown.OptionData(_behaviourList[i].GetName()));
@@ -52,13 +55,59 @@ public class BehaviourManager : MonoBehaviour {
         if(UsingHud==false)return;
         _dropDown.value = index;
         _dropDown.RefreshShownValue();
-        CreateBehaviour( index);
+        if(index==0)return;
+        if ( index == 1 ) {
+            CreateNewLuaBehaviour();
+            return;
+        }
+        CreateBehaviour( index-2);
 
     }
 
+    private void CreateNewLuaBehaviour() {
+        GameObject gameObject = Instantiate<GameObject>(empty);
+        LuaBehaviour lua = gameObject.AddComponent<LuaBehaviour>();
+        behaviour = lua;
+        _luaCanvas.SetActive(true);
+
+
+    }
+    //Should show AddVariableMenu
+    public void AddLuaVariableButton() {
+        _variableCanvas.SetActive(true);
+
+    }
+    /// <summary>
+    /// ToDO
+    /// </summary>
+    public void CreateLuaFile() {
+        _luaCanvas.SetActive(false);
+        string luaCode = _luaCanvas.GetComponentInChildren<InputField>().text;
+        Debug.Log(luaCode);
+        LuaBehaviour lua = CurrentObject.AddComponent<LuaBehaviour>();
+        LuaCSharpFunctions csharp = CurrentObject.AddComponent<LuaCSharpFunctions>();
+        //LuaBehaviour.CreateLuaScriptForObject(CurrentObject, lua);
+        lua.SaveLua(luaCode, "test");
+        lua.Init();
+        Cancel();
+        //write to lua shizzle
+    }
+
+    public void AddLuaVariable() {
+        InputField[] objects = _variableCanvas.gameObject.GetComponentsInChildren<InputField>();
+        int nameID = -1 ;
+        int valueID = -1;
+        for ( int i = 0; i < objects.Length; i++ ) {
+            if(objects[i].name == "Name")nameID=i;
+            if(objects[i].name == "Value")valueID=i;
+        }
+        behaviour.VariableList.Add(objects[nameID].text, objects[valueID].text);
+        _variableCanvas.SetActive(false);
+    }
+
     private void CreateBehaviour(int index) {
-        if (index == 0)return;
-        System.Type T = _behaviourList[index-1].GetType();
+        //if (index <= 1)return;
+        System.Type T = _behaviourList[index].GetType();
         behaviour = (CustomBehaviour)CurrentObject.AddComponent(T);
         int i = 0;
         foreach ( KeyValuePair<string, object> key in behaviour.VariableList ) {
@@ -80,11 +129,17 @@ public class BehaviourManager : MonoBehaviour {
     }
 
     public void Create() {
-        for ( int i = 0; i < _inputFields.Count; i++ ) {
+       // if ( _dropDown.value > 3 ) {
+       for ( int i = 0; i < _inputFields.Count; i++ ) {
             InputField field = _inputFields[i].GetComponent<InputField>();
             behaviour.VariableList[_inputFields[i].name] = ConvertToType(field);
-        }
-        behaviour.Init();
+       }
+            behaviour.Init();
+       // } else if ( _dropDown.value == 1 ) {
+
+       // } else if(_dropDown.value == 2){
+       //
+       // }
         Cancel();
     }
 
