@@ -12,6 +12,10 @@ public class LuaCSharpFunctions : MonoBehaviour {
     {
         this.transform.position = new Vector3(pX, pY, pZ);
     }
+    public Vector3 GetPosition()
+    {
+        return this.transform.position;
+    }
     public void SetRotation(int pX, int pY, int pZ)
     {
         this.transform.rotation = new Quaternion(pX, pY, pZ,0);
@@ -97,4 +101,47 @@ public class LuaCSharpFunctions : MonoBehaviour {
         this.GetComponent<Renderer>().material.mainTexture = material;
     }
 
+    public bool TurnColliderOn(bool pOnOff)
+    {
+        if (pOnOff)
+        {
+            if (!this.GetComponent<Rigidbody>())
+            {
+                this.gameObject.AddComponent<Rigidbody>(); 
+            }
+            return true;
+        }
+        else
+        {
+            if (this.GetComponent<Rigidbody>())
+            {
+                Destroy(this.GetComponent<Rigidbody>());
+            }
+            return false;
+        }
+    }
+    public void Transparency(float pTrans = 1)
+    {
+        this.gameObject.GetComponent<Renderer>().material.color = new Color(1.0f,1.0f,1.0f,pTrans);
+    }
+    public float GetRandomFloat(float pMinRange=0, float pMaxRange=99999999)
+    {
+        return UnityEngine.Random.RandomRange(pMinRange, pMaxRange);
+    }
+    public float GetRandomInt(int pMinRange = 0, int pMaxRange = 99999999)
+    {
+        return UnityEngine.Random.Range(pMinRange, pMaxRange);
+    }
+    public void Message(string pMessage)
+    {
+
+    }
+    public void Deadly(bool pIsInstantDeath, float pMinHP)
+    {
+
+    }
+    public void OnOff(bool pIsOn, GameObject pGameObject)
+    {
+
+    }
 }

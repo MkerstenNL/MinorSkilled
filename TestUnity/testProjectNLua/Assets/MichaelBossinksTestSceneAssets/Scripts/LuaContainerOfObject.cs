@@ -47,6 +47,7 @@ public class LuaContainerOfObject : MonoBehaviour {
 
             env["this"] = this; // Give the script access to the gameobject.
             env["transform"] = transform;
+            env["func"] = this.GetComponent<LuaCSharpFunctions>();
 
             try
             {
