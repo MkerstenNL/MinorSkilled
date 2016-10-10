@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System;
 
 public class WorldScript : MonoBehaviour {
     GameObject[] gameObjects;
-	
-    
+
+    string[] luaFiles;
+
+
 
     // Use this for initialization
-	void Start () {
-        gameObjects = this.gameObject.GetComponentsInChildren<GameObject>();
+    void Start () {
+        Invalidate();
 	}
 	
 	// Update is called once per frame
@@ -22,6 +26,12 @@ public class WorldScript : MonoBehaviour {
     /// </summary>
     public void Invalidate() {
         gameObjects = this.gameObject.GetComponentsInChildren<GameObject>();
+        luaFiles = System.IO.Directory.GetFiles(Environment.CurrentDirectory+"/Assets/Lua", "*.txt");
+       
+    }
+
+    public string[] getLuaFiles() {
+        return luaFiles;
     }
 
     /// <summary>

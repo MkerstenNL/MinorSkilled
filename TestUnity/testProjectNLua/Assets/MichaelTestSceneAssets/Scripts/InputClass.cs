@@ -57,10 +57,10 @@ public class InputClass : MonoBehaviour {
     private void handleRotationInput() {
         Rotx += Input.GetAxis("Mouse X");
         Roty -= Input.GetAxis("Mouse Y");
-        if ( Roty < -45 ) {
-            Roty = -45;
-        } else if ( Roty > 45 ) {
-            Roty = 45;
+        if ( Roty < -90 ) {
+            Roty = -90;
+        } else if ( Roty > 90 ) {
+            Roty = 90;
         }
         controller.Rotate(cam.transform, new Vector3(Roty, 0, 0),true);
         controller.Rotate(transform, new Vector3(0, Rotx, 0));

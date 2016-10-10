@@ -93,8 +93,28 @@ public class LuaCSharpFunctions : MonoBehaviour {
 
     public void SetTexture(string pMaterial)
     {
-        Texture material = Resources.Load(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Materials/" + pMaterial) as Texture;
-        this.GetComponent<Renderer>().material.mainTexture = material;
+        Material material = Resources.Load("Materials/" + pMaterial) as Material;
+        this.GetComponent<Renderer>().material = material;
     }
 
+
+    public LuaCSharpFunctions CreateObject(string pName) {
+        GameObject prefab = Resources.Load(pName) as GameObject;
+        //Debug.Log(prefab);
+        GameObject _gameObject = (GameObject) GameObject.Instantiate(prefab, transform.position, Quaternion.identity);
+        _gameObject.name = _gameObject.name.Replace("(Clone)", "");
+        if ( _gameObject.GetComponent<IsClickedOnMouse>() == null ) {
+            _gameObject.AddComponent<IsClickedOnMouse>();
+        }
+        if ( _gameObject.GetComponent<LuaContainerOfObject>() == null ) {
+            _gameObject.AddComponent<LuaContainerOfObject>();
+        }
+        if ( _gameObject.GetComponent<Collider>() == null ) {
+            _gameObject.AddComponent<MeshCollider>();
+        }
+        if ( _gameObject.GetComponent<LuaCSharpFunctions>() == null ) {
+            _gameObject.AddComponent<LuaCSharpFunctions>();
+        }
+        return _gameObject.GetComponent<LuaCSharpFunctions>();
+    }
 }
