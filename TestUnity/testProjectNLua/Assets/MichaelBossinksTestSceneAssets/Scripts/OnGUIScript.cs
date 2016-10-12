@@ -10,6 +10,7 @@ public class OnGUIScript : MonoBehaviour {
     bool buttonPressedStart;
     bool buttonPressedSaveGame;
     bool buttonPressedLoadGame;
+    bool isShowOnGUI;
     string stringToEdit = "";
     string saveName = "";
     GameObject selectedGameObject;
@@ -24,6 +25,17 @@ public class OnGUIScript : MonoBehaviour {
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (isShowOnGUI)
+            {
+                isShowOnGUI = false;
+            }
+            else
+            {
+                isShowOnGUI = true;
+            }
+        }
         if (Input.GetKey(KeyCode.LeftControl)&&Input.GetKey(KeyCode.LeftAlt)&&Input.GetKeyDown(KeyCode.Equals))
         {
             if (stringToEdit != "")
@@ -73,13 +85,16 @@ public class OnGUIScript : MonoBehaviour {
         //    oldText = stringToEdit;
         //    isOldTextSaved = true;
         //}
-        GUI.backgroundColor = new Color(1.0f, 1.0f, 1.0f, 0.1f);
-        stringToEdit = GUI.TextArea(new Rect(10, 10, 500, 900), stringToEdit);
-        buttonPressed = GUI.Button(new Rect(600, 10, 200, 30), "Save");
-        buttonPressedStart = GUI.Button(new Rect(600, 50, 200, 30), "Start");
-        buttonPressedSaveGame = GUI.Button(new Rect(600, 90, 200, 30), "SaveGame");
-        saveName = GUI.TextField(new Rect(600, 120, 200, 30),saveName);
-        buttonPressedLoadGame = GUI.Button(new Rect(600, 160, 200, 30), "LoadGame");
+        if (isShowOnGUI)
+        {
+            GUI.backgroundColor = new Color(1.0f, 1.0f, 1.0f, 0.1f);
+            stringToEdit = GUI.TextArea(new Rect(10, 10, 500, 900), stringToEdit);
+            buttonPressed = GUI.Button(new Rect(600, 10, 200, 30), "Save");
+            buttonPressedStart = GUI.Button(new Rect(600, 50, 200, 30), "Start");
+            buttonPressedSaveGame = GUI.Button(new Rect(600, 90, 200, 30), "SaveGame");
+            saveName = GUI.TextField(new Rect(600, 120, 200, 30), saveName);
+            buttonPressedLoadGame = GUI.Button(new Rect(600, 160, 200, 30), "LoadGame");
+        }
         //if (buttonPressed)
         //{
         //    oldText = stringToEdit;
