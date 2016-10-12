@@ -7,12 +7,14 @@ using System;
 public class BehaviourManager : MonoBehaviour {
 
     CustomBehaviour[] _behaviourList;
+    List<LuaBehaviour> _luaBehaviours = new List<LuaBehaviour>();
     GameObject CurrentObject;
     [SerializeField]GameObject empty;
     [SerializeField]GameObject _variableCanvas;
     [SerializeField]GameObject _luaCanvas;
 
     [SerializeField]Dropdown _dropDown;
+    [SerializeField]Dropdown _luaDropdown;
     public static bool UsingHud = false;
     CustomBehaviour behaviour;
     [SerializeField]GameObject _variableHolder;
@@ -35,16 +37,20 @@ public class BehaviourManager : MonoBehaviour {
         _dropDown.options.Clear();
         _dropDown.options.Add(new Dropdown.OptionData("No Behaviour selected"));
         _dropDown.options.Add(new Dropdown.OptionData("new Lua Behaviour"));
-        for (int i = 0; i<_behaviourList.Length; i++ ) {
+        _dropDown.options.Add(new Dropdown.OptionData("Existing Lua Behaviour"));
+        for ( int i = 0; i < _behaviourList.Length; i++ ) {
             //_behaviourList[i].GetName();
             _dropDown.options.Add(new Dropdown.OptionData(_behaviourList[i].GetName()));
         }
+        
+        
+        
         _dropDown.value = 0;
         _dropDown.RefreshShownValue();
        // Debug.Log(_behaviourList.Length);
         //
         //_dropDown.AddOptions(options);
-        _dropDown.gameObject.SetActive(true);
+        _dropDown.gameObject.transform.parent.gameObject.SetActive(true);
         _dropDown.value = 0;
         
         //_dropDown.onValueChanged
@@ -53,15 +59,39 @@ public class BehaviourManager : MonoBehaviour {
 
     public void OnClickBehaviourButton(int index) {
         if(UsingHud==false)return;
+        
         _dropDown.value = index;
         _dropDown.RefreshShownValue();
-        if(index==0)return;
-        if ( index == 1 ) {
-            CreateNewLuaBehaviour();
-            return;
-        }
-        CreateBehaviour( index-2);
+        switch ( index ) {
+            case 0:
+                return;
+                
 
+            case 1:
+                CreateNewLuaBehaviour();
+                return;
+
+            case 2:
+                createNewExistingLuaBehaviour();
+                
+                return;
+
+            default:
+                CreateBehaviour(index - 3);
+                return;
+
+
+        }
+
+    }
+
+    private void createNewExistingLuaBehaviour() {
+        _luaDropdown.gameObject.SetActive(true);
+        for ( int i = 0; i < _luaBehaviours.Count; i++ ) {
+            _luaDropdown.options.Add(new Dropdown.OptionData(_luaBehaviours[i].filename));
+
+        }
+        Debug.Log(_luaBehaviours.Count);
     }
 
     private void CreateNewLuaBehaviour() {
@@ -86,6 +116,7 @@ public class BehaviourManager : MonoBehaviour {
         Debug.Log(luaCode);
         LuaBehaviour lua = CurrentObject.AddComponent<LuaBehaviour>();
         LuaCSharpFunctions csharp = CurrentObject.AddComponent<LuaCSharpFunctions>();
+        _luaBehaviours.Add(lua);
         //LuaBehaviour.CreateLuaScriptForObject(CurrentObject, lua);
         lua.SaveLua(luaCode, "test");
         lua.Init();
@@ -162,8 +193,9 @@ public class BehaviourManager : MonoBehaviour {
         _inputFields.Clear();
         CurrentObject = null;
         behaviour = null;
-        _dropDown.gameObject.SetActive(false);
+        _dropDown.gameObject.transform.parent.gameObject.SetActive(false);
         UsingHud = false;
+        _luaDropdown.gameObject.SetActive(false);
     }
 
 

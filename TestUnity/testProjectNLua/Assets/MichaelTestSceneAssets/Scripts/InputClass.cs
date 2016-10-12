@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -11,6 +12,7 @@ public class InputClass : MonoBehaviour {
     MovementController controller;
     GameObject cam;
     [SerializeField]PlayerData _playerStats;
+    [SerializeField]Canvas GameCanvas;
     // Use this for initialization
 
     bool InAir = false;
@@ -26,11 +28,17 @@ public class InputClass : MonoBehaviour {
         controller = ScriptableObject.CreateInstance<MovementController>();
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         _currentTool = _tools.getNextTool();
-	}
+        GameCanvas.GetComponentInChildren<Text>().text = _currentTool.name;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if(BehaviourManager.UsingHud)return;
+        if ( BehaviourManager.UsingHud ) {
+            GameCanvas.gameObject.SetActive(false);
+            return;
+        } else {
+            GameCanvas.gameObject.SetActive(true);
+        }
         handleMovementInput();
         handleRotationInput();
         handleToolInput();
@@ -69,7 +77,10 @@ public class InputClass : MonoBehaviour {
     private void handleToolInput() {
         if(Input.GetMouseButtonDown(0))_currentTool.Activate(cam);
         if(Input.GetMouseButtonDown(1))_currentTool.DeActivate();
-        if(Input.GetKeyDown(KeyCode.E))_currentTool = _tools.getNextTool();
+        if ( Input.GetKeyDown(KeyCode.E) ) {
+            _currentTool = _tools.getNextTool();
+            GameCanvas.GetComponentInChildren<Text>().text = _currentTool.name;
+        }
     }
 
    /* void OnGUI() {
