@@ -7,11 +7,12 @@ using System;
 public class BehaviourManager : MonoBehaviour {
 
     CustomBehaviour[] _behaviourList;
-    List<LuaBehaviour> _luaBehaviours = new List<LuaBehaviour>();
+    Dictionary<string, LuaBehaviour> _luaBehaviours = new Dictionary<string, LuaBehaviour>();
     GameObject CurrentObject;
     [SerializeField]GameObject empty;
     [SerializeField]GameObject _variableCanvas;
     [SerializeField]GameObject _luaCanvas;
+    [SerializeField]LuaCanvasManager _luaManager;
 
     [SerializeField]Dropdown _dropDown;
     [SerializeField]Dropdown _luaDropdown;
@@ -57,6 +58,10 @@ public class BehaviourManager : MonoBehaviour {
 
     }
 
+    public void AddLuaBehaviour(LuaBehaviour pLuaBheaviour) {
+
+    }
+
     public void OnClickBehaviourButton(int index) {
         if(UsingHud==false)return;
         
@@ -87,18 +92,18 @@ public class BehaviourManager : MonoBehaviour {
 
     private void createNewExistingLuaBehaviour() {
         _luaDropdown.gameObject.SetActive(true);
-        for ( int i = 0; i < _luaBehaviours.Count; i++ ) {
-            _luaDropdown.options.Add(new Dropdown.OptionData(_luaBehaviours[i].filename));
-
+        foreach ( KeyValuePair<string,LuaBehaviour> key in _luaBehaviours ) {
+            _luaDropdown.options.Add(new Dropdown.OptionData(key.Key));
         }
         Debug.Log(_luaBehaviours.Count);
     }
 
     private void CreateNewLuaBehaviour() {
-        GameObject gameObject = Instantiate<GameObject>(empty);
-        LuaBehaviour lua = gameObject.AddComponent<LuaBehaviour>();
-        behaviour = lua;
-        _luaCanvas.SetActive(true);
+        _luaManager.Enable("",CurrentObject);
+       // GameObject gameObject = Instantiate<GameObject>(empty);
+       // LuaBehaviour lua = gameObject.AddComponent<LuaBehaviour>();
+        //behaviour = lua;
+        //_luaCanvas.SetActive(true);
 
 
     }
@@ -111,7 +116,8 @@ public class BehaviourManager : MonoBehaviour {
     /// ToDO
     /// </summary>
     public void CreateLuaFile() {
-        _luaCanvas.SetActive(false);
+       /* _luaCanvas.SetActive(false);
+        InputField[] inputfields = _luaCanvas.GetComponentsInChildren<InputField>();
         string luaCode = _luaCanvas.GetComponentInChildren<InputField>().text;
         Debug.Log(luaCode);
         LuaBehaviour lua = CurrentObject.AddComponent<LuaBehaviour>();
@@ -119,7 +125,7 @@ public class BehaviourManager : MonoBehaviour {
         _luaBehaviours.Add(lua);
         //LuaBehaviour.CreateLuaScriptForObject(CurrentObject, lua);
         lua.SaveLua(luaCode, "test");
-        lua.Init();
+        lua.Init();*/
         Cancel();
         //write to lua shizzle
     }

@@ -6,15 +6,8 @@ using System;
 public class ProgrammingTool : ToolBase {
 
     BehaviourManager _manager;
-
-    [MenuItem("Assets/AssetCreator/Tools/Programming")]
-    public static void CreateNewToolListAsset() {
-        ProgrammingTool asset = ScriptableObject.CreateInstance<ProgrammingTool>();
-        AssetDatabase.CreateAsset(asset, "Assets/MichaelTestSceneAssets/ProgrammingTool.asset");
-        AssetDatabase.SaveAssets();
-        EditorUtility.FocusProjectWindow();
-        Selection.activeObject = asset;
-    }
+    [SerializeField]LuaCanvasManager _luaManager;
+    GameObject World;
 
     public override void Activate(GameObject obj) {
         if (obj.tag == "Terrain")return;
@@ -26,7 +19,9 @@ public class ProgrammingTool : ToolBase {
     }
 
     public override void DeActivate() {
-      //  throw new NotImplementedException();
+        if(World==null)World = GameObject.FindGameObjectWithTag("World");
+        if(_luaManager==null)_luaManager = GameObject.FindGameObjectWithTag("LuaManager").GetComponent<LuaCanvasManager>();
+        _luaManager.Enable("World", World);
     }
 
     public override void DeEquip() {

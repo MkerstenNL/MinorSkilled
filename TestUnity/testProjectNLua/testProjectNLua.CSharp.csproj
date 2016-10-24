@@ -96,6 +96,7 @@
     <Compile Include="Assets\KeraLua\NativeMethods.cs" />
     <Compile Include="Assets\KeraLua\Platform\CLSCompliantAttribute.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\CreateObjectFromLua.cs" />
+    <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\FlagVictory.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\IsClickedOnMouse.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\LuaCSharpFunctions.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\LuaContainerOfObject.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\DestroyTool.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\InputClass.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\LuaBehaviour.cs" />
+    <Compile Include="Assets\MichaelTestSceneAssets\Scripts\LuaCanvasManager.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\MovementController.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\PlacementTool.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\PlayerData.cs" />

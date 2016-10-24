@@ -3,15 +3,6 @@ using System.Collections;
 using UnityEditor;
 
 public class DestroyTool : ToolBase {
-    [MenuItem("Assets/AssetCreator/Tools/Destroy")]
-    public static void CreateNewToolListAsset() {
-        DestroyTool asset = ScriptableObject.CreateInstance<DestroyTool>();
-        AssetDatabase.CreateAsset(asset, "Assets/MichaelTestSceneAssets/DestroyTool.asset");
-        AssetDatabase.SaveAssets();
-        EditorUtility.FocusProjectWindow();
-        Selection.activeObject = asset;
-    }
-
 
     public override void Activate(GameObject obj) {
         RaycastHit hit;

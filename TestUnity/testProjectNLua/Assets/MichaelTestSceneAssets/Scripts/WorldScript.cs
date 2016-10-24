@@ -26,7 +26,7 @@ public class WorldScript : MonoBehaviour {
     /// </summary>
     public void Invalidate() {
         gameObjects = this.gameObject.GetComponentsInChildren<GameObject>();
-        luaFiles = System.IO.Directory.GetFiles(Environment.CurrentDirectory+"/Assets/Lua", "*.txt");
+        luaFiles = Directory.GetFiles(Environment.CurrentDirectory+"/Assets/Lua", "*.txt");
        
     }
 
