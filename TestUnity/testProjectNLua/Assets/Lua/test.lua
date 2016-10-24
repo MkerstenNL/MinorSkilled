@@ -1,3 +1,1 @@
-shield = this:CreateObject('ThisShieldModel')
-shield:SetPosition(10,10,10)
-shield:SetCollider()
+enter your code here
