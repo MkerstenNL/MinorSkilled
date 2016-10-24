@@ -33,6 +33,28 @@ public class LuaCSharpFunctions : MonoBehaviour {
         }
         //this.transform.position = new Vector3(pX, pY, pZ);
     }
+    public void IsCollider(bool pYesNo)
+    {
+        this.GetComponent<Collider>().enabled = pYesNo;
+    }
+    public string IsCollider(string pYesNo)
+    {
+        pYesNo = pYesNo.ToLower();
+        if (pYesNo == "y" || pYesNo == "yes" || pYesNo == "true")
+        {
+            this.GetComponent<Collider>().enabled = true;
+            return "Collider is active";
+        }
+        else if (pYesNo == "n" || pYesNo == "no" || pYesNo == "false")
+        {
+            this.GetComponent<Collider>().enabled = false;
+            return "Collider is not active";
+        }
+        else
+        {
+            return "Not an correct format. Choose Yes or No";
+        }
+    }
     public void SetColliderConstrains(bool pFreezeXPosition, bool pFreezeYPosition, bool pFreezeZPosition, bool pFreezeXRatation, bool pFreezeYRatation, bool pFreezeZRatation)
     {
         if (pFreezeXPosition)
@@ -96,7 +118,6 @@ public class LuaCSharpFunctions : MonoBehaviour {
         Material material = Resources.Load("Materials/" + pMaterial) as Material;
         this.GetComponent<Renderer>().material = material;
     }
-
 
     public LuaCSharpFunctions CreateObject(string pName) {
         GameObject prefab = Resources.Load(pName) as GameObject;
