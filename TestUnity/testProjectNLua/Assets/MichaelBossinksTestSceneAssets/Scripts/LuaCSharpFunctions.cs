@@ -8,6 +8,43 @@ using System.Linq;
 
 public class LuaCSharpFunctions : MonoBehaviour {
 
+    private bool _isFirstTime = true;
+    private Vector3 _oldPosition;
+    private float _amount;
+    private float _speed;
+    private bool _isMoving = false;
+    void Update()
+    {
+        if (_isMoving)
+        {
+            Move(_amount, _speed);
+            Debug.Log(true);
+        }
+    }
+
+    public void Move(float pAmount, float pSpeed)
+    {
+        if (_isFirstTime)
+        {
+            _isMoving = true;
+            _amount = pAmount;
+            _speed = pSpeed;
+            _oldPosition = this.transform.position;
+            _isFirstTime = false;
+        }
+        //transform.position += Vector3.forward * Time.deltaTime;
+        this.transform.Translate(Vector3.forward * (Time.deltaTime * _speed));
+        if (_oldPosition.x + _amount < this.transform.position.x || _oldPosition.y + _amount < this.transform.position.y || _oldPosition.z + _amount < this.transform.position.z || _oldPosition.x - _amount > this.transform.position.x || _oldPosition.y - _amount > this.transform.position.y || _oldPosition.z - _amount > this.transform.position.z)
+        {
+            this.transform.position = new Vector3((float)Math.Round(this.transform.position.x, MidpointRounding.AwayFromZero), (float)Math.Round(this.transform.position.y, MidpointRounding.AwayFromZero), (float)Math.Round(this.transform.position.z, MidpointRounding.AwayFromZero));
+            _isMoving = false;
+            _isFirstTime = true;
+        }
+    }
+    public void Turn()
+    {
+
+    }
     public void SetPosition(int pX, int pY, int pZ)
     {
         this.transform.position = new Vector3(pX, pY, pZ);
