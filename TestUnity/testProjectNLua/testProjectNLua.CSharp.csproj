@@ -103,8 +103,6 @@
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\OnGUIScript.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\SaveCurrentScene.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\CustomBehaviour.cs" />
-    <Compile Include="Assets\MichaelTestSceneAssets\LuaBehaviourContainer.cs" />
-    <Compile Include="Assets\MichaelTestSceneAssets\LuaScriptContainer.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\MainMenu.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\MovementBehaviour.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Performance test\BehaviourSpawner.cs" />
@@ -118,6 +116,8 @@
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\InputClass.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\LuaBehaviour.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\LuaCanvasManager.cs" />
+    <Compile Include="Assets\MichaelTestSceneAssets\Scripts\LuaObject.cs" />
+    <Compile Include="Assets\MichaelTestSceneAssets\Scripts\LuaObjectManager.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\MovementController.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\PlacementTool.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\PlayerData.cs" />

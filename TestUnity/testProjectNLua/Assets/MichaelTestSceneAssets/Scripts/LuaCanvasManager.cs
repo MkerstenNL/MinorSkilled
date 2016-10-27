@@ -17,6 +17,7 @@ public class LuaCanvasManager : MonoBehaviour {
         this.gameObject.SetActive(true);
         currentObject = pCurrentObject;
         if ( pFileName == "" || pFileName == null )return;
+        filename = pFileName;
         loadLuaFile(pFileName);
     }
 
@@ -39,6 +40,8 @@ public class LuaCanvasManager : MonoBehaviour {
     public void FileNameEntered(string pFilename) {
         Debug.Log(pFilename);
         filename = pFilename;
+        source = LuaBehaviour.LoadLuaFile(pFilename);
+        _luaSource.text = source;
     }
 
     public void SourceCodeEntered(string pSource) {
@@ -47,17 +50,42 @@ public class LuaCanvasManager : MonoBehaviour {
     }
 
     public void CreateFile() {
-        LuaBehaviour lua = currentObject.AddComponent<LuaBehaviour>();
-        LuaCSharpFunctions csharp = currentObject.AddComponent<LuaCSharpFunctions>();
-        _behaviourManager.AddLuaBehaviour(lua);
-        LuaBehaviour.CreateLuaScriptForObject(currentObject, lua, filename);
+        LuaBehaviour lua = null;
+        bool found = false;
+        lua = currentObject.GetComponent<LuaBehaviour>();
+        if ( lua != null ) {
+            LuaBehaviour[] luaBehaviours = currentObject.GetComponents<LuaBehaviour>();
+            foreach ( LuaBehaviour _lua in luaBehaviours ) {
+                if ( filename != _lua.filename ) continue;
+                lua = _lua;
+                //source = lua.source;
+                found = true;
+                break;
+                
+            }
+        }
+        LuaCSharpFunctions csharp = currentObject.GetComponent<LuaCSharpFunctions>();
+        if ( csharp != null ) {
+            csharp.Invalidate();
+        } else {
+            csharp = currentObject.AddComponent<LuaCSharpFunctions>();
+        }
+
+        if ( lua == null || !found) {
+            lua = currentObject.AddComponent<LuaBehaviour>();
+            _behaviourManager.AddLuaBehaviour(lua);
+            LuaBehaviour.CreateLuaScriptForObject(currentObject, lua, filename);
+        }
         lua.SaveLua(source, filename);
-        lua.Init();
         Disable();
+        _behaviourManager.Cancel();
 
     }
 
     private void loadLuaFile(string pFileName) {
-
+        _fileName.text = pFileName;
+        source = LuaBehaviour.LoadLuaFile(pFileName);
+        _luaSource.text = source;
+        
     }
 }

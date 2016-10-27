@@ -19,8 +19,9 @@ public class ProgrammingTool : ToolBase {
     }
 
     public override void DeActivate() {
+        BehaviourManager.UsingHud = true;
         if(World==null)World = GameObject.FindGameObjectWithTag("World");
-        if(_luaManager==null)_luaManager = GameObject.FindGameObjectWithTag("LuaManager").GetComponent<LuaCanvasManager>();
+        //if(_luaManager==null)_luaManager = GameObject.FindGameObjectWithTag("LuaManager").GetComponent<LuaCanvasManager>();
         _luaManager.Enable("World", World);
     }
 
@@ -30,6 +31,10 @@ public class ProgrammingTool : ToolBase {
 
     public override void Equip() {
        // throw new NotImplementedException();
+    }
+
+    public override string ToString() {
+        return "ProgrammingTool";
     }
 
 }

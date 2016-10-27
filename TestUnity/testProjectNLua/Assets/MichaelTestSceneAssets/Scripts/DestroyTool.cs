@@ -31,4 +31,8 @@ public class DestroyTool : ToolBase {
 
     }
 
+    public override string ToString() {
+        return "DestructionTool";
+    }
+
 }

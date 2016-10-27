@@ -30,4 +30,8 @@ public class PlacementTool : ToolBase {
     public override void Equip() {
         
     }
+
+    public override string ToString() {
+        return "PlacementTool";
+    }
 }

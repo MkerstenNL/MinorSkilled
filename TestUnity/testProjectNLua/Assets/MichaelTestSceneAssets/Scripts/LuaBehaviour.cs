@@ -17,12 +17,15 @@ public class LuaBehaviour : CustomBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+        if (filename=="")return;
+        CreateLuaScriptForObject(this.gameObject, this, filename);
+        //Init();
         //env.DoFile(Environment.CurrentDirectory + "/Assets/Lua/" + filename + ".lua");
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if(!active)return;
         Call("Update");
 	}
 
@@ -33,6 +36,17 @@ public class LuaBehaviour : CustomBehaviour {
 
     }
 
+    public static string LoadLuaFile(string pFilename) {
+        string source = "";
+        if ( File.Exists(Environment.CurrentDirectory + "/Assets/Lua/" + pFilename + ".lua") ) {
+            source = File.ReadAllText(Environment.CurrentDirectory + "/Assets/Lua/" + pFilename + ".lua");
+        } else {
+            Debug.Log("File Doesnt Exist");
+            return "";
+        }
+        return source;
+    }
+
     public static void CreateLuaScriptForObject(GameObject obj, LuaBehaviour lua, string filename ) {
         lua.filename = filename;
         
@@ -41,6 +55,7 @@ public class LuaBehaviour : CustomBehaviour {
                 File.Create(Environment.CurrentDirectory + "/Assets/Lua/" + filename + ".lua").Dispose();
             }
             lua.source = File.ReadAllText(Environment.CurrentDirectory + "/Assets/Lua/" + filename + ".lua");
+            
             Debug.Log(lua.source);
             //stringToEdit = File.ReadAllText(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + _gameObject.name + ".lua");
             Debug.Log("test");

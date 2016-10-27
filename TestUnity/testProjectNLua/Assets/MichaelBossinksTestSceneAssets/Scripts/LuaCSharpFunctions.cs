@@ -8,6 +8,8 @@ using System.Linq;
 
 public class LuaCSharpFunctions : MonoBehaviour {
 
+    private LuaObjectManager objectManager = new LuaObjectManager();
+
     public void SetPosition(int pX, int pY, int pZ)
     {
         this.transform.position = new Vector3(pX, pY, pZ);
@@ -113,29 +115,39 @@ public class LuaCSharpFunctions : MonoBehaviour {
         }
     }
 
-    public void SetTexture(string pMaterial)
-    {
+    public void SetTexture(string pMaterial){
         Material material = Resources.Load("Materials/" + pMaterial) as Material;
         this.GetComponent<Renderer>().material = material;
+    }
+
+    public void AddBehaviour(string pName) {
+        if(pName == null || pName =="")return;
+        if ( !File.Exists(Environment.CurrentDirectory + "/Assets/Lua/" + pName + ".lua") )return;
+        LuaBehaviour behaviour = gameObject.AddComponent<LuaBehaviour>();
+        behaviour.source = LuaBehaviour.LoadLuaFile(pName);
+        behaviour.filename = pName;
+
     }
 
     public LuaCSharpFunctions CreateObject(string pName) {
         GameObject prefab = Resources.Load(pName) as GameObject;
         //Debug.Log(prefab);
         GameObject _gameObject = (GameObject) GameObject.Instantiate(prefab, transform.position, Quaternion.identity);
+        
         _gameObject.name = _gameObject.name.Replace("(Clone)", "");
-        if ( _gameObject.GetComponent<IsClickedOnMouse>() == null ) {
-            _gameObject.AddComponent<IsClickedOnMouse>();
-        }
-        if ( _gameObject.GetComponent<LuaContainerOfObject>() == null ) {
-            _gameObject.AddComponent<LuaContainerOfObject>();
-        }
+        objectManager.AddObject(_gameObject);
+
         if ( _gameObject.GetComponent<Collider>() == null ) {
             _gameObject.AddComponent<MeshCollider>();
+            _gameObject.GetComponent<MeshCollider>().convex = true;
         }
         if ( _gameObject.GetComponent<LuaCSharpFunctions>() == null ) {
             _gameObject.AddComponent<LuaCSharpFunctions>();
         }
         return _gameObject.GetComponent<LuaCSharpFunctions>();
+    }
+
+    public void Invalidate() {
+        objectManager.ClearList();
     }
 }

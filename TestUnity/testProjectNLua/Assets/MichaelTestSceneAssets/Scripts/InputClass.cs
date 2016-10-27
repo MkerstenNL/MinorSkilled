@@ -28,7 +28,7 @@ public class InputClass : MonoBehaviour {
         controller = ScriptableObject.CreateInstance<MovementController>();
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         _currentTool = _tools.getNextTool();
-        GameCanvas.GetComponentInChildren<Text>().text = _currentTool.name;
+        GameCanvas.GetComponentInChildren<Text>().text = _currentTool.ToString();
     }
 	
 	// Update is called once per frame
@@ -79,7 +79,7 @@ public class InputClass : MonoBehaviour {
         if(Input.GetMouseButtonDown(1))_currentTool.DeActivate();
         if ( Input.GetKeyDown(KeyCode.E) ) {
             _currentTool = _tools.getNextTool();
-            GameCanvas.GetComponentInChildren<Text>().text = _currentTool.name;
+            GameCanvas.GetComponentInChildren<Text>().text = _currentTool.ToString();
         }
     }
 
