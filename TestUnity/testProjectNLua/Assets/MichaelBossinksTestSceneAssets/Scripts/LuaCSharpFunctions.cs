@@ -8,10 +8,7 @@ using System.Linq;
 
 public class LuaCSharpFunctions : MonoBehaviour {
 
-<<<<<<< HEAD
     private LuaObjectManager objectManager = new LuaObjectManager();
-
-=======
     private bool _isFirstTime = true;
     private Vector3 _oldPosition;
     private float _amount;
@@ -49,7 +46,6 @@ public class LuaCSharpFunctions : MonoBehaviour {
     {
 
     }
->>>>>>> e6093326ec7d721941f45ef5f16b096fb65d6815
     public void SetPosition(int pX, int pY, int pZ)
     {
         this.transform.position = new Vector3(pX, pY, pZ);
