@@ -93,6 +93,7 @@
      <Compile Include="Assets\MichaelTestSceneAssets\Scripts\DestroyTool.cs" />
      <Compile Include="Assets\MichaelTestSceneAssets\Scripts\InputClass.cs" />
      <Compile Include="Assets\MichaelTestSceneAssets\Scripts\LuaBehaviour.cs" />
+     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\LuaCanvasManager.cs" />
      <Compile Include="Assets\MichaelTestSceneAssets\Scripts\MovementController.cs" />
      <Compile Include="Assets\MichaelTestSceneAssets\Scripts\PlacementTool.cs" />
      <Compile Include="Assets\MichaelTestSceneAssets\Scripts\PlayerData.cs" />
@@ -146,6 +147,24 @@
      <Compile Include="Assets\SPlugins\RemoteConsole\Examples\Scripts\SampleStartClient.cs" />
      <Compile Include="Assets\SPlugins\RemoteConsole\Examples\Scripts\SampleStartHost.cs" />
      <Compile Include="Assets\SPlugins\RemoteConsole\Examples\Scripts\SampleStartLocal.cs" />
+     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
+     <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
+     <Compile Include="Assets\UnityChan\Scripts\IdleChanger.cs" />
+     <Compile Include="Assets\UnityChan\Scripts\SceneLoader.cs" />
+     <Compile Include="Assets\UnityChan\Scripts\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+     <None Include="Assets\UnityChan\license.txt" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
+     <None Include="Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -153,10 +172,10 @@
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="SPluginsNetwork">
- <HintPath>D:/Github/MinorSkilled/TestUnity/testProjectNLua/Assets/SPlugins/RemoteConsole/Plugins/Library/SPluginsNetwork.dll</HintPath>
+ <HintPath>D:/SourceTreeProjects/TestUnity/testProjectNLua/Assets/SPlugins/RemoteConsole/Plugins/Library/SPluginsNetwork.dll</HintPath>
  </Reference>
  <Reference Include="SRemoteConsole">
- <HintPath>D:/Github/MinorSkilled/TestUnity/testProjectNLua/Assets/SPlugins/RemoteConsole/Plugins/Library/SRemoteConsole.dll</HintPath>
+ <HintPath>D:/SourceTreeProjects/TestUnity/testProjectNLua/Assets/SPlugins/RemoteConsole/Plugins/Library/SRemoteConsole.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
