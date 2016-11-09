@@ -19,7 +19,6 @@ public class LuaCSharpFunctions : MonoBehaviour {
         if (_isMoving)
         {
             Move(_amount, _speed);
-            Debug.Log(true);
         }
     }
 
@@ -42,9 +41,32 @@ public class LuaCSharpFunctions : MonoBehaviour {
             _isFirstTime = true;
         }
     }
-    public void Turn()
+    public void Turn(string pTurn)
     {
-
+        if (pTurn.ToLower() == "left")
+        {
+            //this.transform.rotation = new Quaternion(0, this.transform.rotation.y + 90, 0, 1);
+            this.transform.Rotate(new Vector3(0, this.transform.rotation.y + 90, 0));
+        }
+        if (pTurn.ToLower() == "right")
+        {
+            this.transform.Rotate(new Vector3(0, this.transform.rotation.y - 90, 0));
+        }
+        Debug.Log("DIT MOET WAAR ZIJN");
+    }
+    //Doesn't work right
+    public void Turn(float pDegrees)
+    {
+        if (pDegrees > 360 || pDegrees < -360)
+        {
+            Debug.Log("stay within the 360 degrees");
+            return;
+        }
+        this.transform.Rotate(0,pDegrees,0);
+    }
+    public void Turn(float pX,float pY,float pZ)
+    {
+        this.transform.Rotate(-pX,-pY,-pZ);
     }
     public void SetPosition(int pX, int pY, int pZ)
     {

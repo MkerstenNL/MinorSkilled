@@ -15,7 +15,8 @@ public class FlagVictory : MonoBehaviour {
 
     void OnCollisionEnter(Collision pOther)
     {
-        if (pOther.transform.name == "Capsule")
+        Debug.Log(pOther.transform.name);
+        if (pOther.transform.name == "Player")
         {
             Debug.Log("Good Job");
         }

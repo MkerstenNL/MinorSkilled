@@ -1,0 +1,1 @@
+this:SetPosition(10,10,10)

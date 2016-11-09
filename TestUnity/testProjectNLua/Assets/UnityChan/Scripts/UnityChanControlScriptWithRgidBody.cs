@@ -79,35 +79,35 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 		
 		
 		// 以下、キャラクターの移動処理
-		velocity = new Vector3(0, 0, v);		// 上下のキー入力からZ軸方向の移動量を取得
+		//velocity = new Vector3(0, 0, v);		// 上下のキー入力からZ軸方向の移動量を取得
 		// キャラクターのローカル空間での方向に変換
-		velocity = transform.TransformDirection(velocity);
+		//velocity = transform.TransformDirection(velocity);
 		//以下のvの閾値は、Mecanim側のトランジションと一緒に調整する
-		if (v > 0.1) {
-			velocity *= forwardSpeed;		// 移動速度を掛ける
-		} else if (v < -0.1) {
-			velocity *= backwardSpeed;	// 移動速度を掛ける
-		}
+		//if (v > 0.1) {
+	//		velocity *= forwardSpeed;		// 移動速度を掛ける
+		//} else if (v < -0.1) {
+		//	velocity *= backwardSpeed;	// 移動速度を掛ける
+		//}
 		
-		if (Input.GetButtonDown("Jump")) {	// スペースキーを入力したら
+        //if (Input.GetButtonDown("Jump")) {	// スペースキーを入力したら
 
-			//アニメーションのステートがLocomotionの最中のみジャンプできる
-			if (currentBaseState.nameHash == locoState){
-				//ステート遷移中でなかったらジャンプできる
-				if(!anim.IsInTransition(0))
-				{
-						rb.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
-						anim.SetBool("Jump", true);		// Animatorにジャンプに切り替えるフラグを送る
-				}
-			}
-		}
+        //    //アニメーションのステートがLocomotionの最中のみジャンプできる
+        //    if (currentBaseState.nameHash == locoState){
+        //        //ステート遷移中でなかったらジャンプできる
+        //        if(!anim.IsInTransition(0))
+        //        {
+        //                rb.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
+        //                anim.SetBool("Jump", true);		// Animatorにジャンプに切り替えるフラグを送る
+        //        }
+        //    }
+        //}
 		
 
-		// 上下のキー入力でキャラクターを移動させる
-		transform.localPosition += velocity * Time.fixedDeltaTime;
+        //// 上下のキー入力でキャラクターを移動させる
+        //transform.localPosition += velocity * Time.fixedDeltaTime;
 
-		// 左右のキー入力でキャラクタをY軸で旋回させる
-		transform.Rotate(0, h * rotateSpeed, 0);	
+        //// 左右のキー入力でキャラクタをY軸で旋回させる
+        //transform.Rotate(0, h * rotateSpeed, 0);	
 	
 
 		// 以下、Animatorの各ステート中での処理
