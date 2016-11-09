@@ -60,6 +60,8 @@ public class LuaBehaviour : CustomBehaviour {
             //stringToEdit = File.ReadAllText(Environment.CurrentDirectory + "/Assets/MichaelBossinksTestSceneAssets/Lua/" + _gameObject.name + ".lua");
             Debug.Log("test");
             lua.Env["this"] = obj.GetComponent<LuaCSharpFunctions>(); // Give the script access to the gameobject.
+            lua.Env[obj.transform.name] = obj.GetComponent<LuaCSharpFunctions>();
+            Debug.Log(obj.transform.name);
             lua.Env["transform"] = obj.transform;
 
             try {

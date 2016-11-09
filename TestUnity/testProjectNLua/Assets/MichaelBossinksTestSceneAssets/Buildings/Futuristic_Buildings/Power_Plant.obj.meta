@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 28436b805eb8e794abf5c07b2ea96145
+timeCreated: 1478521829
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Power_plant_Poly_1_atlas_1
+    100004: Power_plant_Poly_1_Base
+    100006: Power_plant_Poly_1_bottom_pipes
+    100008: Power_plant_Poly_1_Bucky_ball_1
+    100010: Power_plant_Poly_1_Capsule_power_0_1
+    100012: Power_plant_Poly_1_drain_pipes_1
+    100014: Power_plant_Poly_1_tank__heat__sink
+    100016: Power_plant_Poly_1_tank_power_rod_holders
+    100018: Power_plant_Poly_1_tank_power_rod_holders_MeshPart0
+    100020: Power_plant_Poly_1_tank_power_rod_holders_MeshPart1
+    100022: Power_plant_Poly_1_Tanks
+    100024: Power_plant_Poly_1_top_middle_turbine
+    100026: Power_plant_Poly_1_top_pipes
+    100028: Power_plant_Poly_1_top_power_rods
+    100030: Power_plant_Poly_1_top_turbine
+    100032: Power_plant_Poly_1_turbine
+    100034: Power_plant_Poly_1_turbine_vents
+    100036: Power_plant_Poly_1_Vents
+    400000: //RootNode
+    400002: Power_plant_Poly_1_atlas_1
+    400004: Power_plant_Poly_1_Base
+    400006: Power_plant_Poly_1_bottom_pipes
+    400008: Power_plant_Poly_1_Bucky_ball_1
+    400010: Power_plant_Poly_1_Capsule_power_0_1
+    400012: Power_plant_Poly_1_drain_pipes_1
+    400014: Power_plant_Poly_1_tank__heat__sink
+    400016: Power_plant_Poly_1_tank_power_rod_holders
+    400018: Power_plant_Poly_1_tank_power_rod_holders_MeshPart0
+    400020: Power_plant_Poly_1_tank_power_rod_holders_MeshPart1
+    400022: Power_plant_Poly_1_Tanks
+    400024: Power_plant_Poly_1_top_middle_turbine
+    400026: Power_plant_Poly_1_top_pipes
+    400028: Power_plant_Poly_1_top_power_rods
+    400030: Power_plant_Poly_1_top_turbine
+    400032: Power_plant_Poly_1_turbine
+    400034: Power_plant_Poly_1_turbine_vents
+    400036: Power_plant_Poly_1_Vents
+    2300000: Power_plant_Poly_1_atlas_1
+    2300002: Power_plant_Poly_1_Base
+    2300004: Power_plant_Poly_1_bottom_pipes
+    2300006: Power_plant_Poly_1_Bucky_ball_1
+    2300008: Power_plant_Poly_1_Capsule_power_0_1
+    2300010: Power_plant_Poly_1_drain_pipes_1
+    2300012: Power_plant_Poly_1_tank__heat__sink
+    2300014: Power_plant_Poly_1_tank_power_rod_holders_MeshPart0
+    2300016: Power_plant_Poly_1_tank_power_rod_holders_MeshPart1
+    2300018: Power_plant_Poly_1_Tanks
+    2300020: Power_plant_Poly_1_top_middle_turbine
+    2300022: Power_plant_Poly_1_top_pipes
+    2300024: Power_plant_Poly_1_top_power_rods
+    2300026: Power_plant_Poly_1_top_turbine
+    2300028: Power_plant_Poly_1_turbine
+    2300030: Power_plant_Poly_1_turbine_vents
+    2300032: Power_plant_Poly_1_Vents
+    3300000: Power_plant_Poly_1_atlas_1
+    3300002: Power_plant_Poly_1_Base
+    3300004: Power_plant_Poly_1_bottom_pipes
+    3300006: Power_plant_Poly_1_Bucky_ball_1
+    3300008: Power_plant_Poly_1_Capsule_power_0_1
+    3300010: Power_plant_Poly_1_drain_pipes_1
+    3300012: Power_plant_Poly_1_tank__heat__sink
+    3300014: Power_plant_Poly_1_tank_power_rod_holders_MeshPart0
+    3300016: Power_plant_Poly_1_tank_power_rod_holders_MeshPart1
+    3300018: Power_plant_Poly_1_Tanks
+    3300020: Power_plant_Poly_1_top_middle_turbine
+    3300022: Power_plant_Poly_1_top_pipes
+    3300024: Power_plant_Poly_1_top_power_rods
+    3300026: Power_plant_Poly_1_top_turbine
+    3300028: Power_plant_Poly_1_turbine
+    3300030: Power_plant_Poly_1_turbine_vents
+    3300032: Power_plant_Poly_1_Vents
+    4300000: Power_plant_Poly_1_atlas_1
+    4300002: Power_plant_Poly_1_Base
+    4300004: Power_plant_Poly_1_bottom_pipes
+    4300006: Power_plant_Poly_1_Bucky_ball_1
+    4300008: Power_plant_Poly_1_Capsule_power_0_1
+    4300010: Power_plant_Poly_1_drain_pipes_1
+    4300012: Power_plant_Poly_1_tank__heat__sink
+    4300014: Power_plant_Poly_1_tank_power_rod_holders_MeshPart0
+    4300016: Power_plant_Poly_1_tank_power_rod_holders_MeshPart1
+    4300018: Power_plant_Poly_1_Tanks
+    4300020: Power_plant_Poly_1_top_middle_turbine
+    4300022: Power_plant_Poly_1_top_pipes
+    4300024: Power_plant_Poly_1_top_power_rods
+    4300026: Power_plant_Poly_1_top_turbine
+    4300028: Power_plant_Poly_1_turbine
+    4300030: Power_plant_Poly_1_turbine_vents
+    4300032: Power_plant_Poly_1_Vents
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

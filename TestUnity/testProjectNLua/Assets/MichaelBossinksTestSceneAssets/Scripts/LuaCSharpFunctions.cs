@@ -72,6 +72,10 @@ public class LuaCSharpFunctions : MonoBehaviour {
     {
         this.transform.position = new Vector3(pX, pY, pZ);
     }
+    public Vector3 GetPosition()
+    {
+        return this.transform.position;
+    }
     public void SetRotation(int pX, int pY, int pZ)
     {
         this.transform.rotation = new Quaternion(pX, pY, pZ,0);

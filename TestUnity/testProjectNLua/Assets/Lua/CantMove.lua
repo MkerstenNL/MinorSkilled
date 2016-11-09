@@ -1,0 +1,1 @@
+this:SetPosition(this:GetPosition().x,this:GetPosition().y,this:GetPosition().z)
