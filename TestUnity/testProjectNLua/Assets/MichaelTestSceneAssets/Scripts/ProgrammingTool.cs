@@ -10,7 +10,7 @@ public class ProgrammingTool : ToolBase {
     GameObject World;
 
     public override void Activate(GameObject obj) {
-        if (obj.tag == "Terrain")return;
+        if (obj.tag != "Programmable")return;
         if (_manager==null)_manager = FindObjectOfType<BehaviourManager>();
         RaycastHit hit;
         if(Physics.Raycast(obj.transform.position, obj.transform.forward, out hit, 10)){
