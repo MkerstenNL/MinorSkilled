@@ -48,7 +48,8 @@ end
 function checkCollisions()
     --player vs key
     if(CheckCollision(hero.x,hero.y,hero.width,hero.height,key.x,key.y,key.width,key.height)and hero.inventory.hasKey == false)then
-        hero.inventory.hasKey = true;
+        hero.hitKey(hero)
+        --hero.inventory.hasKey = true;
     end
     for key, value in pairs(walls)do
       local tempwall = walls[key]
