@@ -41,6 +41,7 @@ public class LuaCSharpFunctions : MonoBehaviour {
             _isFirstTime = true;
         }
     }
+
     public void Turn(string pTurn)
     {
         if (pTurn.ToLower() == "left")
@@ -54,13 +55,13 @@ public class LuaCSharpFunctions : MonoBehaviour {
         }
         Debug.Log("DIT MOET WAAR ZIJN");
     }
+
     //Doesn't work right
     public void Turn(float pDegrees)
     {
         if (pDegrees > 360 || pDegrees < -360)
         {
-            Debug.Log("stay within the 360 degrees");
-            return;
+            pDegrees = pDegrees % 360;
         }
         this.transform.Rotate(0,pDegrees,0);
     }
