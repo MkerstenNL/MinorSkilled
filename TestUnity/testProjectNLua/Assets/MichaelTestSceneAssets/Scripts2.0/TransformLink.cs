@@ -18,16 +18,19 @@ public class TransformLink : MonoBehaviour {
     }
 
     public void GetPosition() {
-        _lua.Push(this.transform.position.x);
-        _lua.Push(this.transform.position.y);
-        _lua.Push(this.transform.position.z);
+        //_lua.Push(this.transform.position.x);
+        //_lua.Push(this.transform.position.y);
+        //_lua.Push(this.transform.position.z);
+        _lua["x"] = this.transform.position.x;
+        _lua["y"] = this.transform.position.y;
+        _lua["z"] = this.transform.position.z;
         
         //return new object[3] {  this.transform.position.x,
         //                        this.transform.position.y,
         //                        this.transform.position.z};
     }
 
-    public void Log(string s) {
+    public void Log(float s) {
 
         Debug.Log(s);
     }

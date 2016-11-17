@@ -2,14 +2,14 @@
 --Assert(TransformComponent!=nil)
 --AttachedComponents{}
 --CsharpFile = nil
-GameObject = nil
 x = 0
 y = 0
 z = 0
+GameObject = nil
 
 --Gets Called From Engine on start of script
 function Start()
-	x,y,z = cSharp:GetPosition ()
+	cSharp:GetPosition ()
 
 	cSharp:Log (x)
 	cSharp:Log (y)
