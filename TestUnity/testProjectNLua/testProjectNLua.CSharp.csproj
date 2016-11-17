@@ -105,6 +105,7 @@
     <Compile Include="Assets\MichaelTestSceneAssets\CustomBehaviour.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\MainMenu.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\MovementBehaviour.cs" />
+    <Compile Include="Assets\MichaelTestSceneAssets\NewBehaviourScript.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Performance test\BehaviourSpawner.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Performance test\MonoBehaviourHolder.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Performance test\MonoBehaviourStressTest.cs" />
@@ -125,6 +126,9 @@
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\ToolBase.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\ToolList.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts\WorldScript.cs" />
+    <Compile Include="Assets\MichaelTestSceneAssets\Scripts2.0\GameObjectLuaLink.cs" />
+    <Compile Include="Assets\MichaelTestSceneAssets\Scripts2.0\LuaCanvasHandler.cs" />
+    <Compile Include="Assets\MichaelTestSceneAssets\Scripts2.0\LuaWorldHandler.cs" />
     <Compile Include="Assets\NLua\CheckType.cs" />
     <Compile Include="Assets\NLua\Config\NLuaConfig.cs" />
     <Compile Include="Assets\NLua\Event\DebugHookEventArgs.cs" />
