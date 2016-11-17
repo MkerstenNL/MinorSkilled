@@ -284,8 +284,8 @@ end
 		}
 
 		/*
-			* CAUTION: NLua.Lua instances can't share the same lua state! 
-			*/
+		* CAUTION: NLua.Lua instances can't share the same lua state! 
+		*/
 		public Lua (LuaState lState)
 		{
 			LuaLib.LuaPushString (lState, "LUAINTERFACE LOADED");
