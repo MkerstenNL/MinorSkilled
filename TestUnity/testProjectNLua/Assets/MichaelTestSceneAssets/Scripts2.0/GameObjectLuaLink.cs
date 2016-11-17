@@ -23,6 +23,9 @@ public class GameObjectLuaLink : MonoBehaviour {
         _lua.DoFile(Environment.CurrentDirectory + "/Assets/Lua/engine/" + _filename + ".lua");
         _lua["cSharp"] = this;
         _lua["Name"] = this.gameObject.name;
+        TransformLink l = gameObject.AddComponent<TransformLink>();
+        _lua["Transform"] = gameObject.GetComponent<TransformLink>();
+        l.Init(_lua);
         _luaFunctions.Add("Start", _lua.GetFunction("Start") as LuaFunction);
         _luaFunctions["Start"].Call();
         //_lua.RegisterFunction()

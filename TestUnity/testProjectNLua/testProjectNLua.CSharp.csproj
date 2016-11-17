@@ -129,6 +129,7 @@
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts2.0\GameObjectLuaLink.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts2.0\LuaCanvasHandler.cs" />
     <Compile Include="Assets\MichaelTestSceneAssets\Scripts2.0\LuaWorldHandler.cs" />
+    <Compile Include="Assets\MichaelTestSceneAssets\Scripts2.0\TransformLink.cs" />
     <Compile Include="Assets\NLua\CheckType.cs" />
     <Compile Include="Assets\NLua\Config\NLuaConfig.cs" />
     <Compile Include="Assets\NLua\Event\DebugHookEventArgs.cs" />
