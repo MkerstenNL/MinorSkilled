@@ -9,8 +9,11 @@ GameObject = nil
 
 --Gets Called From Engine on start of script
 function Start()
-	cSharp:GetPosition ()
-
+	--x, y, z = cSharp:GetPosition ()
+	pos = cSharp:GetPosition ()
+	x,y,z = table.unpack(pos)
+	cSharp:Log(cSharp:GetPosition())
+	--x,y,z = table.unpack(pos)
 	cSharp:Log (x)
 	cSharp:Log (y)
 	cSharp:Log (z)

@@ -1,0 +1,54 @@
+﻿
+Camera.Follow( Object ) : The Camera will try to keep the provided Object in the center of the sreen.
+
+Controller.Wasd ( Object )	: Controller sets the controll of the provoded Object to the WASD keys.
+	
+Debug.Log( string )	: Prints the provided message string to the console.
+
+Hud.Health( health ) : Displays the Health number on screen.
+Hud.Message( message, duration )	: Displays the Message string on Screen for the Duration number of seconds.
+Hud.Score( score ) : Displays the Score number on screen.
+
+pressed Input.GetKey( key )  : Checks whether the provided key numer is pressed.
+	Returns true if the key is pressed, otherwise false.
+
+Level.AddObject ( name, id, x, y, trigger ) : Adds a new Object to the level with name string, id number in the TileSet, the x and y numbers for the position and trigger string for what trigger it fires on collision. If trigger is nil, then no trigger.
+
+Level.AddObjectFrom ( parent, name, id, trigger )  : Adds a new Object to the level having it's position and direction from the parent with name string, id number from the TileSet.
+
+object Level.GetObject ( name ) : Finds the Object with the provided name. If there are more Objects with the same name, the first found is returned.
+	Returns a Object reference of the first found Object having name, or nill when none found
+
+objects Level.GetObjects ( name ) : Finds all objects with this name
+	Returns an array with all found objects, array is empty if non found
+	
+Level.Load( name ) : Loads the level file (tmx) with provided name in the assets directory as the Current level
+Level.RemoveObject( object ) : Removes and destroys the Object from the level. Note, using this Objects ref after this will cause errors!
+
+success Object.Move( object, x, y ) : Moves the object with the x and y step if possible
+	Returns true on succes and false if it hits anything
+
+Object.GetName( object ) : Gets the name for the object
+	Returns the name string of the object and nil if does not have one
+		
+x,y	Object.GetPosition( object ) : gets the current position for the object 
+	Returns x, y numbers as the current position
+
+Object.Forward( object, step ) : Moves the object step number in its current direction
+	Returns true on succes and false if it hits anything
+
+Lua.SoundLoad( name, looping, streaming ) : Loads as sound from file with name string and specifies looping boolean it it should be repeating and streaming boolean. Streaming is advised with sounds lasting more then a few seconds, and are not frequently used.
+	Returns a Sound reference
+Lua.SoundPlay( sound ) : plays the Sound 
+	Returns the soundchannel ref which resembles the currently playing sound
+	
+Sound.IsPlaying( soundchannel ) : checks if the soundchannel is stil playing or is finished
+	Returns true if playing, false if finished. Note, a repeating sound will never be finished playing unless you stop the channel.
+	
+Lua.SoundStop( soundchannel ) : stops the soundchannel playing.
+
+Lua.TimerStart( name, interval, repeat ) : Starts a timer with name string as the timeout trigger with interval number and repeat boolean
+	Returns the timer ref
+
+Timer.Stop( timer ) : stopt the timer from running, it will not produce a timeout trigger anymore
+
