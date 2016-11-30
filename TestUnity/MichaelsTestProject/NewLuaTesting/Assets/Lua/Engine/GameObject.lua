@@ -1,5 +1,5 @@
 GameObject = {}
-
+GameObject.IsInteractive = false
 function GameObject:Start ()
 	
 	GameObjectC.Log ("GameObject")
