@@ -17,11 +17,12 @@ public class TransformLuaLink : LuaLink {
 	
 	}
 
-    public override void init(ILuaState state) {
+    public override LuaTable init(ILuaState state) {
         scriptName = "Transform";
         scriptLocation = "Engine";
         base.init(state);
-        CallLuaFunction("Start");
+        //CallLuaFunction("Transform","Start");
+        return luaclass;
     }
 
     protected override void registerFunctions() {

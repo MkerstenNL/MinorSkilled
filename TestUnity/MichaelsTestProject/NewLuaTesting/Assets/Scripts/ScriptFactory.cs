@@ -7,7 +7,7 @@ using System;
 public class ScriptFactory : MonoBehaviour {
     private Dictionary<string, Type> _scriptList = new Dictionary<string, Type>();
 
-    void Start() {
+    void Awake() {
         fillDict();
 
     }
@@ -18,6 +18,7 @@ public class ScriptFactory : MonoBehaviour {
     }
 
     public Type GetScriptType(string name) {
+        
         try {
             return _scriptList[name];
         } catch(Exception e) {

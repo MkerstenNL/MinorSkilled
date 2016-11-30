@@ -1,21 +1,18 @@
-table = {}
+GameObject = {}
 
-function Start ()
+function GameObject:Start ()
 	
 	GameObjectC.Log ("GameObject")
 	--message = NewComponent ("Transform")
-	GameObjectC.Log ("Test")
-	message = Update ()
-	GameObjectC.Log (message)
+	GameObjectC.Log ("Calling function")
 	--NewComp ()
-
-	message = NewComponent ("Transform")
+	message = GameObject.NewScript(self,"Transform")
 	GameObjectC.Log(message)
 --message = NewComponent ("Transform")
 --GameObjectC.Log (message)
 end
 
-function Update ()
+function GameObject:Update ()
 	--i = i + 1
 	--message = "test"+tostring(i)
 	GameObjectC.Log ("update")
@@ -23,23 +20,23 @@ function Update ()
 --GameObjectC.Log("Update From GameObject")
 end
 
-function NewComponent (name)
+function GameObject:NewScript (name)
+	if(name == nil)then GameObjectC.Log("name == nil")end
 	if(type (name) == "string")then
-
+		GameObjectC.Log("adding component:"..name)
+		local  table, message = GameObjectC.NewComponent (name)
 		
-		--local comp = Components[name]
-		--if(comp~=nil)then
-		--	return "component Already exists"
-		--else
-		GameObjectC.NewScript (name)
-		--Transform = require ("")
-		return "Succes"
-	--end
+		GameObjectC.Log (message)
+		GameObjectC.Log (table)
+		Transform:Start ()
+		Transform:Test()
+		return "Succes" 
 	else
 		return "NewComponent expects a string"
 	end
 end
 
+return GameObject
 
 --[[--]]
 

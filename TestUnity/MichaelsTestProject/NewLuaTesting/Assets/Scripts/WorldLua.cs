@@ -11,7 +11,7 @@ public class WorldLua : LuaLink {
         init();
         Debug.Assert(scriptName != "");
         
-        CallLuaFunction("Start");
+        //CallLuaFunction("Start");
         
 	}
 	
