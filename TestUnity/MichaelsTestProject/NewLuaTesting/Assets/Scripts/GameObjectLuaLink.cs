@@ -17,7 +17,7 @@ public class GameObjectLuaLink : LuaLink {
 	
 	// Update is called once per frame
 	void Update () {
-        //CallLuaFunction("Update");
+        CallLuaFunction("GameObject","Update");
 	}
     ////////////////////////////////////////
     /// LuaFunctions
@@ -48,7 +48,7 @@ public class GameObjectLuaLink : LuaLink {
             return 1;
         } else {
             LuaLink l = gameObject.AddComponent(t) as LuaLink;
-            LuaTable tab = l.init(_lua);
+            l.init(_lua);
             //_lua.PushGlobalTable();
             //Debug.Log(_lua.GetTop());
             _lua.SetTop(1);

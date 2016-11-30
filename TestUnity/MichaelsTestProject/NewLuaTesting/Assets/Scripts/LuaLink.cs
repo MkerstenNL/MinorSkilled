@@ -24,7 +24,7 @@ public abstract class LuaLink : MonoBehaviour {
 	void Start () {
         
 	}
-    public virtual LuaTable init(ILuaState state) {
+    public virtual void init(ILuaState state) {
         _lua = state;
         //_lua.L_LoadFile(Environment.CurrentDirectory + "/Assets/Lua/" + scriptLocation + "/" + scriptName + ".lua");
         state.L_DoFile(Environment.CurrentDirectory+"/Assets/Lua/"+scriptLocation+"/"+scriptName+".lua");
@@ -38,32 +38,24 @@ public abstract class LuaLink : MonoBehaviour {
         //ThreadStatus status  = _lua.L_DoString("Require["+Environment.CurrentDirectory + "/Assets/Lua/" + scriptLocation + " / " + scriptName + ".lua]");
         //Debug.Log(status.ToString());
         registerFunctions();
-        return luaclass;
     }
     
     /// <summary>
     /// can be overwritten but make sure to call the base first!
     /// </summary>
-    protected virtual LuaTable init() {
+    protected virtual void init() {
         _lua = new LuaState();
         //_lua.L_LoadFile(Environment.CurrentDirectory + "/Assets/Lua/" + scriptLocation + "/" + scriptName + ".lua");
         _lua.L_DoFile(Environment.CurrentDirectory + "/Assets/Lua/"+scriptLocation + "/" + scriptName+".lua");
         _lua.GetTop();
         _lua.L_OpenLibs();
-
-        if ( _lua.IsTable(-1) ) {
-            Debug.Log("True");
-            luaclass = _lua.ToObject(-1) as LuaTable;
-            Debug.Log(luaclass);
-        }
         registerFunctions();
-        return luaclass;
     }
 
 
     protected virtual void CallLuaFunction(string classname,string functionName) {
         _lua.GetGlobal(classname);
-        _lua.GetField(2,functionName);
+        _lua.GetField(1,functionName);
         if ( _lua.IsFunction(-1) ) {
             _lua.PCall(0, 0, 0);
             _lua.SetTop(0);
