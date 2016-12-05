@@ -18,8 +18,12 @@ function Transform:Turn(x,y,z)
 
 end
 
-function Transform:Teleport (x,y,z, distance)
+function Transform:Teleport (x, y, z, distance)
+	if(z==nil and type(x)==string)then
 
+	elseif(distance == nil)then
+		TransformC.SetPosition(x,y,z)
+	end
 
 end
 

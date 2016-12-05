@@ -1,4 +1,5 @@
 GameObject = {}
+GameObject.x = 0;
 function GameObject:Start ()
 	
 	GameObjectC.Log ("GameObject")
@@ -9,8 +10,9 @@ function GameObject:Start ()
 end
 
 function GameObject:Update ()
-	GameObjectC.Log("Test")
-	Transform:Start()
+	GameObject.x = GameObject.x + 0.02
+	Transform:Teleport(GameObject.x,1,1)
+
 end
 
 function GameObject:NewScript (name)
