@@ -10,8 +10,10 @@ function GameObject:Start ()
 end
 
 function GameObject:Update ()
-	GameObject.x = GameObject.x + 0.02
-	Transform:Teleport(GameObject.x,1,1)
+	GameObjectC.Log("StartUpdate")
+	local message = Transform:Teleport ("Up", 0.02)
+	GameObjectC.Log(message)
+	GameObjectC.Log("End Update")
 
 end
 

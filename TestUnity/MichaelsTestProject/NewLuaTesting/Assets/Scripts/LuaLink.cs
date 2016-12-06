@@ -68,11 +68,12 @@ public abstract class LuaLink : MonoBehaviour {
             _lua.PushString("incorrect number of arguments");
             return 1;
         }
-        string message = state.ToObject(1).ToString();
+        object message = state.ToObject(1);
+        Debug.Log("Test");
         Debug.Log(message.ToString());
         _lua.SetTop(0);
         //_lua.PushString("operation succesful");
-        return 1;
+        return 0;
     }
 
 
