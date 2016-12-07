@@ -12,6 +12,8 @@ end
 function GameObject:Update ()
 	GameObjectC.Log("StartUpdate")
 	local message = Transform:Teleport ("Up", 0.02)
+	local message2 = Transform:Turn (1)
+	GameObjectC.Log(message2)
 	GameObjectC.Log(message)
 	GameObjectC.Log("End Update")
 

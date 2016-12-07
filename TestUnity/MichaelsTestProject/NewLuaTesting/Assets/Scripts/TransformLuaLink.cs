@@ -26,13 +26,37 @@ public class TransformLuaLink : LuaLink {
 
     protected override void registerFunctions() {
         regFunction("TransformC", "Log", Log);
+        regFunction("TransformC", "Rotate", Rotate);
         regFunction("TransformC", "SetPosition", SetPosition);
         regFunction("TransformC", "GetPosition", GetPosition);
+        regFunction("TransformC", "GetRotation", GetRotation);
         regFunction("TransformC", "GetDirection", GetDirection);
         foreach ( KeyValuePair<string, List<NameFuncPair>> lib in _libs ) {
             _lua.L_NewLib(lib.Value.ToArray());
             _lua.SetGlobal(lib.Key);
         }
+    }
+
+    public int Rotate(ILuaState state) {
+        if ( state.GetTop() != 4 ) {
+            _lua.SetTop(0);
+            _lua.PushString("Invalid amount of parameters");
+            
+        }
+        this.transform.Rotate(new Vector3((float)state.ToNumber(1),
+                                          (float) state.ToNumber(2),
+                                          (float) state.ToNumber(3)), (float) state.ToNumber(4));
+        _lua.SetTop(0);
+        _lua.PushString("Rotate successfull");
+        return 1;
+    }
+
+    public int GetRotation(ILuaState state) {
+        _lua.SetTop(0);
+        _lua.PushNumber(this.transform.rotation.eulerAngles.x);
+        _lua.PushNumber(this.transform.rotation.eulerAngles.y);
+        _lua.PushNumber(this.transform.rotation.eulerAngles.z);
+        return 3;
     }
 
     public int GetPosition(ILuaState state) {
@@ -41,7 +65,6 @@ public class TransformLuaLink : LuaLink {
             state.PushString("Invalid amount of parameters. function requires 0");
             return 1;
         }
-        Debug.Log("GotPosition");
         _lua.PushNumber(this.transform.position.x);
         _lua.PushNumber(this.transform.position.y);
         _lua.PushNumber(this.transform.position.z);
@@ -54,7 +77,6 @@ public class TransformLuaLink : LuaLink {
             _lua.PushString("Incorrect number of arguments. function requires 0");
             return 1;
         }
-        Debug.Log("GOtDirection");
         Vector3 dir = Vector3.zero;
         switch ( state.ToString(1) ) {
             case "Up":

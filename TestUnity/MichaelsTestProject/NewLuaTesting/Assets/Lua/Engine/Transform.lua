@@ -15,8 +15,31 @@ function Transform:IsActive()
 end
 
 function Transform:Turn(x,y,z)
-	--if(type(x)==""
+	if(type(x)=="string")then
+		if(x=="Up")then
+			TransformC.Rotate(1, 0, 0, -90)
+		elseif(x=="Down")then
+			TransformC.Rotate(1,0,0,90)
+		elseif(x=="Left")then
+			TransformC.Rotate(0,1,0,-90)
+		elseif(x=="Right")then
+			TransformC.Rotate(0,1,0,90)
+		else
+			return "Invalid direction."
+		end
 
+	elseif (type(x)=="number" and y == nil)then
+		TransformC.Rotate(0,1,0,x)
+		return "rotation succesfull"
+	elseif(x~=nil and y~=nil and z~=nil)then
+		rotx,roty,rotz = TransformC.GetRotation()
+		rotx = rotx+x
+		roty= roty+y
+		rotz= rotz+z
+		TransformC.SetRotation(rotx,roty,rotz)
+	end
+
+	return "Invalid amounts of parameters"
 end
 
 function Transform:Teleport (x, y, z, distance)
