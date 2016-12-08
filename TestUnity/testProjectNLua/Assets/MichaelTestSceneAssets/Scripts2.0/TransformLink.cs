@@ -2,6 +2,7 @@
 using System.Collections;
 using NLua;
 using System;
+using System.Reflection;
 using System.Collections.Generic;
 
 public class TransformLink : MonoBehaviour {
@@ -12,25 +13,21 @@ public class TransformLink : MonoBehaviour {
         _lua = pLua;
         _lua.DoFile(Environment.CurrentDirectory + "/Assets/Lua/engine/" + "Transform" + ".lua");
         _lua["cSharp"] = this;
+        //_lua.RegisterFunction("GetPosition");
         _luaFunctions.Add("Start", _lua.GetFunction("Start") as LuaFunction);
         _luaFunctions["Start"].Call();
 
     }
 
-    public void GetPosition() {
-        //_lua.Push(this.transform.position.x);
-        //_lua.Push(this.transform.position.y);
-        //_lua.Push(this.transform.position.z);
-        _lua["x"] = this.transform.position.x;
-        _lua["y"] = this.transform.position.y;
-        _lua["z"] = this.transform.position.z;
-        
-        //return new object[3] {  this.transform.position.x,
-        //                        this.transform.position.y,
-        //                        this.transform.position.z};
+    public int GetPosition() {
+        _lua.Push(this.transform.position.x);
+        _lua.Push(this.transform.position.y);
+        _lua.Push(this.transform.position.z);
+        return 3;
+       //return {transform.position.x, transform.position.y, transform.position.z}
     }
 
-    public void Log(float s) {
+    public void Log(object s) {
 
         Debug.Log(s);
     }
