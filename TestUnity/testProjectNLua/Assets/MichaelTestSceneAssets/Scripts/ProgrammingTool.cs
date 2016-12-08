@@ -9,12 +9,18 @@ public class ProgrammingTool : ToolBase {
     [SerializeField]LuaCanvasManager _luaManager;
     GameObject World;
 
-    public override void Activate(GameObject obj) {
-        if (obj.tag != "Programmable")return;
+    public override void Activate(GameObject obj)
+    {
+        //if (obj.tag != "Programmable")return;
         if (_manager==null)_manager = FindObjectOfType<BehaviourManager>();
         RaycastHit hit;
-        if(Physics.Raycast(obj.transform.position, obj.transform.forward, out hit, 10)){
-            _manager.AddBehaviour(hit.collider.gameObject);
+        int layermask = 1<<8;
+        layermask = ~layermask;
+        if(Physics.Raycast(obj.transform.position, obj.transform.forward, out hit, 10,layermask)){
+            if (hit.collider.gameObject.tag == "Programmable")
+            {
+                _manager.AddBehaviour(hit.collider.gameObject);
+            }
         }
     }
 

@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEditor.SceneManagement;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class LuaCanvasManager : MonoBehaviour {
 
@@ -50,35 +53,55 @@ public class LuaCanvasManager : MonoBehaviour {
     }
 
     public void CreateFile() {
-        LuaBehaviour lua = null;
-        bool found = false;
-        lua = currentObject.GetComponent<LuaBehaviour>();
-        if ( lua != null ) {
-            LuaBehaviour[] luaBehaviours = currentObject.GetComponents<LuaBehaviour>();
-            foreach ( LuaBehaviour _lua in luaBehaviours ) {
-                if ( filename != _lua.filename ) continue;
-                lua = _lua;
-                //source = lua.source;
-                found = true;
-                break;
-                
-            }
-        }
-        LuaCSharpFunctions csharp = currentObject.GetComponent<LuaCSharpFunctions>();
-        if ( csharp != null ) {
-            csharp.Invalidate();
-        } else {
-            csharp = currentObject.AddComponent<LuaCSharpFunctions>();
-        }
+        ScriptsCheck scriptCheck = new ScriptsCheck();
+        Debug.Log(_luaSource.text);
+        Debug.Log(source);
+        bool? canCreate = scriptCheck.CompareFiles(_luaSource.text, EditorApplication.currentScene.Replace("Assets/Scenes", "").Replace(".unity", "") + currentObject.gameObject.name);
+        if (canCreate == true || canCreate == null)
+        {
+            LuaBehaviour lua = null;
+            bool found = false;
+            lua = currentObject.GetComponent<LuaBehaviour>();
+            if (lua != null)
+            {
+                LuaBehaviour[] luaBehaviours = currentObject.GetComponents<LuaBehaviour>();
+                foreach (LuaBehaviour _lua in luaBehaviours)
+                {
+                    if (filename != _lua.filename) continue;
+                    lua = _lua;
+                    //source = lua.source;
+                    found = true;
+                    break;
 
-        if ( lua == null || !found) {
-            lua = currentObject.AddComponent<LuaBehaviour>();
-            _behaviourManager.AddLuaBehaviour(lua);
-            LuaBehaviour.CreateLuaScriptForObject(currentObject, lua, filename);
+                }
+            }
+            LuaCSharpFunctions csharp = currentObject.GetComponent<LuaCSharpFunctions>();
+            if (csharp != null)
+            {
+                csharp.Invalidate();
+            }
+            else
+            {
+                csharp = currentObject.AddComponent<LuaCSharpFunctions>();
+            }
+
+            if (lua == null || !found)
+            {
+                lua = currentObject.AddComponent<LuaBehaviour>();
+                _behaviourManager.AddLuaBehaviour(lua);
+                LuaBehaviour.CreateLuaScriptForObject(currentObject, lua, filename);
+            }
+            lua.SaveLua(source, filename);
+            Disable();
+            _behaviourManager.Cancel();
+            if (canCreate == null)
+            {
+                SceneManager.LoadScene("Level1");
+            }
+            scriptCheck.NextLevelCheck(source);
         }
-        lua.SaveLua(source, filename);
-        Disable();
-        _behaviourManager.Cancel();
+        else
+        { Debug.Log("The files are not the same"); }
 
     }
 

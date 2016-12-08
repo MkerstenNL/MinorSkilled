@@ -1,0 +1,1 @@
+Elevator:TeleportUp(10)
