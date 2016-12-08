@@ -14,6 +14,7 @@ public class ScriptFactory : MonoBehaviour {
 
     private void fillDict() {
         _scriptList.Add("Transform", typeof(TransformLuaLink));
+        _scriptList.Add("RigidBody", typeof(RigidBodyLink));
 
     }
 

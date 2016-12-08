@@ -19,7 +19,7 @@ function Transform:Turn(x,y,z)
 		if(x=="Up")then
 			TransformC.Rotate(1, 0, 0, -90)
 		elseif(x=="Down")then
-			TransformC.Rotate(1,0,0,90)
+			TransformC.Rotate(1, 0, 0, 90)
 		elseif(x=="Left")then
 			TransformC.Rotate(0,1,0,-90)
 		elseif(x=="Right")then

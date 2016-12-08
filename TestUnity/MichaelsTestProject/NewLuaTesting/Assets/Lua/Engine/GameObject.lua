@@ -1,21 +1,16 @@
 GameObject = {}
+
 GameObject.x = 0;
 function GameObject:Start ()
 	
 	GameObjectC.Log ("GameObject")
 	GameObjectC.Log ("Calling function")
-	message = GameObject.NewScript(self,"Transform")
+	message = GameObject.NewScript(self,"RigidBody")
 	GameObjectC.Log (message)
-	
+	RigidBody:Move("Forward", 10, 100)
 end
 
 function GameObject:Update ()
-	GameObjectC.Log("StartUpdate")
-	local message = Transform:Teleport ("Up", 0.02)
-	local message2 = Transform:Turn (1)
-	GameObjectC.Log(message2)
-	GameObjectC.Log(message)
-	GameObjectC.Log("End Update")
 
 end
 
@@ -27,8 +22,6 @@ function GameObject:NewScript (name)
 		
 		GameObjectC.Log (message)
 		GameObjectC.Log (table)
-		
-		Transform:Start ()
 		return "Succes" 
 	else
 		return "NewComponent expects a string"
@@ -36,8 +29,3 @@ function GameObject:NewScript (name)
 end
 
 return GameObject
-
---[[--]]
-
-
-
