@@ -72,12 +72,14 @@
      <Compile Include="Assets\KeraLua\NativeMethods.cs" />
      <Compile Include="Assets\KeraLua\Platform\CLSCompliantAttribute.cs" />
      <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\CreateObjectFromLua.cs" />
+     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\DontDestroyScript.cs" />
      <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\FlagVictory.cs" />
      <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\IsClickedOnMouse.cs" />
      <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\LuaCSharpFunctions.cs" />
      <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\LuaContainerOfObject.cs" />
      <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\OnGUIScript.cs" />
      <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\SaveCurrentScene.cs" />
+     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\ScriptsCheck.cs" />
      <Compile Include="Assets\MichaelTestSceneAssets\CustomBehaviour.cs" />
      <Compile Include="Assets\MichaelTestSceneAssets\MainMenu.cs" />
      <Compile Include="Assets\MichaelTestSceneAssets\MovementBehaviour.cs" />
@@ -160,6 +162,7 @@
      <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+     <None Include="Assets\MichaelBossinksTestSceneAssets\3DText.shader" />
      <None Include="Assets\UnityChan\license.txt" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />

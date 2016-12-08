@@ -213,4 +213,15 @@ public class LuaCSharpFunctions : MonoBehaviour {
     public void Invalidate() {
         objectManager.ClearList();
     }
+
+    public void Open()
+    {
+
+    }
+
+    public void TeleportUp(float pDistance)
+    {
+        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + pDistance, this.transform.position.z);
+    }
 }
+
