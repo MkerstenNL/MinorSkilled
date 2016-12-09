@@ -30,6 +30,7 @@ public class MovementScript : MonoBehaviour {
                 _rigidBody = gameObject.AddComponent<Rigidbody>();
             }
         }
+        _rigidBody.useGravity = false;
         MovementData m = new MovementData();
         m.speed = speed;
         m.time = timeInSeconds;
@@ -46,7 +47,7 @@ public class MovementScript : MonoBehaviour {
 
     void FixedUpdate() {
         Vector3 newVec = Vector3.zero;
-        newVec.y = _rigidBody.velocity.y;
+        //newVec.y = _rigidBody.velocity.y;
         int j = -1;
         for ( int i = 0; i < _movements.Count; i++ ) {
             MovementData m = _movements[i];

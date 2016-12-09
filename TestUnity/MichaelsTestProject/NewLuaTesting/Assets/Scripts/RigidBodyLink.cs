@@ -28,6 +28,7 @@ public class RigidBodyLink : LuaLink {
         regFunction("RigidBodyC", "IsMoving",       IsMoving);
         regFunction("RigidBodyC", "GetDirection",   GetDirection);
         regFunction("RigidBodyC", "Move",           Move);
+        regFunction("RigidBodyC", "MoveToTarget",   MoveToTarget);
         regFunction("RigidBodyC", "UseGravity",     UseGravity);
         regFunction("RigidBodyC", "GetPosition",    GetPosition);
         foreach ( KeyValuePair<string, List<NameFuncPair>> lib in _libs ) {
@@ -37,6 +38,11 @@ public class RigidBodyLink : LuaLink {
     }
 
     public int IsMoving(ILuaState state) {
+        if ( state.GetTop() != 1 ) {
+            state.SetTop(0);
+            _lua.PushString("Invalid amount of parameters");
+            return 1;
+        }
         float mag = _rigidBody.velocity.magnitude;
         bool val = mag > 0 ? true : false;
         _lua.PushBoolean(val);
@@ -76,7 +82,8 @@ public class RigidBodyLink : LuaLink {
             break;
 
             default:
-            state.PushString("invalid parameter");
+            _lua.SetTop(0);
+            _lua.PushString("invalid parameter");
             return 1;
         }
         _lua.SetTop(0);
@@ -91,6 +98,7 @@ public class RigidBodyLink : LuaLink {
         if ( state.GetTop() != 5 ) {
             state.SetTop(0);
             _lua.PushString("Invalid amount of parameters");
+            return 1;
         }
         float distance = (float) _lua.ToNumber(5);
         float speed = (float)_lua.ToNumber(4);
@@ -109,6 +117,7 @@ public class RigidBodyLink : LuaLink {
         if ( state.GetTop() != 4 ) {
             state.SetTop(0);
             _lua.PushString("Invalid amount of parameters");
+            return 1;
         }
         float speed = (float) _lua.ToNumber(4);
         float posz = (float) _lua.ToNumber(3);
@@ -117,8 +126,9 @@ public class RigidBodyLink : LuaLink {
         Vector3 targetPos = new Vector3(posx, posy, posz);
         float distance = (this.transform.position - targetPos).magnitude;
         float time = distance / speed;
-
-        _movement.Init(speed, targetPos - transform.position, time);
+        if ( _movement == null )
+            _movement = gameObject.AddComponent<MovementScript>();
+        _movement.Init(speed, (targetPos - transform.position).normalized, time);
         _lua.SetTop(0);
         _lua.PushString("Operation succesful");
         return 1;
@@ -128,6 +138,7 @@ public class RigidBodyLink : LuaLink {
         if ( state.GetTop() != 1 ) {
             state.SetTop(0);
             _lua.PushString("Invalid amount of parameters");
+            return 1;
         }
         bool gravity = _lua.ToBoolean(1);
         _rigidBody.useGravity = gravity;

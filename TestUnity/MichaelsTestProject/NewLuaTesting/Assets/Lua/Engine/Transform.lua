@@ -31,12 +31,17 @@ function Transform:Turn(x,y,z)
 	elseif (type(x)=="number" and y == nil)then
 		TransformC.Rotate(0,1,0,x)
 		return "rotation succesfull"
-	elseif(x~=nil and y~=nil and z~=nil)then
-		rotx,roty,rotz = TransformC.GetRotation()
-		rotx = rotx+x
-		roty= roty+y
-		rotz= rotz+z
-		TransformC.SetRotation(rotx,roty,rotz)
+	elseif(type(x)=="number" and type(y)=="number" and type(z)=="number")then
+		TransformC.Rotate(1,0,0,x)
+		TransformC.Rotate(0,1,0,y)
+		TransformC.Rotate(0,0,1,z)
+		return "succes"
+		
+	--rotx,roty,rotz = TransformC.GetRotation()
+	--rotx = rotx+x
+	--roty = roty+y
+	--rotz = rotz+z
+	--TransformC.SetRotation(rotx,roty,rotz)
 	end
 
 	return "Invalid amounts of parameters"

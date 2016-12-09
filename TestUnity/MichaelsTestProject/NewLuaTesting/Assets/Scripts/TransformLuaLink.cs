@@ -28,6 +28,7 @@ public class TransformLuaLink : LuaLink {
         regFunction("TransformC", "Log", Log);
         regFunction("TransformC", "Rotate", Rotate);
         regFunction("TransformC", "SetPosition", SetPosition);
+        regFunction("TransformC", "SetRotation", SetRotation);
         regFunction("TransformC", "GetPosition", GetPosition);
         regFunction("TransformC", "GetRotation", GetRotation);
         regFunction("TransformC", "GetDirection", GetDirection);
@@ -127,6 +128,24 @@ public class TransformLuaLink : LuaLink {
         this.transform.position = newPos;
         _lua.SetTop(0);
         _lua.PushString("Position Set");
+        return 1;
+    }
+
+    public int SetRotation(ILuaState state) {
+        if ( state.GetTop() != 3 ) {
+            _lua.SetTop(0);
+            _lua.PushString("Incorrect number of arguments");
+            return 1;
+        }
+        Debug.Log("Setting Rotation");
+        Vector3 newRot = Vector3.zero;
+        newRot.z = (float) _lua.ToNumber(3);
+        newRot.y = (float) _lua.ToNumber(2);
+        newRot.x = (float) _lua.ToNumber(1);
+        transform.rotation.SetEulerAngles(newRot);
+        _lua.SetTop(0);
+        _lua.PushString("Position Set");
+        return 1;
         return 1;
     }
 }
