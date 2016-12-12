@@ -1,0 +1,47 @@
+﻿using UnityEngine;
+using System.Collections.Generic;
+using UniLua;
+using System;
+using System.IO;
+
+[RequireComponent(typeof(GameObjectLuaLink))]
+[RequireComponent(typeof(TopLevelLua))]
+public class Lualayer : MonoBehaviour {
+    ILuaState _lua;
+    GameObjectLuaLink _gameobjectLua;
+    [SerializeField]string luaLayerFile = "";
+	// Use this for initialization
+	void Start () {
+        GetAvailableFunctions();
+        Debug.Assert(luaLayerFile != "");
+        _gameobjectLua = GetComponent<GameObjectLuaLink>();
+        //_lua = _gameobjectLua.lua;
+        //_lua.L_DoFile(Environment.CurrentDirectory+"/Assets/Lua/LuaLayer/"+luaLayerFile+".lua");
+
+	}
+
+    public void Refresh() {
+        //ToDo
+    }
+
+    public List<string> GetAvailableFunctions() {
+        List<string> functions = new List<string>();
+        StreamReader sr = new StreamReader(Environment.CurrentDirectory + "/Assets/Lua/LuaLayer/" + luaLayerFile + ".lua");
+        string alltext = sr.ReadToEnd();
+        string[] textSplit = alltext.Split('\n');
+        for ( int i = 0; i <textSplit.Length; i++ ) {
+            string s = textSplit[i];
+            if ( s.StartsWith("function") ) {
+                functions.Add(s.Replace("function ", ""));
+                Debug.Log(functions[functions.Count - 1]);
+            }
+
+        }
+        return functions;
+    }
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}

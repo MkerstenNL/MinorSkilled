@@ -44,12 +44,4 @@ function RigidBody:Move (x,y,z, distance)
 
 end
 
-
-end
-
-function RigidBody:Up()
-	RigidBodyC.GetDirection("Up")
-end
-
-
 return RigidBody

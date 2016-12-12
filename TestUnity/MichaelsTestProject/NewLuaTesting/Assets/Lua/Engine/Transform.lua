@@ -4,11 +4,11 @@ function Transform:Start()
 	--WorldC.Log ("Test")
 	TransformC.Log ("Transform Initialized")
 	
+	
 end
 
 function Transform:Update()
 end
-
 
 function Transform:IsActive()
 

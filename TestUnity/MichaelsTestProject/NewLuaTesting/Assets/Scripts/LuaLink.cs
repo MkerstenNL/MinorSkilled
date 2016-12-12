@@ -7,12 +7,13 @@ using UniLua;
 
 public abstract class LuaLink : MonoBehaviour {
     protected ILuaState _lua = null;
+    public ILuaState lua {
+        get{return _lua;}
+    }
     protected Dictionary<string, List<NameFuncPair>> _libs = new Dictionary<string, List<NameFuncPair>>();
     [SerializeField]protected string scriptLocation = "";
-    [SerializeField]
-    protected string scriptName = "";
+    [SerializeField]protected string scriptName = "";
     protected abstract void registerFunctions();
-    protected  LuaTable luaclass = null;
 
     protected void regFunction(string className, string functionName, CSharpFunctionDelegate function) {
         if ( !_libs.ContainsKey(className) ) {
