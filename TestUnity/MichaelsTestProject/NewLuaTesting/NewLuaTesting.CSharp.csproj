@@ -65,9 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameObjectLuaLink.cs" />
     <Compile Include="Assets\Scripts\LuaLink.cs" />
+    <Compile Include="Assets\Scripts\Lualayer.cs" />
     <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\RigidBodyLink.cs" />
     <Compile Include="Assets\Scripts\ScriptFactory.cs" />
+    <Compile Include="Assets\Scripts\TopLevelLua.cs" />
     <Compile Include="Assets\Scripts\TransformLuaLink.cs" />
     <Compile Include="Assets\Scripts\WorldLua.cs" />
     <Compile Include="Assets\Scripts\WorldLuaLink.cs" />
