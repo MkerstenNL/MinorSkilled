@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewLuaTesting.CSharp", "NewLuaTesting.CSharp.csproj", "{A6C4090B-07DA-7476-0BA1-D57B39F70671}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{B8E08D80-C6AB-72EA-9CCD-92A7177A51DB}") = "NewLuaTesting", "Assembly-CSharp.csproj", "{A290D002-1B28-EB88-19C6-FD017DFC8A63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A6C4090B-07DA-7476-0BA1-D57B39F70671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6C4090B-07DA-7476-0BA1-D57B39F70671}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6C4090B-07DA-7476-0BA1-D57B39F70671}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6C4090B-07DA-7476-0BA1-D57B39F70671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A290D002-1B28-EB88-19C6-FD017DFC8A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A290D002-1B28-EB88-19C6-FD017DFC8A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A290D002-1B28-EB88-19C6-FD017DFC8A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A290D002-1B28-EB88-19C6-FD017DFC8A63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
