@@ -6,13 +6,13 @@ function GameObject:Start ()
 	GameObjectC.Log ("GameObject")
 	GameObjectC.Log ("Calling function")
 	message = GameObject.NewScript (self, "RigidBody")
-	message= GameObject:NewScript("Transform")
+	message = GameObject:NewScript("Transform")
 	GameObjectC.Log (message)
-	RigidBody:Move("Forward",5)
+	--RigidBody:Move("Forward",5)
 end
 
 function GameObject:Update ()
-	Transform:Turn(2,10,1)
+	--Transform:Turn(2,10,1)
 end
 
 function GameObject:NewScript (name)
