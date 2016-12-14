@@ -7,11 +7,6 @@ using System;
 public class ScriptFactory : MonoBehaviour {
     private Dictionary<string, Type> _scriptList = new Dictionary<string, Type>();
 
-    void Awake() {
-        fillDict();
-
-    }
-
     private void fillDict() {
         _scriptList.Add("Transform", typeof(TransformLuaLink));
         _scriptList.Add("RigidBody", typeof(RigidBodyLink));
@@ -19,7 +14,8 @@ public class ScriptFactory : MonoBehaviour {
     }
 
     public Type GetScriptType(string name) {
-        
+        if ( _scriptList.Count == 0 )
+            fillDict();
         try {
             return _scriptList[name];
         } catch(Exception e) {

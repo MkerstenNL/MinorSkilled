@@ -69,7 +69,7 @@ public abstract class LuaLink : MonoBehaviour {
             _lua.PushString("incorrect number of arguments");
             return 1;
         }
-        object message = state.ToObject(1);
+        object message = state.ToObject(-1);
         Debug.Log("Test");
         Debug.Log(message.ToString());
         _lua.SetTop(0);
