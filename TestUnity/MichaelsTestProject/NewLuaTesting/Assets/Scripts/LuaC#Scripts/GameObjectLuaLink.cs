@@ -9,16 +9,21 @@ public class GameObjectLuaLink : LuaLink {
     
 	// Use this for initialization
 	void Start () {
-        init();
+        //init();
         Debug.Assert(scriptName != "");
         _scriptFactory = GameObject.FindGameObjectWithTag("ScriptManager").GetComponent<ScriptFactory>();
-        CallLuaFunction("GameObject", "Start");
+        //CallLuaFunction("GameObject", "Start");
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if ( _lua == null ) return;
         CallLuaFunction("GameObject","Update");
 	}
+    public override void init() {
+        base.init();
+        CallLuaFunction("GameObject", "Start");
+    }
     ////////////////////////////////////////
     /// LuaFunctions
     ////////////////////////////////////////
@@ -40,7 +45,7 @@ public class GameObjectLuaLink : LuaLink {
             _lua.PushString("this function needs 1 parameter.");
             return 1;
         }
-        string s = state.ToString(1);
+        string s = state.ToString(-1);
         Type t = _scriptFactory.GetScriptType(s);
         if ( t == null ) {
             _lua.SetTop(0);

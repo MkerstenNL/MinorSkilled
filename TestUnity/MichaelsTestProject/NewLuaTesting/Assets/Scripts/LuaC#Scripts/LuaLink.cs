@@ -44,7 +44,7 @@ public abstract class LuaLink : MonoBehaviour {
     /// <summary>
     /// can be overwritten but make sure to call the base first!
     /// </summary>
-    protected virtual void init() {
+    public virtual void init() {
         _lua = new LuaState();
         //_lua.L_LoadFile(Environment.CurrentDirectory + "/Assets/Lua/" + scriptLocation + "/" + scriptName + ".lua");
         _lua.L_DoFile(Environment.CurrentDirectory + "/Assets/Lua/"+scriptLocation + "/" + scriptName+".lua");
