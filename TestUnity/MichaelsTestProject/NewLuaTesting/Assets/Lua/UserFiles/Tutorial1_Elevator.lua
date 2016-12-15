@@ -1,3 +1,3 @@
 Function Start()
-	Transform: Turn(90)
+	Elevator:TeleportUp(10)
 end
