@@ -1,13 +1,10 @@
 GameObject = {}
-
-GameObject.x = 0;
 function GameObject:Start ()
 	
-	GameObjectC.Log ("GameObject")
-	GameObjectC.Log ("Calling function")
-	message = GameObject.NewScript (self, "RigidBody")
-	message = GameObject:NewScript("Transform")
-	GameObjectC.Log (message)
+	GameObjectC.Log ("GameObject Initialized")
+	--message = GameObject.NewScript (self, "RigidBody")
+	--message = GameObject:NewScript("Transform")
+	--GameObjectC.Log (message)
 	--RigidBody:Move("Forward",5)
 end
 

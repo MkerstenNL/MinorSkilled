@@ -20,7 +20,15 @@ public class Lualayer : MonoBehaviour {
 
 	}
 
-    public void Refresh() {
+    public void Init() {
+        _gameobjectLua.init();
+        _lua = _gameobjectLua.lua;
+        _lua.L_DoFile(Environment.CurrentDirectory + "/Assets/Lua/LuaLayer/" + luaLayerFile + ".lua");
+        _lua.GetGlobal(luaLayerFile);
+        _lua.GetField(1,"Start");
+        if(_lua.IsFunction(-1)){
+            _lua.PCall(0, 0, 0);
+        }
         //ToDo
     }
 

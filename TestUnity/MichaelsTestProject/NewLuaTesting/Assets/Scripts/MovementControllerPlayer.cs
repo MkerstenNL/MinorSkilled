@@ -9,16 +9,18 @@ public class MovementControllerPlayer : MonoBehaviour {
     // Use this for initialization
     void Start() {
         _rigidBody = GetComponent<Rigidbody>();
-        programmingTool = ScriptableObject.CreateInstance<ProgrammingTool>(); 
+        programmingTool = GetComponent<ProgrammingTool>();
     }
 
     void Update() {
+        if(CanvasManager.UsingHud)return;
         rotate();
         mouseInput();
     }
 
     // Update is called once per frame
     void FixedUpdate() {
+        if(CanvasManager.UsingHud)return;
         movement();
         
         
