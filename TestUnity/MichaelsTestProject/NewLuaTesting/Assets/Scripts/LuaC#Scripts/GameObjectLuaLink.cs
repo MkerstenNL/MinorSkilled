@@ -24,6 +24,19 @@ public class GameObjectLuaLink : LuaLink {
         base.init();
         CallLuaFunction("GameObject", "Start");
     }
+
+    public int GetGlobalFromOtherState(ILuaState otherstate) {
+        otherstate.SetTop(0);//safety measure
+        _lua.GetGlobal("GameObject");
+        _lua.XMove(otherstate, 1);
+        return 1;
+    }
+
+
+
+
+
+
     ////////////////////////////////////////
     /// LuaFunctions
     ////////////////////////////////////////
@@ -38,6 +51,8 @@ public class GameObjectLuaLink : LuaLink {
         }
 
     }
+
+
 
     public int NewComponent(ILuaState state) {
         if ( state.GetTop() != 1 ) {
@@ -55,8 +70,9 @@ public class GameObjectLuaLink : LuaLink {
             LuaLink l = gameObject.AddComponent(t) as LuaLink;
             l.init(_lua);
             //_lua.PushGlobalTable();
+            _lua.SetGlobal(s);
             //Debug.Log(_lua.GetTop());
-            _lua.SetTop(1);
+            //_lua.SetTop(1);
             _lua.PushString("Operation Successful");
             return 2;
         }

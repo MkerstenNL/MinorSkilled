@@ -9,12 +9,16 @@ using System.IO;
 public class Lualayer : MonoBehaviour {
     ILuaState _lua;
     GameObjectLuaLink _gameobjectLua;
+    WorldLuaLink _world;
     [SerializeField]string luaLayerFile = "";
 	// Use this for initialization
 	void Start () {
         GetAvailableFunctions();
         Debug.Assert(luaLayerFile != "");
         _gameobjectLua = GetComponent<GameObjectLuaLink>();
+        _world = GameObject.FindGameObjectWithTag("World").GetComponent<WorldLuaLink>();
+        _lua = _world.GetWorld(_lua);
+        _lua.SetGlobal("World");
         //_lua = _gameobjectLua.lua;
         //_lua.L_DoFile(Environment.CurrentDirectory+"/Assets/Lua/LuaLayer/"+luaLayerFile+".lua");
 
