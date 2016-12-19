@@ -11,9 +11,9 @@ end
 function World:FindObject(name)
 
 end
---Derp
 
-World.Log ()
-World.log ()
+function World:LoadNewLevel(level)
+	WorldC.LoadLevel(level)
+end
 
 return World

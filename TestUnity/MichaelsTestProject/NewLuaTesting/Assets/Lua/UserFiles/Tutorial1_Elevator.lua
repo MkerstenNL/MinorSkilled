@@ -1,3 +1,3 @@
 Function Start()
-	Elevator:TeleportUp(10)
+	RigidBody:Move("Up",10)
 end
