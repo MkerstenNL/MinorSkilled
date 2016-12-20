@@ -4,7 +4,6 @@ using UniLua;
 using System;
 using System.IO;
 
-[RequireComponent(typeof(GameObjectLuaLink))]
 [RequireComponent(typeof(TopLevelLua))]
 public class Lualayer : MonoBehaviour {
     ILuaState _lua;
