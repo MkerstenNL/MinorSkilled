@@ -63,11 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CanvasManager.cs" />
+    <Compile Include="Assets\LuaInitializer.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\DontDestroyScript.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\ScriptsCheck.cs" />
     <Compile Include="Assets\SapphiArt\SapphiArtchan\Scripts\AnimationManagerUI.cs" />
     <Compile Include="Assets\SapphiArt\SapphiArtchan\Scripts\SapphiArtChan_AnimManager.cs" />
+    <Compile Include="Assets\Scripts\CanvasManager.cs" />
     <Compile Include="Assets\Scripts\LuaC#Scripts\GameObjectLuaLink.cs" />
     <Compile Include="Assets\Scripts\LuaC#Scripts\HUDLua.cs" />
     <Compile Include="Assets\Scripts\LuaC#Scripts\LuaLink.cs" />
