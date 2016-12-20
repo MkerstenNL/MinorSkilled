@@ -16,6 +16,9 @@ public class HUDLuaLink : LuaLink {
         base.init(state);
     }
 
+    void OnTriggerEnter(Collider trigger) {
+        //CallLuaFunction(GetComponent<TopLevelLua>().FileName)
+    }
 
     protected override void registerFunctions() {
         regFunction(scriptName + "C", "Log", Log);

@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\LuaInitializer.cs" />
+    <Compile Include="Assets\MessageSystem.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\DontDestroyScript.cs" />
     <Compile Include="Assets\MichaelBossinksTestSceneAssets\Scripts\ScriptsCheck.cs" />
     <Compile Include="Assets\SapphiArt\SapphiArtchan\Scripts\AnimationManagerUI.cs" />
