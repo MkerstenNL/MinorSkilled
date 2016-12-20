@@ -1,32 +1,37 @@
+--1 hint
+--0 message
 function OnHit(Hit)
-	if(Hit == "triggerDoorLevel1") then
-	HUD:Message("Try opening the door by typing Door:Open()")
+	if(Hit == "StartTrigger") then
+	HUD:Message("Try to escape the prison the door looks unguarded",0)
 	end
-	if(Hit == triggerWalkedThroughDoorLevel1) then
-	HUD:Message("Good Job. You used a function for an object. Is that a coin? Free money! Let's pick it up.")
+	if(Hit == "Door") then
+	HUD:Message("Try opening the door by typing Door:Open()",1)
 	end
-	if(Hit == TriggLevel1Coin) then
-	HUD:Message("Tip:Coin.PickUp()")
+	if(Hit == "triggerWalkedThroughDoorLevel1") then
+	HUD:Message("Good Job. You used a function for an object. Is that a coin? Free money! Let's pick it up.",0)
 	end
-	if(Hit == TriggerPickedUpCoin) then
-	HUD:Message("Nice you have some money now and again you used a function but for another object. Let's continue.")
+	if(Hit == "TriggLevel1Coin") then
+	HUD:Message("Tip:Coin.PickUp()",1)
 	end
-	if(Hit == triggerWaterLevel3) then
-	HUD:Message("The boat is coming our way. Someone is trying to help you. How does the boat operate?")
+	if(Hit == "TriggerPickedUpCoin") then
+	HUD:Message("Nice you have some money now and again you used a function but for another object. Let's continue.",0)
 	end
-	if(Hit == triggerWaterBoatLevel3) then
-	HUD:Message("Hee, someone programmed the boat that is was going in your direction. Now you need to go the opposite direction.")
+	if(Hit == "triggerWaterLevel3") then
+	HUD:Message("The boat is coming our way. Someone is trying to help you. How does the boat operate?",0)
 	end
-	if(Hit == triggerWaterBoatEndLevel3) then
-	HUD:Message("Using a function with parameters. Nice! but what did the text and number show you? The text was the direction and the number the amount in meters.")
+	if(Hit == "Boat") then
+	HUD:Message("Hee, someone programmed the boat that is was going in your direction. Now you need to go the opposite direction.",1)
 	end
-	if(Hit == triggerLevel4) then
-	HUD:Message("Did you see that? I think I saw a coin on the way here. That's unfair you weren't able to get there. Maybe you can go Toward the Coin, but how to get back? You can continue if you want to.")
+	if(Hit == "triggerWaterBoatEndLevel3") then
+	HUD:Message("Using a function with parameters. Nice! but what did the text and number show you? The text was the direction and the number the amount in meters.",0)
 	end
-	if(Hit == triggerLevelCoin4) then
-	HUD:Message("So you went for the coin and used the gameobject. But how to get back. If there is forward and backwards. Maybe there is also right and left. Try more then just one line of code.")
+	if(Hit == "triggerLevel4") then
+	HUD:Message("Did you see that? I think I saw a coin on the way here. That's unfair you weren't able to get there. Maybe you can go Toward the Coin, but how to get back? You can continue if you want to.",0)
 	end
-	if(Hit == triggerLevelCoinEnd4) then
-	HUD:Message("You were able to get back. You used 2 lines of code. Now you know that there is more than only one line. Don't forget the choice that you made! Some functions gives you also a choice. Instead of direction you gave an object.")
+	if(Hit == "TriggerLevel4Coin") then
+	HUD:Message("So you went for the coin and used the gameobject. But how to get back. If there is forward and backwards. Maybe there is also right and left. Try more then just one line of code.",1)
+	end
+	if(Hit == "triggerLevelCoinEnd4") then
+	HUD:Message("You were able to get back. You used 2 lines of code. Now you know that there is more than only one line. Don't forget the choice that you made! Some functions gives you also a choice. Instead of direction you gave an object.",0)
 	end
 end
