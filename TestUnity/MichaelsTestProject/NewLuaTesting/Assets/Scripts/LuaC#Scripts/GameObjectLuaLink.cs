@@ -32,15 +32,9 @@ public class GameObjectLuaLink : LuaLink {
         return 1;
     }
 
-
-
-
-
-
     ////////////////////////////////////////
     /// LuaFunctions
     ////////////////////////////////////////
-
 
     protected override void registerFunctions() {
         regFunction(scriptName + "C", "Log", Log);
@@ -51,8 +45,6 @@ public class GameObjectLuaLink : LuaLink {
         }
 
     }
-
-
 
     public int NewComponent(ILuaState state) {
         if ( state.GetTop() != 1 ) {
@@ -77,6 +69,4 @@ public class GameObjectLuaLink : LuaLink {
             return 2;
         }
     }
-
-
 }
