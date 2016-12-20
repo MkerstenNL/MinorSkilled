@@ -1,1 +1,1 @@
-Door:Close()
+Door:Open()
