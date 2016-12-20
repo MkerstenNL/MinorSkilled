@@ -1,7 +1,6 @@
 function Start()
-	Door:Open()
+HUD:Message("test")
 end
 
 function Update()
-
 end

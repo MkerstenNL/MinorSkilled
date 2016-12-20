@@ -69,6 +69,7 @@
     <Compile Include="Assets\SapphiArt\SapphiArtchan\Scripts\AnimationManagerUI.cs" />
     <Compile Include="Assets\SapphiArt\SapphiArtchan\Scripts\SapphiArtChan_AnimManager.cs" />
     <Compile Include="Assets\Scripts\LuaC#Scripts\GameObjectLuaLink.cs" />
+    <Compile Include="Assets\Scripts\LuaC#Scripts\HUDLua.cs" />
     <Compile Include="Assets\Scripts\LuaC#Scripts\LuaLink.cs" />
     <Compile Include="Assets\Scripts\LuaC#Scripts\Lualayer.cs" />
     <Compile Include="Assets\Scripts\LuaC#Scripts\MovementScript.cs" />
