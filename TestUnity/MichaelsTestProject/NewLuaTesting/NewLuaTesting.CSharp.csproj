@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\LuaC#Scripts\WorldLuaLink.cs" />
     <Compile Include="Assets\Scripts\MovementControllerPlayer.cs" />
     <Compile Include="Assets\Scripts\ProgrammingTool.cs" />
+    <Compile Include="Assets\StartLuaPlayer.cs" />
     <Compile Include="Assets\UniLua\ByteString.cs" />
     <Compile Include="Assets\UniLua\Coder.cs" />
     <Compile Include="Assets\UniLua\Common.cs" />

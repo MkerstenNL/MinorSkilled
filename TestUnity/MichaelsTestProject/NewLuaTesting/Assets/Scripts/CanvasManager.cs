@@ -8,6 +8,10 @@ public class CanvasManager : MonoBehaviour {
     public static bool UsingHud = false;
     TopLevelLua currentLuaFile  = null;
 
+    void LateStart() {
+        gameObject.SetActive(false);
+    }
+
     public void LoadScript(TopLevelLua _lua) {
         UsingHud = true;
         this.gameObject.SetActive(true);

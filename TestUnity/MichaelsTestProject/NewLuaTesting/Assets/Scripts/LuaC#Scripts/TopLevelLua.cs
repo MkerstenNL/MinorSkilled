@@ -10,11 +10,16 @@ public class TopLevelLua : MonoBehaviour {
     [SerializeField]
     string topLevelFile = "";
     Lualayer _layer;
+    public string file {
+        get {
+            return topLevelFile;
+        }
+    }
     public string FileName {
         get {return Environment.CurrentDirectory + "/Assets/Lua/UserFiles/" + topLevelFile + ".lua";}
     }
     // Use this for initialization
-    void Init () {
+    public void Init () {
         Debug.Assert(topLevelFile != "");
         _gameobjectLua = GetComponent<GameObjectLuaLink>();
         
@@ -28,11 +33,13 @@ public class TopLevelLua : MonoBehaviour {
         }
         
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    // Update is called once per frame
+    void Update() {
+
+    }
+
+
 
     public string GetFile() {
         Debug.Assert(topLevelFile != "");
