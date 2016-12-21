@@ -7,8 +7,13 @@ using UnityEngine.UI;
 
 public class HUDLuaLink : LuaLink {
 
-    [SerializeField]InputField HintField;
-    [SerializeField]InputField MessageField;
+    [SerializeField]InputField hintField;
+    [SerializeField]MessageSystem messageField;
+
+    void Start() {
+        hintField = GameObject.FindGameObjectWithTag("hintfield").GetComponent<InputField>();
+        messageField = GameObject.FindGameObjectWithTag("Message").GetComponent<MessageSystem>();
+    }
 
     public override void init(ILuaState state) {
         scriptLocation = "Engine";
@@ -17,7 +22,11 @@ public class HUDLuaLink : LuaLink {
     }
 
     void OnTriggerEnter(Collider trigger) {
-        //CallLuaFunction(GetComponent<TopLevelLua>().FileName)
+        _lua.GetGlobal("OnHit");
+        if ( _lua.IsFunction(-1) ) {
+            _lua.PushString(trigger.gameObject.name);
+            _lua.PCall(1, 0, 0);
+        }
     }
 
     protected override void registerFunctions() {
@@ -32,12 +41,13 @@ public class HUDLuaLink : LuaLink {
 
     public int SetMessage(ILuaState state) {
         string message = state.ToString(-1);
-        //set it in the hud
+        messageField.SetMessage(message);
         return 0;
     }
 
     public int SetHint(ILuaState state) {
         string message = state.ToString(-1);
+        hintField.GetComponentInChildren<Text>().text = message;
         return 0;
     }
 }

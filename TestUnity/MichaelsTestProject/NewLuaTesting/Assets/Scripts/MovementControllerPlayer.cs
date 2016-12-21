@@ -15,7 +15,6 @@ public class MovementControllerPlayer : MonoBehaviour {
     void Update() {
         if(CanvasManager.UsingHud)return;
         rotate();
-        mouseInput();
     }
 
     // Update is called once per frame
@@ -51,12 +50,5 @@ public class MovementControllerPlayer : MonoBehaviour {
         } else if ( _cam.transform.rotation.eulerAngles.x < 300 && _cam.transform.rotation.eulerAngles.x > 120 ) {
             _cam.transform.rotation = Quaternion.Euler(new Vector3(300, 0, 0));
         }
-    }
-
-    void mouseInput() {
-        if ( Input.GetMouseButtonDown(0) ) {
-            programmingTool.Activate(this.gameObject);
-        }
-
     }
 }
