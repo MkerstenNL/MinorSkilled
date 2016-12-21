@@ -23,7 +23,7 @@ public class PlayerHitScript : LuaLink
         Message("Good Job. You used a function for an object. Is that a coin? Free money! Let's pick it up.", 0);
         }
 
-        if (other.gameObject.name == "TriggLevel1Coin")
+        if (other.gameObject.name == "Coin")
         {
          Message("Tip:Coin.PickUp()", 1);
         }
@@ -61,6 +61,7 @@ public class PlayerHitScript : LuaLink
     }
     void Message(string message, int tip)
     {
+        Debug.Log(message);
         if (tip == 1)
         {
             //Debug.Log(GameObject.Find("Tip"));
