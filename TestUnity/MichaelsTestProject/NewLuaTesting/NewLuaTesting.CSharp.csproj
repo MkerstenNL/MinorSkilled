@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\PlayerHitScript.cs" />
     <Compile Include="Assets\Scripts\ProgrammingTool.cs" />
     <Compile Include="Assets\Scripts\WaterDeathScript.cs" />
+    <Compile Include="Assets\StartLuaPlayer.cs" />
     <Compile Include="Assets\UniLua\ByteString.cs" />
     <Compile Include="Assets\UniLua\Coder.cs" />
     <Compile Include="Assets\UniLua\Common.cs" />

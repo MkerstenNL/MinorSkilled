@@ -1,3 +1,2 @@
-Function Start()
-	RigidBody:Move("Up",10)
-end
+Boat:Move("Back",10)
+

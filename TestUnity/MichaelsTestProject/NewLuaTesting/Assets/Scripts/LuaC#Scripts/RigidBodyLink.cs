@@ -56,7 +56,7 @@ public class RigidBodyLink : LuaLink {
             return 1;
         }
         Vector3 dir = Vector3.zero;
-        switch ( state.ToString(1) ) {
+        switch ( state.ToString(-1) ) {
             case "Up":
             dir = Vector3.up;
             break;
@@ -119,10 +119,10 @@ public class RigidBodyLink : LuaLink {
             _lua.PushString("Invalid amount of parameters");
             return 1;
         }
-        float speed = (float) _lua.ToNumber(4);
-        float posz = (float) _lua.ToNumber(3);
-        float posy = (float) _lua.ToNumber(2);
-        float posx = (float) _lua.ToNumber(1);
+        float speed = (float) _lua.ToNumber(-4);
+        float posz = (float) _lua.ToNumber(-3);
+        float posy = (float) _lua.ToNumber(-2);
+        float posx = (float) _lua.ToNumber(-1);
         Vector3 targetPos = new Vector3(posx, posy, posz);
         float distance = (this.transform.position - targetPos).magnitude;
         float time = distance / speed;

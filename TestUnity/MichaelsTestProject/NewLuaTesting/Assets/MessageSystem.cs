@@ -7,7 +7,7 @@ public class MessageSystem : MonoBehaviour {
     int timer = 0;
     // Use this for initialization
 	void Awake () {
-        timer = 100;
+       // timer = 100;
 	}
 
     public void SetMessage(string message) {
@@ -20,7 +20,7 @@ public class MessageSystem : MonoBehaviour {
 	void Update () {
         timer--;
         if ( timer < 0 ) {
-            gameObject.SetActive(false);
+           // gameObject.SetActive(false);
         }
 	}
 }

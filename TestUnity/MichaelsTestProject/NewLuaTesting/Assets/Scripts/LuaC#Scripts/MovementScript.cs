@@ -39,7 +39,7 @@ public class MovementScript : MonoBehaviour {
     }
 
     void OncollisionEnter(Collider col) {
-        if ( col.gameObject.tag == "MoveableObject" ) return;
+       // if ( col.gameObject.tag == "MoveableObject" ) return;
         lastHit = col.gameObject.name;
         _movements.Clear();
 
