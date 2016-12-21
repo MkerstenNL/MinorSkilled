@@ -10,8 +10,8 @@ public class HUDLuaLink : LuaLink {
     [SerializeField]InputField hintField;
     [SerializeField]MessageSystem messageField;
 
-    void Start() {
-        hintField = GameObject.FindGameObjectWithTag("hintfield").GetComponent<InputField>();
+    void Awake() {
+        hintField = GameObject.FindGameObjectWithTag("HintField").GetComponent<InputField>();
         messageField = GameObject.FindGameObjectWithTag("Message").GetComponent<MessageSystem>();
     }
 

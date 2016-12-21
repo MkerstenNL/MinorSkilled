@@ -18,7 +18,7 @@ public class GameObjectLuaLink : LuaLink {
 	// Update is called once per frame
 	void Update () {
         if ( _lua == null ) return;
-        CallLuaFunction("GameObject","Update");
+        //CallLuaFunction("GameObject","Update");
 	}
     public override void init() {
         base.init();

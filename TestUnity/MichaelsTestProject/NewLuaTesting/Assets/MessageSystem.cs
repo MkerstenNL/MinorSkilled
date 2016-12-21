@@ -6,8 +6,8 @@ public class MessageSystem : MonoBehaviour {
     [SerializeField]InputField _input;
     int timer = 0;
     // Use this for initialization
-	void LateStart () {
-        gameObject.SetActive(false);
+	void Awake () {
+        timer = 100;
 	}
 
     public void SetMessage(string message) {
