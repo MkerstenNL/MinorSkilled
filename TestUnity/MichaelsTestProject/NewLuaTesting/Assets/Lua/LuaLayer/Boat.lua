@@ -1,13 +1,15 @@
-Elevator = {}
-
-function Elevator:Start()
-	GameObjectC.Log("Adding Transform from Elevator")
-	GameObject:NewScript("Transform")
+Boat = {}
+function Boat:Start()
+	GameObjectC.Log("Adding Transform from Door")
+	GameObject:NewScript("RigidBody")
 	--World:Start()
 end
 
-function Elevator:Update()
+function Boat:Update()
 
 end
 
-return Elevator
+function Boat:Move(direction,speed)
+RigidBody:Move("Back",10)
+end
+return Boat

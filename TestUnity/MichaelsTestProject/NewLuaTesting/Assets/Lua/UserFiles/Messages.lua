@@ -1,7 +1,7 @@
 --1 hint
 --0 message
-
-function OnHit(Hit)
+Hit = ""
+function OnHit()
 	if(Hit == "StartTrigger") then
 	HUD:Message("Try to escape the prison the door looks unguarded",0)
 	end
@@ -36,4 +36,3 @@ function OnHit(Hit)
 	HUD:Message("You were able to get back. You used 2 lines of code. Now you know that there is more than only one line. Don't forget the choice that you made! Some functions gives you also a choice. Instead of direction you gave an object.",0)
 	end
 end
-
