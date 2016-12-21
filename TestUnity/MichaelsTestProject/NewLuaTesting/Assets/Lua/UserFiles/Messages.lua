@@ -1,6 +1,7 @@
 --1 hint
 --0 message
-function OnHit(Hit)
+Hit = ""
+function OnHit()
 	if(Hit == "StartTrigger") then
 	HUD:Message("Try to escape the prison the door looks unguarded",0)
 	end
