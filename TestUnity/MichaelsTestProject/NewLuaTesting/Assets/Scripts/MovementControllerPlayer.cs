@@ -10,6 +10,7 @@ public class MovementControllerPlayer : MonoBehaviour {
     void Start() {
         _rigidBody = GetComponent<Rigidbody>();
         programmingTool = GetComponent<ProgrammingTool>();
+        
     }
 
     void Update() {
@@ -26,17 +27,20 @@ public class MovementControllerPlayer : MonoBehaviour {
     }
 
     void movement() {
-        _rigidBody.velocity = Vector3.zero;
         if ( Input.GetKey(KeyCode.W) ) {
-            _rigidBody.velocity += transform.forward * _movementForce / 60;
+            _rigidBody.AddForce(transform.forward * _movementForce);
         } else if ( Input.GetKey(KeyCode.S) ) {
-            _rigidBody.velocity += transform.forward*-0.5f * _movementForce / 60;
+            _rigidBody.AddForce(transform.forward*-0.5f * _movementForce);
         }
 
         if ( Input.GetKey(KeyCode.A) ) {
-            _rigidBody.velocity += transform.right*-0.5f * _movementForce / 60;
+            _rigidBody.AddForce(transform.right*-0.5f * _movementForce);
         } else if ( Input.GetKey(KeyCode.D) ) {
-            _rigidBody.velocity += transform.right*0.5f* _movementForce / 60;
+            _rigidBody.AddForce(transform.right*0.5f* _movementForce);
+        }
+
+        if ( Input.GetKeyDown(KeyCode.Space) ) {
+            _rigidBody.AddForce(Vector3.up * 5000);
         }
     }
 
