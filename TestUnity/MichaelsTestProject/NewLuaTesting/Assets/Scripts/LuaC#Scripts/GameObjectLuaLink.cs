@@ -6,6 +6,7 @@ using UniLua;
 
 public class GameObjectLuaLink : LuaLink {
     ScriptFactory _scriptFactory;
+    List<Component> RuntimeAddedComponenets = new List<Component>();
     
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,11 @@ public class GameObjectLuaLink : LuaLink {
         //CallLuaFunction("GameObject","Update");
 	}
     public override void init() {
+        if ( RuntimeAddedComponenets.Count > 0 ) {
+            foreach ( Component c in RuntimeAddedComponenets ) {
+                Component.Destroy(c);
+            }
+        }
         base.init();
         CallLuaFunction("GameObject", "Start");
     }
@@ -60,6 +66,7 @@ public class GameObjectLuaLink : LuaLink {
             return 1;
         } else {
             LuaLink l = gameObject.AddComponent(t) as LuaLink;
+            RuntimeAddedComponenets.Add(l);
             l.init(_lua);
             //_lua.PushGlobalTable();
             _lua.SetGlobal(s);
