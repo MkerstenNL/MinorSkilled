@@ -22,8 +22,11 @@ function Update()
 inSense = Guard:Sense(GuardSense)
 isMoving = Boat:Move("Back",10)
 	if(isMoving == false and Boat.Hit() == "Player") then
-		Boat:Move("Towards","Coin",10)
-		
+		MoveToCoin = Boat:Move("Towards","Coin",10)
+		if(MoveToCoin == false) then
+			Boat:Move("back",10)
+			Boat:Move("right",10)
+		end
 	end
 StillPatrol = Guard:Patrol(GuardRange, GuardSpeedWalking)
 	if(StillPatrol == false or inSense == true) then
