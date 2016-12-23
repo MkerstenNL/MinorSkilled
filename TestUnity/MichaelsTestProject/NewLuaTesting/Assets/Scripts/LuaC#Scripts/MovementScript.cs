@@ -42,6 +42,7 @@ public class MovementScript : MonoBehaviour {
        // if ( col.gameObject.tag == "MoveableObject" ) return;
         lastHit = col.gameObject.name;
         _movements.Clear();
+        _rigidBody.angularVelocity = Vector3.zero;
 
     }
 
