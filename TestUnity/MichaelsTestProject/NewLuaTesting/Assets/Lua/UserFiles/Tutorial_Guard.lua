@@ -1,11 +1,12 @@
-GuardRange = 2
+GuardRange = 30
 GuardSense = 3
 GuardSpeedRunning = 2
 GuardSpeedWalking = 1
 
 
 function Start()
-
+	player = WorldC.Find ("Player")
+	Guard:Patrol(GuardRange,GuardSpeedWalking)
 end
 
 function Update()
