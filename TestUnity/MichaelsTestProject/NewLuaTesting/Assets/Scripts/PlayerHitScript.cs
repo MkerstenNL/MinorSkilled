@@ -3,11 +3,39 @@ using System.Collections;
 using System;
 using UniLua;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PlayerHitScript : LuaLink
 {
+    void Awake()
+    {
+        this.init();
+    }
+
+
+
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
+        lua.PushString(other.gameObject.name);
+        lua.GetGlobal("OnHit");
+        if (lua.IsFunction(-1))
+        {
+            lua.PCall(1, 0, 0);
+            //lua.GetGlobal("Message");
+            //string message;
+            //int nummer;
+            //if (lua.IsString(-1))
+            //{
+
+            //}
+            //lua.GetGlobal("MessageNumber");
+            //Debug.Log(lua.ToNumber(-1));
+            //Message()
+        }
+
+        //Debug.Log(lua.ToString(-2));
+        /*
         if (other.gameObject.name == "StartTrigger")
         {
             Message("Try to escape the prison the door looks unguarded", 0);
@@ -57,7 +85,8 @@ public class PlayerHitScript : LuaLink
         if (other.gameObject.name == "triggerLevelCoinEnd4") {
             Message("You were able to get back. You used 2 lines of code. Now you know that there is more than only one line. Don't forget the choice that you made! Some functions gives you also a choice. Instead of direction you gave an object.", 0);
         }
-    
+        */
+
     }
     void Message(string message, int tip)
     {
@@ -73,25 +102,37 @@ public class PlayerHitScript : LuaLink
             GameObject.Find("Messagtext").GetComponent<Text>().text = message;
         }
     }
-    
+    public override void init(ILuaState state)
+    {
+        scriptName = "Messages";
+        scriptLocation = "LuaLayer";
+        base.init(state);
+    }
+
     protected override void registerFunctions()
     {
-        regFunction("TextTrigger", "Message", Message);
+        regFunction("Messages", "Message", Message);
+        foreach (KeyValuePair<string, List<NameFuncPair>> lib in _libs)
+        {
+            _lua.L_NewLib(lib.Value.ToArray());
+            _lua.SetGlobal(lib.Key);
+        }
     }
 
     public int Message(ILuaState state)
     {
-        if (state.GetTop() != 1)
+        if (state.GetTop() != 2)
         {
             _lua.SetTop(0);
             _lua.PushString("Invalid amount of parameters");
 
         }
-
-
+        int MessageType = (int)_lua.ToNumber(2);
+        string Text = _lua.ToString(1);
+        Message(Text, MessageType);
 
         _lua.SetTop(0);
-        _lua.PushString("HUD successfull");
+        _lua.PushString("Message");
         return 1;
     }
 }
