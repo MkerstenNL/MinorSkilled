@@ -6,7 +6,8 @@
 -- Hit = "triggerWalkedThroughDoorLevel1	"--RigidBody:LastHit()
 -- OnHit()
 -- end
-function OnHit(Hit)	
+function OnHit ()
+	Hit = "StartTrigger"
 	if(Hit == "StartTrigger") then
 	Message("Try to escape the prison the door looks unguarded",0)
 	end

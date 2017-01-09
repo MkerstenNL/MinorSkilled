@@ -54,8 +54,8 @@ public class Lualayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        _lua.GetGlobal(luaLayerFile);
-        _lua.GetField(-1, "Update");
-        _lua.PCall(0, 0, 0);
+     //   _lua.GetGlobal(luaLayerFile);
+       // _lua.GetField(-1, "Update");
+        //_lua.PCall(0, 0, 0);
 	}
 }

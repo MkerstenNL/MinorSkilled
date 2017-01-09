@@ -7,7 +7,9 @@ using System.Collections.Generic;
 
 public class PlayerHitScript : LuaLink
 {
-    void Awake()
+
+    NameFuncPair[] _lib = new NameFuncPair[1];
+    void Start()
     {
         this.init();
     }
@@ -17,11 +19,12 @@ public class PlayerHitScript : LuaLink
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name);
-        lua.PushString(other.gameObject.name);
+       // lua.PushString(other.gameObject.name);
         lua.GetGlobal("OnHit");
         if (lua.IsFunction(-1))
         {
-            lua.PCall(1, 0, 0);
+            lua.PCall(0, 0, 0);
+            lua.SetTop(0);
             //lua.GetGlobal("Message");
             //string message;
             //int nummer;
@@ -102,21 +105,17 @@ public class PlayerHitScript : LuaLink
             GameObject.Find("Messagtext").GetComponent<Text>().text = message;
         }
     }
-    public override void init(ILuaState state)
+    public override void init()
     {
         scriptName = "Messages";
         scriptLocation = "LuaLayer";
-        base.init(state);
+        base.init();
     }
 
     protected override void registerFunctions()
     {
-        regFunction("Messages", "Message", Message);
-        foreach (KeyValuePair<string, List<NameFuncPair>> lib in _libs)
-        {
-            _lua.L_NewLib(lib.Value.ToArray());
-            _lua.SetGlobal(lib.Key);
-        }
+        _lib[0] = new NameFuncPair("Message", Message);
+        _lua.L_NewLib(_lib);
     }
 
     public int Message(ILuaState state)
