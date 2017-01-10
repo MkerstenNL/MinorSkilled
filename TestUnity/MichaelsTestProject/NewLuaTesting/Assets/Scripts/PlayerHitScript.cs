@@ -49,11 +49,17 @@ public class PlayerHitScript : LuaLink
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name);
-       // lua.PushString(other.gameObject.name);
         lua.GetGlobal("OnHit");
-        if (lua.IsFunction(-1))
+        lua.PushString(other.gameObject.name);
+        
+        if (lua.IsFunction(-2))
         {
+<<<<<<< HEAD
+            lua.PCall(1, 0, 0);
+            lua.SetTop(0);
+=======
             lua.PCall(0, 0, 0);
+>>>>>>> 5c70e6aca69dc5deaba4bc1d0c3341f524bc38c9
             //lua.GetGlobal("Message");
             //string message;
             //int nummer;
@@ -135,4 +141,30 @@ public class PlayerHitScript : LuaLink
         }
     }
 
+<<<<<<< HEAD
+    protected override void registerFunctions()
+    {
+        _lib[0] = new NameFuncPair("Message", Message);
+        _lua.L_NewLib(_lib);
+        _lua.SetGlobal("M");
+    }
+
+    public int Message(ILuaState state)
+    {
+        if (state.GetTop() != 2)
+        {
+            _lua.SetTop(0);
+            _lua.PushString("Invalid amount of parameters");
+
+        }
+        int MessageType = (int)_lua.ToNumber(2);
+        string Text = _lua.ToString(1);
+        Message(Text, MessageType);
+
+        _lua.SetTop(0);
+        //_lua.PushString("Message");
+        return 0;
+    }
+=======
+>>>>>>> 5c70e6aca69dc5deaba4bc1d0c3341f524bc38c9
 }
