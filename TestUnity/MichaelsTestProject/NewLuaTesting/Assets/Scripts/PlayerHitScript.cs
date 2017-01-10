@@ -19,11 +19,12 @@ public class PlayerHitScript : LuaLink
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name);
-       // lua.PushString(other.gameObject.name);
         lua.GetGlobal("OnHit");
-        if (lua.IsFunction(-1))
+        lua.PushString(other.gameObject.name);
+        
+        if (lua.IsFunction(-2))
         {
-            lua.PCall(0, 0, 0);
+            lua.PCall(1, 0, 0);
             lua.SetTop(0);
             //lua.GetGlobal("Message");
             //string message;
@@ -116,6 +117,7 @@ public class PlayerHitScript : LuaLink
     {
         _lib[0] = new NameFuncPair("Message", Message);
         _lua.L_NewLib(_lib);
+        _lua.SetGlobal("M");
     }
 
     public int Message(ILuaState state)
@@ -131,7 +133,7 @@ public class PlayerHitScript : LuaLink
         Message(Text, MessageType);
 
         _lua.SetTop(0);
-        _lua.PushString("Message");
-        return 1;
+        //_lua.PushString("Message");
+        return 0;
     }
 }
