@@ -1,7 +1,7 @@
-MessageBoard.Status = clean
+Status = dirty
 
-if(MessageBoard.Status == dirty) then
-MessageBoard:NoMessage()
+if(Status == dirty) then
+MessageBoard:NoMessage(Status)
 else
-MessageBoard:ShowMessage()
-end
+MessageBoard:ShowMessage(Status)
+end 
