@@ -13,7 +13,7 @@ public class WaterDeathScript : MonoBehaviour {
 	
 	}
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == player.gameObject.name)
         {
