@@ -1,29 +1,12 @@
-require '\lua\UserFiles\message.lua'
+
 MessageBoard = {}
-Status = dirty
-function Start()
+
+function MessageBoard:NoMessage(status) 
+	GameObject.Log("Testdsgdfg")
 end
-
-
-function Update()
-
-	if(Status ~= dirty) then
-	Status = dirty
-	ShowMessage()
-	else
-	NoMessage()
+function MessageBoard:ShowMessage(status) 
+	if(status ~= dirty) then
+	--showmessage
+	GameObject.Log("Testdsgdfg")
 	end
 end
-
-function MessageBoard:NoMessage() 
-	--DirtTexture
-	return Status
-end
-function MessageBoard:ShowMessage() 
-	--enable trigger for new message and a texture that shows a message
-	return Status
-end
-
-
-
-return MessageBoard
