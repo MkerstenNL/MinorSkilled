@@ -14,6 +14,36 @@ public class PlayerHitScript : LuaLink
         this.init();
     }
 
+    public override void init()
+    {
+        scriptName = "Messages";
+        scriptLocation = "LuaLayer";
+        base.init();
+    }
+
+    protected override void registerFunctions()
+    {
+        _lib[0] = new NameFuncPair("Message", Message);
+        _lua.L_NewLib(_lib);
+    }
+
+    public int Message(ILuaState state)
+    {
+        if (state.GetTop() != 2)
+        {
+            _lua.SetTop(0);
+            _lua.PushString("Invalid amount of parameters");
+
+        }
+        int MessageType = (int)_lua.ToNumber(2);
+        string Text = _lua.ToString(1);
+        Message(Text, MessageType);
+
+        _lua.SetTop(0);
+        _lua.PushString("Message");
+        return 1;
+    }
+
 
 
     void OnTriggerEnter(Collider other)
@@ -24,8 +54,12 @@ public class PlayerHitScript : LuaLink
         
         if (lua.IsFunction(-2))
         {
+<<<<<<< HEAD
             lua.PCall(1, 0, 0);
             lua.SetTop(0);
+=======
+            lua.PCall(0, 0, 0);
+>>>>>>> 5c70e6aca69dc5deaba4bc1d0c3341f524bc38c9
             //lua.GetGlobal("Message");
             //string message;
             //int nummer;
@@ -106,13 +140,8 @@ public class PlayerHitScript : LuaLink
             GameObject.Find("Messagtext").GetComponent<Text>().text = message;
         }
     }
-    public override void init()
-    {
-        scriptName = "Messages";
-        scriptLocation = "LuaLayer";
-        base.init();
-    }
 
+<<<<<<< HEAD
     protected override void registerFunctions()
     {
         _lib[0] = new NameFuncPair("Message", Message);
@@ -136,4 +165,6 @@ public class PlayerHitScript : LuaLink
         //_lua.PushString("Message");
         return 0;
     }
+=======
+>>>>>>> 5c70e6aca69dc5deaba4bc1d0c3341f524bc38c9
 }

@@ -10,8 +10,8 @@ function Door:Update()
 
 end
 
-function Door:Open()
-	if(Door.Opened==true)then return"Door Already open."end
+function Door:Interactive()
+	if(Door.Opened==true)then Close() return"Door Already open. Closing now"end
 	GameObjectC.Log("Opening Door")
 	Door.Opened = true
 	Transform:Teleport("Right",5)
