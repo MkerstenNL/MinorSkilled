@@ -1,0 +1,1 @@
+Boat:Move("Towards","Coin")

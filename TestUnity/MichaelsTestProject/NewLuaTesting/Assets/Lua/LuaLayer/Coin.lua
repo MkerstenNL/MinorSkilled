@@ -9,7 +9,7 @@ end
 function Coin:Update()
 end
 
-function Coin:PickUp()
+function Coin:Interactive()
 	if(Coin.PickedUp == false) then
 	GameObjectC.Log("Picking Up Coin")
 	Coin.PickedUp = true

@@ -1,1 +1,1 @@
-Coin:PickUp()
+Coin:Interactive()

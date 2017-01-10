@@ -14,6 +14,36 @@ public class PlayerHitScript : LuaLink
         this.init();
     }
 
+    public override void init()
+    {
+        scriptName = "Messages";
+        scriptLocation = "LuaLayer";
+        base.init();
+    }
+
+    protected override void registerFunctions()
+    {
+        _lib[0] = new NameFuncPair("Message", Message);
+        _lua.L_NewLib(_lib);
+    }
+
+    public int Message(ILuaState state)
+    {
+        if (state.GetTop() != 2)
+        {
+            _lua.SetTop(0);
+            _lua.PushString("Invalid amount of parameters");
+
+        }
+        int MessageType = (int)_lua.ToNumber(2);
+        string Text = _lua.ToString(1);
+        Message(Text, MessageType);
+
+        _lua.SetTop(0);
+        _lua.PushString("Message");
+        return 1;
+    }
+
 
 
     void OnTriggerEnter(Collider other)
@@ -24,7 +54,6 @@ public class PlayerHitScript : LuaLink
         if (lua.IsFunction(-1))
         {
             lua.PCall(0, 0, 0);
-            lua.SetTop(0);
             //lua.GetGlobal("Message");
             //string message;
             //int nummer;
@@ -105,33 +134,5 @@ public class PlayerHitScript : LuaLink
             GameObject.Find("Messagtext").GetComponent<Text>().text = message;
         }
     }
-    public override void init()
-    {
-        scriptName = "Messages";
-        scriptLocation = "LuaLayer";
-        base.init();
-    }
 
-    protected override void registerFunctions()
-    {
-        _lib[0] = new NameFuncPair("Message", Message);
-        _lua.L_NewLib(_lib);
-    }
-
-    public int Message(ILuaState state)
-    {
-        if (state.GetTop() != 2)
-        {
-            _lua.SetTop(0);
-            _lua.PushString("Invalid amount of parameters");
-
-        }
-        int MessageType = (int)_lua.ToNumber(2);
-        string Text = _lua.ToString(1);
-        Message(Text, MessageType);
-
-        _lua.SetTop(0);
-        _lua.PushString("Message");
-        return 1;
-    }
 }
