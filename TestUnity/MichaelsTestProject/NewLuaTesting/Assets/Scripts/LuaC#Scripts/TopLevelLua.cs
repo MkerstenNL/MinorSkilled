@@ -27,7 +27,8 @@ public class TopLevelLua : MonoBehaviour {
         _layer.Init();
         _lua = _gameobjectLua.lua;
         _lua.L_DoFile(Environment.CurrentDirectory + "/Assets/Lua/UserFiles/" + topLevelFile + ".lua");
-        _lua.GetGlobal("Start");
+        _lua.GetGlobal(topLevelFile);
+        _lua.GetField(1,"Start");
         if ( _lua.IsFunction(-1) ) {
             _lua.PCall(0, 0, 0);
         }
@@ -36,7 +37,13 @@ public class TopLevelLua : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        
+        if (_lua==null)return;
+        _lua.GetGlobal(topLevelFile);
+        _lua.GetField(1, "Update");
+        if ( _lua.IsFunction(-1) ) {
+            _lua.PCall(0, 0, 0);
+        }
+        _lua.SetTop(0);
     }
 
 
