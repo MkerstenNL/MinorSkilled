@@ -66,6 +66,29 @@ function OnHit (Hit)
 	if(Hit == "BigGuardTrigger") then
 	M.Message("Wow he is big!. Let's see what changed. Not everything is changed when facing another guard.",0)
 	end
+	if(Hit == "FenceTrigger") then
+	M.Message("Freedom is on the other side of the fence!",0)
+	end
+	if(Hit == "FenceHitTrigger") then
+	M.Message("The fence it to high to climb over and no door to open. Why can't you open the script editor to change the fence? Try walking along the fence for a weak spot.",0)
+	end
+	if(Hit == "FenceHitScriptTrigger") then
+	M.Message("You found the weak spot. Colliders are a bitch sometimes, but without it we should have fallen of the boat. Why not trying to Turn off the collider for the fence? TurnOnCollider(TrueOrFalse)?",1)
+	end
+	if(Hit == "FreedomTrigger") then
+	M.Message("YOU DID IT! Now get out fast! Get to the road",0)
+	end
+	
+	if(Hit == "CreateObjectTrigger") then
+	M.Message("Now we need a car to escape quickly. I have a car available for you. It is only not created! CreateObject('car')",1)
+	end
+	if(Hit == "InteractCarTrigger") then
+	M.Message("You should be able to do this now!",1)
+	end
+	
+	if(Hit == "EndAlphaGame") then
+	M.Message("Congratz! You have finished the Alpha. We changed a lot but hoped that you learned anything. Might be not much, but if you liked? Try real programming. P.S. The person that was helping you was me and I am you!",0)
+	end
 	
 	
 end
