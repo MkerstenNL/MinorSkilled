@@ -1,1 +1,1 @@
- Move(Forward,5)
+Boat:Move("Forward",10)

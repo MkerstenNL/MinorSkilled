@@ -14,10 +14,10 @@ function Update()
 end
 
 function MessageBoard:NoMessage() 
-
+	--DirtTexture
 end
 function MessageBoard:ShowMessage() 
-
+	--enable trigger for new message and a texture that shows a message
 end
 
 
