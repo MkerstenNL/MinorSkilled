@@ -5,7 +5,7 @@ public class StartLuaPlayer : MonoBehaviour {
 
     [SerializeField]bool OnTrigger = true;
     [SerializeField]
-    Lualayer layer;
+    TopLevelLua layer;
 
 	// Use this for initialization
 	void Start () {

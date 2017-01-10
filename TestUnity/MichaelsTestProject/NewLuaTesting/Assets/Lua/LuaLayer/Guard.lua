@@ -48,11 +48,11 @@ function Guard:Update()
 end
 
 function Guard:Sense(senseRange) 
-	RigidBody:SetScaleCollider(senseRange)
+	--RigidBody:SetScaleCollider(senseRange)
 end
 
 function Guard:Patrol(guardRange,guardSpeedWalking)
-	speed= guardSpeedWalking
+	speed = guardSpeedWalking
 	if(endPosition.x==nil)then
 		local x,y,z = Transform:GetDirection()
 		x = x * guardRange
