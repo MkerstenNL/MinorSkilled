@@ -14,6 +14,18 @@ function Transform:IsActive()
 
 end
 
+function Transform:GetPosition(nameOfOtherObject)
+	local x,y,z = nil
+	if(nameOfOtherObject==nil)then
+		x,y,z = TransformC.GetPosition()
+	else
+		x,y,z = TransformC.GetPositionOther(nameofOtherObject)
+	end
+
+		return x,y,z
+end
+
+
 function Transform:Turn(x,y,z)
 	if(type(x)=="string")then
 		if(x=="Up")then

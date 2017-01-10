@@ -32,6 +32,7 @@ public class TransformLuaLink : LuaLink {
         regFunction("TransformC", "GetPosition", GetPosition);
         regFunction("TransformC", "GetRotation", GetRotation);
         regFunction("TransformC", "GetDirection", GetDirection);
+        regFunction("TransformC", "GetPositionOther", GetPositionOther);
         foreach ( KeyValuePair<string, List<NameFuncPair>> lib in _libs ) {
             _lua.L_NewLib(lib.Value.ToArray());
             _lua.SetGlobal(lib.Key);
@@ -147,5 +148,34 @@ public class TransformLuaLink : LuaLink {
         _lua.PushString("Position Set");
         return 1;
         return 1;
+    }
+
+
+
+    List<GameObject> foundGameObjects = new List<GameObject>();
+    public int GetPositionOther(ILuaState state) {
+        if ( state.GetTop() != 1 ) {
+
+            //invalid Parameters
+            return 0;
+        }
+        string s = state.ToString(-1);
+        GameObject g = null;
+        for ( int i = 0; i < foundGameObjects.Count; i++ ) {
+            if ( foundGameObjects[i].tag == s ) {
+                g = foundGameObjects[i];
+            }
+        }
+
+        if ( g == null ) {
+            g = GameObject.FindGameObjectWithTag("Player");
+            foundGameObjects.Add(g);
+        }
+
+        _lua.SetTop(0);
+        _lua.PushNumber(g.transform.position.x);
+        _lua.PushNumber(g.transform.position.y);
+        _lua.PushNumber(g.transform.position.z);
+        return 3;
     }
 }
