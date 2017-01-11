@@ -29,10 +29,20 @@ public class Lualayer : MonoBehaviour {
         _lua = _gameobjectLua.lua;
         _lua.L_DoFile(Environment.CurrentDirectory + "/Assets/Lua/LuaLayer/" + luaLayerFile + ".lua");
         _lua.GetGlobal(luaLayerFile);
-        _lua.GetField(1,"Start");
-        if(_lua.IsFunction(-1)){
-            _lua.PCall(0, 0, 0);
-        }
+        //int index = _lua.GetTop();
+        //if ( _lua.IsTable(index) ) {
+        _lua.GetField(1, "Start");
+        Debug.Log(_lua.GetTop());
+        try {
+
+            if ( _lua.IsFunction(-1) ) {
+                _lua.PCall(0, 0, 0);
+                //  }
+
+            }
+        } catch { }
+
+        _lua.SetTop(0);
         //ToDo
     }
 
@@ -54,8 +64,17 @@ public class Lualayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-     //   _lua.GetGlobal(luaLayerFile);
-       // _lua.GetField(-1, "Update");
-        //_lua.PCall(0, 0, 0);
+        if ( _lua == null )
+            return;
+        _lua.GetGlobal(luaLayerFile);
+        try {
+
+            _lua.GetField(-1, "Update");
+            if ( _lua.IsFunction(-1) ) {
+
+                _lua.PCall(0, 0, 0);
+            }
+        } catch { }
+        _lua.SetTop(0);
 	}
 }
