@@ -10,6 +10,7 @@ end
 
 function Fence:TurnOnCollider(TrueOfFalse)
 	RigidBody:TurnOnCollider(TrueOfFalse)
+	GameObjectC.Log("Adding RigidBody from Door")
 end
 
 return Fence

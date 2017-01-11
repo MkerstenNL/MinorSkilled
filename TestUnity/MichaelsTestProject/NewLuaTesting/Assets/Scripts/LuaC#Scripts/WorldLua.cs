@@ -4,6 +4,9 @@ using UniLua;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// OLD
+/// </summary>
 public class WorldLua : LuaLink {
 
 	// Use this for initialization

@@ -168,8 +168,26 @@ public class RigidBodyLink : LuaLink {
             state.PushString("Invalid amount of parameters. function requires 0");
             return 1;
         }
-
-        _rigidBody.gameObject.GetComponent<Collider>().isTrigger = _lua.ToBoolean(-1);
+        _rigidBody.isKinematic = true;
+        Collider[] MoreColliders = this.gameObject.GetComponents<Collider>();// = _lua.ToBoolean(-1);
+        if (MoreColliders.Length > 1)
+        {
+            for (int i = 0; i < MoreColliders.Length; i++)
+            {
+                if(MoreColliders[i].isTrigger)
+                {
+                    Destroy(MoreColliders[i]);
+                }
+                else
+                {
+                    MoreColliders[i].enabled = _lua.ToBoolean(-1);
+                }
+            }
+        }
+        else
+        {
+            MoreColliders[0].enabled = _lua.ToBoolean(-1);
+        }
         return 0;
     }
 
