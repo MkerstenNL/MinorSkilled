@@ -21,7 +21,7 @@ end
 
 function Guard:Update()
 	currentPos.x, currentPos.y, currentPos.z = Transform:GetPosition()
-	if(Guard:targetPos ~= nil)then
+	if(targetPos ~= nil)then
 		if(state=="Chase" and targetName~="")then
 		targetPos.x,nvt,targetPos.z = Transform:GetPosition(targetName)
 		end

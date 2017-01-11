@@ -1,1 +1,1 @@
-Door:Interactive()
+Door:InterActive()
