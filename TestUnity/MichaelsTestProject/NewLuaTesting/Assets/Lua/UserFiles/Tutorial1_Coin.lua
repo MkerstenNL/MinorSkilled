@@ -1,1 +1,1 @@
-    
+Coin:Interactive()
