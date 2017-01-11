@@ -16,7 +16,8 @@ end
 
 
 function RigidBody:TurnOnCollider (bool)
-	--to be implemented
+	RigidBodyC.Log ("RigidBody Initialized")
+	return RigidBodyC.TurnOnCollider(bool)
 end
 
 function RigidBody:UseGravity(bool)

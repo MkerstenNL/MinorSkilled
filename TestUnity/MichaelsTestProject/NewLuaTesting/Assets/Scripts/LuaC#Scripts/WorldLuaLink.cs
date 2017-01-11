@@ -21,7 +21,8 @@ public class WorldLuaLink : LuaLink {
 
     protected override void registerFunctions() {
         regFunction("WorldC", "Log", Log);
-        
+        regFunction("WorldC", "CreateObject", CreateObject);
+
         _lua.L_OpenLibs();
         foreach ( KeyValuePair<string, List<UniLua.NameFuncPair>> lib in _libs ) {
             _lua.L_NewLib(lib.Value.ToArray());
@@ -52,6 +53,17 @@ public class WorldLuaLink : LuaLink {
         }
         state.PushString("OperationFailed");
         return 1;
+    }
+
+    public int CreateObject(ILuaState state)
+    {
+        if (state.GetTop() != 4)
+        {
+            state.SetTop(0);
+        }
+        GameObject prefab = (GameObject)Resources.Load(_lua.ToString(-1));
+        GameObject createdObject = (GameObject)UnityEngine.Object.Instantiate(prefab,new Vector3((float)_lua.ToNumber(-2), (float)_lua.ToNumber(-3), (float)_lua.ToNumber(-4)),Quaternion.identity);
+        return 0;
     }
 
     public void FindObject() {

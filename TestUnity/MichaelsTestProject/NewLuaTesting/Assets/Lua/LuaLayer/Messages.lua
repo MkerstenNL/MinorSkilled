@@ -55,7 +55,7 @@ function OnHit (Hit)
 	end
 	
 	if(Hit == "BeforeGuardTrigger") then
-	M.Message("I hope you read the sign. There might me a usefull tip.",0)
+	M.Message("I hope you read the sign. There might be a usefull tip.",0)
 	end
 	
 	--Triggered when guard caught you.

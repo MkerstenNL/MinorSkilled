@@ -5,7 +5,7 @@ function World:Start()
 end
 
 function World:CreateObject(name, x,y,z)
-
+	WorldC:CreateObject(name, x,y,z)
 end
 
 function World:FindObject(name)
