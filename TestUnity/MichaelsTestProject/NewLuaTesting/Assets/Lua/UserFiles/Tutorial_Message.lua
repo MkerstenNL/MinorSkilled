@@ -1,7 +1,11 @@
-Status = dirty
+MessageBoard:Interactive()
+-- Status = dirty
 
-if(Status == dirty) then
-MessageBoard:NoMessage(Status)
-else
-MessageBoard:ShowMessage(Status)
-end 
+-- MessageBoard:NoMessage(Status)
+-- if(Status == dirty) then
+-- GameObjectC.Log("test")
+-- MessageBoard:NoMessage(Status)
+-- else
+-- GameObjectC.Log("test")
+-- MessageBoard:ShowMessage(Status)
+-- end 

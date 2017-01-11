@@ -7,10 +7,14 @@ using UnityEngine.UI;
 
 public class HUDLuaLink : LuaLink {
 
+    private int _score = 0;
+    private List<string> _inventory = new List<string>();
     [SerializeField]InputField hintField;
     [SerializeField]MessageSystem messageField;
 
     void Awake() {
+        scriptName = "HUD";
+        scriptLocation = "Engine";
         hintField = GameObject.FindGameObjectWithTag("HintField").GetComponent<InputField>();
         messageField = GameObject.FindGameObjectWithTag("Message").GetComponent<MessageSystem>();
     }
@@ -30,9 +34,11 @@ public class HUDLuaLink : LuaLink {
     }
 
     protected override void registerFunctions() {
-        regFunction(scriptName + "C", "Log", Log);
-        regFunction(scriptName + "C", "SetMessage", SetMessage);
-        regFunction(scriptName + "C", "SetHint", SetHint);
+        regFunction("HUDC", "Log", Log);
+        regFunction("HUDC", "SetMessage", SetMessage);
+        regFunction("HUDC", "SetHint", SetHint);
+        regFunction("HUDC", "Score", Score);
+        regFunction("HUDC", "Inventory", Inventory);
         foreach ( KeyValuePair<string, List<NameFuncPair>> lib in _libs ) {
             _lua.L_NewLib(lib.Value.ToArray());
             _lua.SetGlobal(lib.Key);
@@ -49,5 +55,15 @@ public class HUDLuaLink : LuaLink {
         string message = state.ToString(-1);
         hintField.GetComponentInChildren<Text>().text = message;
         return 0;
+    }
+    public int Score(ILuaState state)
+    {
+        _score = (int)_lua.ToNumber(-1);
+        return 1;
+    }
+    public int Inventory(ILuaState state)
+    {
+        _inventory.Add(_lua.ToString(-1));
+        return 1;
     }
 }
