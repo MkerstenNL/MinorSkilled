@@ -8,7 +8,7 @@ public class StartLuaPlayer : MonoBehaviour {
     TopLevelLua layer;
 
 	// Use this for initialization
-	void Start () {
+	void LateStart () {
         if (OnTrigger)return;
         layer.Init();
 	}

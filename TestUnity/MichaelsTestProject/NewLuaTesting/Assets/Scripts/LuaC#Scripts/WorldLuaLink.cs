@@ -9,7 +9,8 @@ public class WorldLuaLink : LuaLink {
     GameObjectLuaLink[] programmableObjects; 
     // Use this for initialization
 	void Awake () {
-        scriptName = "Engine/WorldEngine";
+        scriptLocation = "Engine";
+        scriptName = "WorldEngine";
         programmableObjects = FindObjectsOfType<GameObjectLuaLink>();
         init();
     }
