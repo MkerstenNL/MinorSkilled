@@ -29,12 +29,14 @@ public class TopLevelLua : MonoBehaviour {
         _lua.L_DoFile(Environment.CurrentDirectory + "/Assets/Lua/UserFiles/" + topLevelFile + ".lua");
         try {
 
-            _lua.GetGlobal(topLevelFile);
+     //       _lua.GetGlobal(topLevelFile);
             _lua.GetField(1, "Start");
             if ( _lua.IsFunction(-1) ) {
                 _lua.PCall(0, 0, 0);
             }
-        } catch { } 
+        } catch(Exception e) {
+            Debug.LogError(e.Message);
+        } 
         _lua.SetTop(0);
     }
 
