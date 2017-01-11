@@ -8,6 +8,7 @@ function CreateObject:Update()
 end
 
 function World:CreateObject(prefabName, LocationX,LocationY,LocationZ)
+	GameObjectC.Log("Adding RigidBody from Door")
 	World:CreateObject(prefabName, LocationX,LocationY,LocationZ)
 end
 
