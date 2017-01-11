@@ -39,10 +39,16 @@ public class TopLevelLua : MonoBehaviour {
     void Update() {
         if (_lua==null)return;
         _lua.GetGlobal(topLevelFile);
-        _lua.GetField(1, "Update");
-        if ( _lua.IsFunction(-1) ) {
-            _lua.PCall(0, 0, 0);
+        try {
+
+            _lua.GetField(1, "Update");
+            if ( _lua.IsFunction(-1) ) {
+                _lua.PCall(0, 0, 0);
+            }
+        } catch {
+
         }
+        
         _lua.SetTop(0);
     }
 

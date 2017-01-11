@@ -1,1 +1,1 @@
-www
+Coin:Interactive()

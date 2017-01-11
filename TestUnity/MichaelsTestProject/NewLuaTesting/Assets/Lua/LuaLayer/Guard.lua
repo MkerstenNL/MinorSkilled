@@ -7,6 +7,7 @@ local currentPos = {x=nil,z=nil}
 local speed  = 0
 local state = "Patrol"
 local targetName = ""
+local range = 0
 function Guard:Start()
 	GameObjectC.Log("Adding Transform from Door")
 	GameObject:NewScript("Transform")
@@ -38,8 +39,7 @@ function Guard:Update()
 			normz = normz *-1
 		end
 
-		Transform:Teleport(currentPos.x+normx,currentPos.y,currentPos.z+normz)--todo calculations and speed
-	else
+		Transform:Teleport(currentPos.x+normx,currentPos.y,currentPos.z+normz)
 		targetPos = endPosition
 
 	end
@@ -69,7 +69,7 @@ end
 
 function Guard:Chase (gameObject, guardSpeedRunning)
 	speed = guardSpeedRunning
-	state = "Chase"
+	--state = "Chase"
 	targetName = gameObject
 --GameObject:Chase (gameObject,guardSpeedRunning)
 end
