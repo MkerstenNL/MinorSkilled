@@ -16,7 +16,12 @@ function Coin:Interactive()
 	Transform:Teleport("Right",100)
 	--HUD:Score(Score+1)
 	GameObjectC.Log("Coin PickedUp")
+	AddScore();
 	end
+end
+
+function Coin:AddScore()
+	Score = HUD:Score(Score+1);
 end
 
 return Coin

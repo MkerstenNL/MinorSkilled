@@ -9,14 +9,14 @@ public class WorldLuaLink : LuaLink {
     GameObjectLuaLink[] programmableObjects; 
     // Use this for initialization
 	void Awake () {
-        scriptName = "Engine/World";
+        scriptName = "Engine/WorldEngine";
         programmableObjects = FindObjectsOfType<GameObjectLuaLink>();
         init();
     }
 
     public override void init(ILuaState state) {
         base.init(state);
-        CallLuaFunction("World","Start");
+        CallLuaFunction("WorldEngine","Start");
     }
 
     protected override void registerFunctions() {
@@ -31,7 +31,7 @@ public class WorldLuaLink : LuaLink {
     }
 
     public ILuaState GetWorld(ILuaState state) {
-        _lua.GetGlobal("World");
+        _lua.GetGlobal("WorldEngine");
         _lua.XMove(state, 1);
         return state;
     }
