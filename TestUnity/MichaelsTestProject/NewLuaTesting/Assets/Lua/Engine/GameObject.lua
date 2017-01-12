@@ -13,10 +13,11 @@ function GameObject:Update ()
 end
 
 function GameObject:NewScript (name)
-	if(name == nil)then ----GameObjectC.Log("name == nil")end
+	if(name == nil)then --GameObjectC.Log("name == nil")
+	end
 	if(type (name) == "string")then
 		----GameObjectC.Log("adding component:"..name)
-		local  table, message = ----GameObjectC.NewComponent (name)
+		local  table, message = GameObjectC.NewComponent (name)
 		
 		----GameObjectC.Log (message)
 		----GameObjectC.Log (table)
