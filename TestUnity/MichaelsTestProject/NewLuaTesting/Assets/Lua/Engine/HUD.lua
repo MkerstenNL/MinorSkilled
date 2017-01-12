@@ -14,7 +14,7 @@ function HUD:Message (message, id)
 end
 
 function HUD:Score(Score)
-GameObjectC.Log("Coin Score Engine")
+------GameObjectC.Log("Coin Score Engine")
 CurrentScore = HUDC:Score(Score)
 return CurrentScore
 end
