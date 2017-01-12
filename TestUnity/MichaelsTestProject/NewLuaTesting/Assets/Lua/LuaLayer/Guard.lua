@@ -11,7 +11,7 @@ local range = 0
 function Guard:Start()
 	GameObject:NewScript("Transform")
 	GameObject:NewScript ("RigidBody")
-	----GameObjectC:Log("Guard Initialized")
+	GameObjectC:Log("Guard Initialized")
 	startPosition.x, temp, startPosition.z = Transform.GetPosition() 
 	
 
@@ -20,7 +20,7 @@ end
 
 
 function Guard:Update ()
-	----GameObjectC.Log("Guard update")
+	GameObjectC.Log("Guard update")
 	currentPos.x, currentPos.y, currentPos.z = Transform:GetPosition ()
 	
 	if(targetPos ~= nil)then
@@ -55,7 +55,7 @@ end
 
 function Guard:Patrol(guardRange,guardSpeedWalking)
 	speed = guardSpeedWalking
-	----GameObjectC.Log ("GuardRange = "..guardRange)
+	GameObjectC.Log ("GuardRange = "..guardRange)
 	if(endPosition.x==nil)then
 		local x,y,z = Transform:GetDirection()
 		x = x * guardRange
