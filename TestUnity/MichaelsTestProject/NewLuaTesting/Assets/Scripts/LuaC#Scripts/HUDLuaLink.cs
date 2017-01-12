@@ -15,8 +15,8 @@ public class HUDLuaLink : LuaLink {
     void Awake() {
         scriptName = "HUD";
         scriptLocation = "Engine";
-        hintField = GameObject.FindGameObjectWithTag("HintField").GetComponent<InputField>();
-        messageField = GameObject.FindGameObjectWithTag("Message").GetComponent<MessageSystem>();
+        //hintField = GameObject.FindGameObjectWithTag("HintField").GetComponent<InputField>();
+        //messageField = GameObject.FindGameObjectWithTag("Message").GetComponent<MessageSystem>();
     }
 
     public override void init(ILuaState state) {
@@ -59,6 +59,7 @@ public class HUDLuaLink : LuaLink {
     public int Score(ILuaState state)
     {
         _score = (int)_lua.ToNumber(-1);
+        _lua.SetTop(0);
         return 0;
     }
     public int Inventory(ILuaState state)

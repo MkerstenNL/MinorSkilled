@@ -62,8 +62,10 @@ public class WorldLuaLink : LuaLink {
         {
             state.SetTop(0);
         }
-        GameObject prefab = (GameObject)Resources.Load(_lua.ToString(-1));
-        GameObject createdObject = (GameObject)UnityEngine.Object.Instantiate(prefab,new Vector3((float)_lua.ToNumber(-2), (float)_lua.ToNumber(-3), (float)_lua.ToNumber(-4)),Quaternion.identity);
+        string luaPrefabName = _lua.ToString(-4);
+        GameObject prefab = (GameObject)Resources.Load(_lua.ToString(-4));
+        GameObject createdObject = (GameObject)UnityEngine.Object.Instantiate(prefab,new Vector3((float)_lua.ToNumber(-3), (float)_lua.ToNumber(-2), (float)_lua.ToNumber(-1)),Quaternion.identity);
+        createdObject.transform.name = createdObject.transform.name.Replace("(Clone)", "");
         _lua.SetTop(0);
         return 0;
     }

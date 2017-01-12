@@ -1,5 +1,6 @@
 Coin = {}
 Coin.PickedUp = false
+Coin.Score = 0
 function Coin:Start()
 	------GameObjectC.Log("Coinsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss")
 	GameObject:NewScript ("Transform")
@@ -23,8 +24,9 @@ function Coin:Interactive()
 end
 
 function Coin:AddScore()
-	------GameObjectC.Log("Coin Score")
-	Score = HUD:Score(Score+1)
+	GameObjectC.Log("Coin Score")
+	Coin.Score = Coin.Score+1
+	Coin.Score = HUD:Score(Coin.Score)
 	--Score = HUDC:Score(Score+1)
 end
 function Coin:AddInventory()
