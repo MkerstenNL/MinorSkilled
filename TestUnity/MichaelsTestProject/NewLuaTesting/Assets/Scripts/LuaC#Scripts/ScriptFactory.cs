@@ -11,6 +11,7 @@ public class ScriptFactory : MonoBehaviour {
         _scriptList.Add("Transform", typeof(TransformLuaLink));
         _scriptList.Add("RigidBody", typeof(RigidBodyLink));
         _scriptList.Add("HUD", typeof(HUDLuaLink));
+        _scriptList.Add("World",typeof(WorldLuaLink));
 
     }
 

@@ -1,8 +1,7 @@
-
 World = {}
 function World:Start ()
 	GameObjectC.Log("Test")
-	--GameObject:NewScript("WorldEngine")
+	GameObject:NewScript("World")
 	
 --World:Start()
 end

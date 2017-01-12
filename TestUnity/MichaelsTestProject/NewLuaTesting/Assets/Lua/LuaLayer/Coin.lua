@@ -1,9 +1,10 @@
 Coin = {}
 Coin.PickedUp = false
 function Coin:Start()
-	GameObjectC.Log("Adding Transform from Door")
-	GameObject:NewScript("Transform")
-	--World:Start()
+	GameObjectC.Log("Coinsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss")
+	GameObject:NewScript ("Transform")
+	GameObject:NewScript("HUD")
+--World:Start()
 end
 
 function Coin:Update()

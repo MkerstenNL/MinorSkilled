@@ -147,7 +147,6 @@ public class TransformLuaLink : LuaLink {
         _lua.SetTop(0);
         _lua.PushString("Position Set");
         return 1;
-        return 1;
     }
 
 
@@ -155,7 +154,7 @@ public class TransformLuaLink : LuaLink {
     List<GameObject> foundGameObjects = new List<GameObject>();
     public int GetPositionOther(ILuaState state) {
         if ( state.GetTop() != 1 ) {
-
+            _lua.SetTop(0);
             //invalid Parameters
             return 0;
         }
