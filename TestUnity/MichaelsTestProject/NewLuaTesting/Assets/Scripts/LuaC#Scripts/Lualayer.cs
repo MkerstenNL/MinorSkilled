@@ -65,6 +65,7 @@ public class Lualayer : MonoBehaviour {
 	void Update () {
         if ( _lua == null )
             return;
+        _lua.SetTop(0);
         _lua.GetGlobal(luaLayerFile);
 
 
