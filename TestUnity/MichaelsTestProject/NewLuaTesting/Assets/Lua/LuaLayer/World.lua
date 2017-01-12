@@ -2,11 +2,10 @@ World = {}
 function World:Start ()
 	GameObjectC.Log("Test From THe World")
 	GameObject:NewScript("World")
-	
---World:Start()
 end
 
-function World:Update()
+function World:Update ()
+	GameObjectC.Log("World update")
 end
 
 function World:CreateObject()
