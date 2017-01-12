@@ -1,5 +1,13 @@
 HUD = {}
 
+function Start()
+
+end
+
+function Update()
+
+end
+
 function HUD:Message (message, id)
 	if(type (message) == "string" and type(id)=="number")then
 		if(id == 0)then
@@ -14,8 +22,8 @@ function HUD:Message (message, id)
 end
 
 function HUD:Score(Score)
-------GameObjectC.Log("Coin Score Engine")
-CurrentScore = HUDC:Score(Score)
+--GameObjectC.Log("Coin Score Engine")
+CurrentScore = HUDC.Score(Score)
 return CurrentScore
 end
 
