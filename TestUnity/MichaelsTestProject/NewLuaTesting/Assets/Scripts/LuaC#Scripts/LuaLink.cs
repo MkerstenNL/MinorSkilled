@@ -66,8 +66,8 @@ public abstract class LuaLink : MonoBehaviour {
     public virtual int Log(ILuaState state) {
         if ( state.GetTop() != 1 ) {
             _lua.SetTop(0);
-            _lua.PushString("incorrect number of arguments");
-            return 1;
+           // _lua.PushString("incorrect number of arguments");
+            return 0;
         }
         object message = state.ToObject(-1);
         Debug.Log(message.ToString());

@@ -41,20 +41,20 @@ public class RigidBodyLink : LuaLink {
     public int IsMoving(ILuaState state) {
         if ( state.GetTop() != 1 ) {
             state.SetTop(0);
-            _lua.PushString("Invalid amount of parameters");
-            return 1;
+           // _lua.PushString("Invalid amount of parameters");
+            return 0;
         }
         float mag = _rigidBody.velocity.magnitude;
         bool val = mag > 0 ? true : false;
-        _lua.PushBoolean(val);
-        return 1;
+       // _lua.PushBoolean(val);
+        return 0;
     }
 
     public int GetDirection(ILuaState state) {
         if ( state.GetTop() != 1 ) {
             _lua.SetTop(0);
-            _lua.PushString("Incorrect number of arguments. function requires 0");
-            return 1;
+            //_lua.PushString("Incorrect number of arguments. function requires 0");
+            return 0;
         }
         Vector3 dir = Vector3.zero;
         switch ( state.ToString(-1) ) {
@@ -84,22 +84,22 @@ public class RigidBodyLink : LuaLink {
 
             default:
             _lua.SetTop(0);
-            _lua.PushString("invalid parameter");
-            return 1;
+            //_lua.PushString("invalid parameter");
+            return 0;
         }
         _lua.SetTop(0);
-        _lua.PushNumber(dir.x);
-        _lua.PushNumber(dir.y);
-        _lua.PushNumber(dir.z);
-        return 3;
+        //_lua.PushNumber(dir.x);
+        //_lua.PushNumber(dir.y);
+        //_lua.PushNumber(dir.z);
+        return 0;
     }
 
     //direction speed time
     public int Move(ILuaState state) {
         if ( state.GetTop() != 5 ) {
             state.SetTop(0);
-            _lua.PushString("Invalid amount of parameters");
-            return 1;
+            //_lua.PushString("Invalid amount of parameters");
+            return 0;
         }
         float distance = (float) _lua.ToNumber(5);
         float speed = (float)_lua.ToNumber(4);
@@ -110,15 +110,15 @@ public class RigidBodyLink : LuaLink {
         if(_movement==null)_movement = gameObject.AddComponent<MovementScript>();
         _movement.Init(speed, new Vector3(dirx,diry,dirz), time);
         _lua.SetTop(0);
-        _lua.PushString("Operation succesful");
-        return 1;
+        //_lua.PushString("Operation succesful");
+        return 0;
     }
 
     public int MoveToTarget(ILuaState state) {
         if ( state.GetTop() != 4 ) {
             state.SetTop(0);
-            _lua.PushString("Invalid amount of parameters");
-            return 1;
+            //_lua.PushString("Invalid amount of parameters");
+            return 0;
         }
         float speed = (float) _lua.ToNumber(-4);
         float posz = (float) _lua.ToNumber(-3);
@@ -131,28 +131,28 @@ public class RigidBodyLink : LuaLink {
             _movement = gameObject.AddComponent<MovementScript>();
         _movement.Init(speed, (targetPos - transform.position).normalized, time);
         _lua.SetTop(0);
-        _lua.PushString("Operation succesful");
-        return 1;
+        //_lua.PushString("Operation succesful");
+        return 0;
     }
 
     public int UseGravity(ILuaState state) {
         if ( state.GetTop() != 1 ) {
             state.SetTop(0);
-            _lua.PushString("Invalid amount of parameters");
-            return 1;
+            //_lua.PushString("Invalid amount of parameters");
+            return 0;
         }
         bool gravity = _lua.ToBoolean(1);
         _rigidBody.useGravity = gravity;
         _lua.SetTop(0);
-        _lua.PushString("Gravity:" + gravity.ToString());
-        return 1;
+       // _lua.PushString("Gravity:" + gravity.ToString());
+        return 0;
     }
 
     public int GetPosition(ILuaState state) {
         if ( state.GetTop() != 0 ) {
             _lua.SetTop(0);
-            state.PushString("Invalid amount of parameters. function requires 0");
-            return 1;
+            //state.PushString("Invalid amount of parameters. function requires 0");
+            return 0;
         }
         _lua.PushNumber(this.transform.position.x);
         _lua.PushNumber(this.transform.position.y);
@@ -165,8 +165,8 @@ public class RigidBodyLink : LuaLink {
         if (state.GetTop() != 1)
         {
             _lua.SetTop(0);
-            state.PushString("Invalid amount of parameters. function requires 0");
-            return 1;
+            //state.PushString("Invalid amount of parameters. function requires 0");
+            return 0;
         }
         _rigidBody.isKinematic = true;
         Collider[] MoreColliders = this.gameObject.GetComponents<Collider>();// = _lua.ToBoolean(-1);

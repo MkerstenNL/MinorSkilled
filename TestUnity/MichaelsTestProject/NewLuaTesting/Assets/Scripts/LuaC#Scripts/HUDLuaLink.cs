@@ -59,11 +59,11 @@ public class HUDLuaLink : LuaLink {
     public int Score(ILuaState state)
     {
         _score = (int)_lua.ToNumber(-1);
-        return 1;
+        return 0;
     }
     public int Inventory(ILuaState state)
     {
         _inventory.Add(_lua.ToString(-1));
-        return 1;
+        return 0;
     }
 }

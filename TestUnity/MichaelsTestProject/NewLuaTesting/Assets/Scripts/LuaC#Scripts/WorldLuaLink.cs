@@ -52,8 +52,8 @@ public class WorldLuaLink : LuaLink {
                 return 1;
             }
         }
-        state.PushString("OperationFailed");
-        return 1;
+        //state.PushString("OperationFailed");
+        return 0;
     }
 
     public int CreateObject(ILuaState state)

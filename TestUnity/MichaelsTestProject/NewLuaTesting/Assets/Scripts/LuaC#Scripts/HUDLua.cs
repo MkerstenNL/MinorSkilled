@@ -14,15 +14,15 @@ public class HUDLua : LuaLink {
         if (state.GetTop() != 1)
         {
             _lua.SetTop(0);
-            _lua.PushString("Invalid amount of parameters");
+            //_lua.PushString("Invalid amount of parameters");
 
         }
             
         
 
         _lua.SetTop(0);
-        _lua.PushString("HUD successfull");
-        return 1;
+        //_lua.PushString("HUD successfull");
+        return 0;
     }
 
 }

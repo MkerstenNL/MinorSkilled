@@ -35,7 +35,7 @@ public class GameObjectLuaLink : LuaLink {
         otherstate.SetTop(0);//safety measure
         _lua.GetGlobal("GameObject");
         _lua.XMove(otherstate, 1);
-        return 1;
+        return 0;
     }
 
     ////////////////////////////////////////
@@ -55,25 +55,25 @@ public class GameObjectLuaLink : LuaLink {
     public int NewComponent(ILuaState state) {
         if ( state.GetTop() != 1 ) {
             _lua.SetTop(0);
-            _lua.PushString("this function needs 1 parameter.");
-            return 1;
+            //_lua.PushString("this function needs 1 parameter.");
+            return 0;
         }
         string s = state.ToString(-1);
         Type t = _scriptFactory.GetScriptType(s);
         if ( t == null ) {
             _lua.SetTop(0);
-            _lua.PushString("Error 404: ScriptNameNotFound");
-            return 1;
+           // _lua.PushString("Error 404: ScriptNameNotFound");
+            return 0;
         } else {
             LuaLink l = gameObject.AddComponent(t) as LuaLink;
             RuntimeAddedComponenets.Add(l);
             l.init(_lua);
             //_lua.PushGlobalTable();
-            _lua.SetGlobal(s);
+            //_lua.SetGlobal(s);
             //Debug.Log(_lua.GetTop());
             //_lua.SetTop(1);
-            _lua.PushString("Operation Successful");
-            return 2;
+            //_lua.PushString("Operation Successful");
+            return 0;
         }
     }
 }
