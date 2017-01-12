@@ -3,9 +3,9 @@
 
 -- MessageBoard:NoMessage(Status)
 -- if(Status == dirty) then
- GameObjectC.Log("test")
+ ----GameObjectC.Log("test")
 -- MessageBoard:NoMessage(Status)
 -- else
--- GameObjectC.Log("test")
+-- ----GameObjectC.Log("test")
 -- MessageBoard:ShowMessage(Status)
 -- end 

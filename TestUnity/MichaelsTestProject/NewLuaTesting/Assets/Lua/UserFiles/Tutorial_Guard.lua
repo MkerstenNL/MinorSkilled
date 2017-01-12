@@ -7,7 +7,7 @@ GuardSpeedWalking = 1
 function Start()
 	Guard:Patrol (GuardRange, GuardSpeedWalking)
 	Guard:Sense (GuardSense)
-	GameObjectC.Log("Guard Initialized")
+	------GameObjectC.Log("Guard Initialized")
 end
 
 function Update()
@@ -20,6 +20,6 @@ function Update()
 	--end
 	--else
 	--Guard:Patrol (GuardRange, GuardSpeedWalking)
-	GameObjectC.Log("UserFile Updating")
+	------GameObjectC.Log("UserFile Updating")
 --end
 end

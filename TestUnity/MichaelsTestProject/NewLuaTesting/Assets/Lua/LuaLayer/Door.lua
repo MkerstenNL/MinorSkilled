@@ -1,7 +1,7 @@
 Door = {}
  Door.Opened = false
 function Door:Start()
-	GameObjectC.Log("Adding Transform from Door")
+	------GameObjectC.Log("Adding Transform from Door")
 	GameObject:NewScript("Transform")
 	--World:Start()
 end
@@ -12,10 +12,10 @@ end
 
 function Door:Interactive()
 	if(Door.Opened==true)then Close() return"Door Already open. Closing now"end
-	GameObjectC.Log("Opening Door")
+	------GameObjectC.Log("Opening Door")
 	Door.Opened = true
 	Transform:Teleport("Right",5)
-	GameObjectC.Log("Door openend")
+	------GameObjectC.Log("Door openend")
 end
 
 function Door:Close()
