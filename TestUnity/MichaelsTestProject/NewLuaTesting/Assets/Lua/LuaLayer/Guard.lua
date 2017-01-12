@@ -11,6 +11,7 @@ local range = 0
 function Guard:Start()
 	GameObject:NewScript("Transform")
 	GameObject:NewScript ("RigidBody")
+	GameObjectC:Log("Guard Initialized")
 	startPosition.x, temp, startPosition.z = Transform.GetPosition() 
 	
 
@@ -18,7 +19,8 @@ function Guard:Start()
 end
 
 
-function Guard:Update()
+function Guard:Update ()
+	GameObjectC.Log("Guard update")
 	currentPos.x, currentPos.y, currentPos.z = Transform:GetPosition ()
 	
 	if(targetPos ~= nil)then

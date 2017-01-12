@@ -33,14 +33,13 @@ public class Lualayer : MonoBehaviour {
         //if ( _lua.IsTable(index) ) {
         _lua.GetField(1, "Start");
         Debug.Log(_lua.GetTop());
-        try {
 
-            if ( _lua.IsFunction(-1) ) {
-                _lua.PCall(0, 0, 0);
-                //  }
 
-            }
-        } catch { }
+        if ( _lua.IsFunction(-1) ) {
+            _lua.PCall(0, 0, 0);
+            //  }
+
+        }
 
         _lua.SetTop(0);
         //ToDo
