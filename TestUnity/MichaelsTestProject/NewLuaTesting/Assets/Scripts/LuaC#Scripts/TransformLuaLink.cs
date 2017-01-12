@@ -42,15 +42,15 @@ public class TransformLuaLink : LuaLink {
     public int Rotate(ILuaState state) {
         if ( state.GetTop() != 4 ) {
             _lua.SetTop(0);
-            _lua.PushString("Invalid amount of parameters");
+            //_lua.PushString("Invalid amount of parameters");
             
         }
         this.transform.Rotate(new Vector3((float)state.ToNumber(1),
                                           (float) state.ToNumber(2),
                                           (float) state.ToNumber(3)), (float) state.ToNumber(4));
         _lua.SetTop(0);
-        _lua.PushString("Rotate successfull");
-        return 1;
+        //_lua.PushString("Rotate successfull");
+        return 0;
     }
 
     public int GetRotation(ILuaState state) {
@@ -64,8 +64,8 @@ public class TransformLuaLink : LuaLink {
     public int GetPosition(ILuaState state) {
         if ( state.GetTop() != 0 ) {
             _lua.SetTop(0);
-            state.PushString("Invalid amount of parameters. function requires 0");
-            return 1;
+            //state.PushString("Invalid amount of parameters. function requires 0");
+            return 0;
         }
         _lua.PushNumber(this.transform.position.x);
         _lua.PushNumber(this.transform.position.y);
@@ -76,8 +76,8 @@ public class TransformLuaLink : LuaLink {
     public int GetDirection(ILuaState state) {
         if ( state.GetTop() != 1 ) {
             _lua.SetTop(0);
-            _lua.PushString("Incorrect number of arguments. function requires 0");
-            return 1;
+           // _lua.PushString("Incorrect number of arguments. function requires 0");
+            return 0;
         }
         Vector3 dir = Vector3.zero;
         switch ( state.ToString(1) ) {
@@ -106,8 +106,8 @@ public class TransformLuaLink : LuaLink {
             break;
 
             default:
-            state.PushString("invalid parameter");
-            return 1;
+            //state.PushString("invalid parameter");
+            return 0;
         }
         _lua.PushNumber(dir.x);
         _lua.PushNumber(dir.y);
@@ -118,8 +118,8 @@ public class TransformLuaLink : LuaLink {
     public int SetPosition(ILuaState state) {
         if ( state.GetTop() != 3 ) {
             _lua.SetTop(0);
-            _lua.PushString("Incorrect number of arguments");
-            return 1;
+            //_lua.PushString("Incorrect number of arguments");
+            return 0;
         }
         Debug.Log("Setting position");
         Vector3 newPos = Vector3.zero;
@@ -128,15 +128,15 @@ public class TransformLuaLink : LuaLink {
         newPos.x = (float) _lua.ToNumber(1);
         this.transform.position = newPos;
         _lua.SetTop(0);
-        _lua.PushString("Position Set");
-        return 1;
+       // _lua.PushString("Position Set");
+        return 0;
     }
 
     public int SetRotation(ILuaState state) {
         if ( state.GetTop() != 3 ) {
             _lua.SetTop(0);
-            _lua.PushString("Incorrect number of arguments");
-            return 1;
+            //_lua.PushString("Incorrect number of arguments");
+            return 0;
         }
         Debug.Log("Setting Rotation");
         Vector3 newRot = Vector3.zero;
@@ -145,8 +145,8 @@ public class TransformLuaLink : LuaLink {
         newRot.x = (float) _lua.ToNumber(1);
         transform.rotation.SetEulerAngles(newRot);
         _lua.SetTop(0);
-        _lua.PushString("Position Set");
-        return 1;
+        //_lua.PushString("Position Set");
+        return 0;
     }
 
 

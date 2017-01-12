@@ -38,8 +38,8 @@ public class WorldLua : LuaLink {
     public override int Log(ILuaState state) {
         if ( state.GetTop() != 1 ) {
             _lua.SetTop(0);
-            _lua.PushString("incorrect number of arguments");
-            return 1;
+            //_lua.PushString("incorrect number of arguments");
+            return 0;
         }
         string message = state.ToObject(1).ToString();
         Debug.Log(message.ToString());
