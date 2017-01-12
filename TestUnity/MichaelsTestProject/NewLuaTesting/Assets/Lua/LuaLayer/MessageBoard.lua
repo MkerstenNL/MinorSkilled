@@ -10,12 +10,12 @@ function MessageBoard:Update()
 end
 
 function MessageBoard:NoMessage(status) 
-	GameObject.Log("NoMessage")
+	GameObjectC.Log("NoMessage")
 end
 function MessageBoard:ShowMessage(status) 
 	if(status ~= dirty) then
 	--showmessage
-	GameObject.Log("ShowMessage")
+	GameObjectC.Log("ShowMessage")
 	end
 end
 
