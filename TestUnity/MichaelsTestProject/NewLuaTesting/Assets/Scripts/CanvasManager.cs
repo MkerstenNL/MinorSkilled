@@ -7,7 +7,10 @@ public class CanvasManager : MonoBehaviour {
     [SerializeField]private InputField _input;
     public static bool UsingHud = false;
     TopLevelLua currentLuaFile  = null;
-
+    void Awake()
+    {
+        
+    }
     void LateStart() {
         gameObject.SetActive(false);
     }

@@ -90,6 +90,17 @@ function OnHit (Hit)
 	M.Message("Congratz! You have finished the Alpha. We changed a lot but hoped that you learned anything. Might be not much, but if you liked? Try real programming. P.S. The person that was helping you was me and I am you!",0)
 	end
 	
-	
+	if(Hit == "TriggerLevel2Coin") then
+	M.Message("I think you know what you need to do now.",1)
+	end
+	if(Hit == "TriggerLevel3Coin") then
+	M.Message("You're still reading this? Expect to something to change?",1)
+	end
+	if(Hit == "TriggerLevel5Coin") then
+	M.Message("Collecting coins I see and still thinks that I have another tip for you.",1)
+	end
+	if(Hit == "TriggerLevel6Coin") then
+	M.Message("Almost free and still reading this. No more tips anymore for the coins. You know what to do.",1)
+	end
 end
 

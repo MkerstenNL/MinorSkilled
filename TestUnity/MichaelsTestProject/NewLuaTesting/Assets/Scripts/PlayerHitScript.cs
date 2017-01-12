@@ -9,6 +9,9 @@ public class PlayerHitScript : LuaLink
 {
 
     NameFuncPair[] _lib = new NameFuncPair[1];
+    [SerializeField]
+    private InputField input;
+
     void Start()
     {
         this.init();
@@ -43,7 +46,8 @@ public class PlayerHitScript : LuaLink
         if (tip == 1)
         {
             //Debug.Log(GameObject.Find("Tip"));
-            GameObject.Find("TipText").GetComponent<Text>().text = message;
+            input.GetComponentInChildren<Text>().text = message;
+            //GameObject.Find("TipText").GetComponent<Text>().text = message;
             //Debug.Log(GameObject.Find("Tiptext").GetComponent<Text>().text);
         }
         else
@@ -64,7 +68,7 @@ public class PlayerHitScript : LuaLink
         if (state.GetTop() != 2)
         {
             _lua.SetTop(0);
-            _lua.PushString("Invalid amount of parameters");
+            //_lua.PushString("Invalid amount of parameters");
 
         }
         int MessageType = (int)_lua.ToNumber(2);

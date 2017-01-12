@@ -10,21 +10,14 @@ function MessageBoard:Update()
 end
 
 function MessageBoard:NoMessage(status) 
-	----GameObjectC.Log("NoMessage")
+	GameObjectC.Log("NoMessage")
 end
-function MessageBoard:ShowMessage(status) 
+function MessageBoard:ShowMessage(status)
 	if(status ~= dirty) then
 	--showmessage
-	----GameObjectC.Log("ShowMessage")
+	GameObjectC.Log("ShowMessage")
+	GameObject:MessageBoard()
 	end
-end
-
-function MessageBoard:Interactive()
-	if(Door.Opened==true)then Close() return"Door Already open. Closing now"end
-	----GameObjectC.Log("Opening Door")
-	Door.Opened = true
-	Transform:Teleport("Right",5)
-	----GameObjectC.Log("Door openend")
 end
 
 return MessageBoard
