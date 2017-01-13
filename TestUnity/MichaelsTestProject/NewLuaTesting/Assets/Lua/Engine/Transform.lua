@@ -104,7 +104,8 @@ function Transform:Right ()
 end
 
 function Transform:Forward ()
-	TransformC.GetDirection ("Forward")
+	local x,y,z = TransformC.GetDirection ("Forward")
+	return z,y,x
 end
 
 function Transform:Backward ()

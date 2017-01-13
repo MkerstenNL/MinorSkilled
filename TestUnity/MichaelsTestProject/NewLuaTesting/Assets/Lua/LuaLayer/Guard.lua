@@ -51,17 +51,20 @@ function Guard:Patrol(guardRange,guardSpeedWalking)
 	GameObjectC.Log ("GuardRange = "..guardRange)
 	if(Guard.endPosition.x==0)then
 		
-		local x,y,z = Transform:GetDirection()
+		local x,y,z = Transform:Forward()
 		Guard.range = guardRange
 		x = x * Guard.range
 		z = z * Guard.range
+		
 		local tempx, tempy,tempz = Transform.GetPosition()
 		x = x + tempx
 		z = z + tempz
+		
 		Guard.endPosition.x = x
 		Guard.endPosition.z = z
-		GameObjectC.Log("Patrol range set")
-		
+
+		Guard.targetPos = Guard.endPosition
+		GameObjectC.Log("Patrol range set"..Guard.targetPosition)
 	end
 
 
@@ -87,34 +90,39 @@ function Guard:CheckRangeTarget()
 		local diffX = Guard.targetPos.x-Guard.currentPos.x
 		local diffz = Guard.targetPos.z -Guard.currentPos.z
 		local length = math.sqrt(diffX*diffX + diffz*diffz)
-		if(length<Guard.range)then
-
+		if(length<1)then
+			GameObjectC.Log("target in range")
+			return true
 		end
-		GameObjectC.Log("Distance Checked")
+		
 	end
 	return false
 end
 
 function Guard:UpdatePatrolState()
-	Guard:CheckRangeTarget()
-	if(state=="Chase" and targetName~="")then
-		targetPos.x,nvt,targetPos.z = Transform:GetPosition(targetName)
+	if(Guard:CheckRangeTarget())then
+		if(Guard.targetPos == Guard.endPosition)then
+			Guard.targetPos = Guard.startPosition
+		else
+			Guard.targetPos = Guard.endPosition
+		end
+
 	end
 
-	currentPos.x, temp, currentPos.z = Transform:GetPosition()
-	local diffX = targetPos.x-currentPos.x
-	local diffz = targetPos.z -currentPos.z
+	Guard.currentPos.x, temp, Guard.currentPos.z = Transform:GetPosition()
+	local diffX = Guard.targetPos.x-Guard.currentPos.x
+	local diffz = Guard.targetPos.z -Guard.currentPos.z
 	local length = math.sqrt(diffX*diffX + diffz*diffz)
 	local normx = diffX/length
 	local normz = diffz/length
-	normx = normx*speed/60
-	normz = normz*speed/60
-	if(state=="Evade")then
-		normx = normx *-1
-		normz = normz *-1
-	end
+	normx = normx*Guard.speed
+	normz = normz*Guard.speed
+	--if(state=="Evade")then
+	--	normx = normx *-1
+	--	normz = normz *-1
+	--end
 
-	Transform:Teleport(currentPos.x+normx,currentPos.y,currentPos.z+normz)
+	Transform:Teleport(Guard.currentPos.x+normx,Guard.currentPos.y,Guard.currentPos.z+normz)
 end
 
 function Guard:UpdateChaseAndEvadeState()
