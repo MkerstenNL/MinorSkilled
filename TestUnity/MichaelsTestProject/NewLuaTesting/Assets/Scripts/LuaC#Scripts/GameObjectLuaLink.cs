@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UniLua;
+using UnityEngine.UI;
 
 public class GameObjectLuaLink : LuaLink {
     ScriptFactory _scriptFactory;
@@ -45,6 +46,7 @@ public class GameObjectLuaLink : LuaLink {
     protected override void registerFunctions() {
         regFunction(scriptName + "C", "Log", Log);
         regFunction(scriptName + "C", "NewComponent", NewComponent);
+        regFunction(scriptName + "C", "MessageBoard", MessageBoard);
         foreach ( KeyValuePair<string, List<NameFuncPair>> lib in _libs ) {
             _lua.L_NewLib(lib.Value.ToArray());
             _lua.SetGlobal(lib.Key);
@@ -75,5 +77,21 @@ public class GameObjectLuaLink : LuaLink {
             //_lua.PushString("Operation Successful");
             return 0;
         }
+    }
+
+    public int MessageBoard(ILuaState state)
+    {
+        if (lua.GetTop() != 1)
+        {
+            _lua.SetTop(0);
+            return 0;
+        }
+        string textLua = _lua.ToString(-1);
+        Text[] texts = GameObject.Find("MessageCanvas").GetComponentsInChildren<Text>();
+        foreach (Text text in texts)
+        {
+            text.text = textLua;
+        }
+        return 0;
     }
 }

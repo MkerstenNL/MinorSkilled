@@ -1,11 +1,9 @@
---MessageBoard:Interactive()
--- Status = dirty
+Status = "clean"
 
--- MessageBoard:NoMessage(Status)
--- if(Status == dirty) then
- ----GameObjectC.Log("test")
--- MessageBoard:NoMessage(Status)
--- else
--- ----GameObjectC.Log("test")
--- MessageBoard:ShowMessage(Status)
--- end 
+if(Status == "dirty") then
+ GameObjectC.Log("testDirty")
+MessageBoard:NoMessage(Status)
+else
+GameObjectC.Log("testClean")
+MessageBoard:ShowMessage(Status)
+end 

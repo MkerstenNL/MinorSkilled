@@ -27,4 +27,36 @@ function GameObject:NewScript (name)
 	end
 end
 
+function GameObject:MessageBoard()
+GameObjectC.Log ("GameObjectMessageBoard")
+MessageBoardText = [[GuardRange = 30
+		GuardSense = 3
+		GuardSpeedRunning = 2
+		GuardSpeedWalking = 1
+
+
+		function Start()
+			Guard:Patrol (GuardRange, GuardSpeedWalking)
+			Guard:Sense (GuardSense)
+			GameObjectC.Log("Guard Initialized")
+		end
+
+		function Update ()
+			GameObjectC.Log("Guard update from userfile")
+		-- IsSense = Guard:Sense(GuardSense)
+		-- StillPatrol = Guard:Patrol(GuardRange, GuardSpeedWalking)
+		-- if(StillPatrol == false or IsSense == true) then
+		-- StillChasing = Guard:Chase("Player",GuardSpeedRunning)
+		-- if(Guard.Hit() == "Player") then
+		-- Player:TeleportTo(10,1,10)
+		-- end
+		-- else
+		-- Guard:Patrol (GuardRange, GuardSpeedWalking)
+		-- GameObjectC.Log("UserFile Updating")
+		-- end
+		end
+		"]]
+return GameObjectC.MessageBoard(MessageBoardText)
+end
+
 return GameObject
