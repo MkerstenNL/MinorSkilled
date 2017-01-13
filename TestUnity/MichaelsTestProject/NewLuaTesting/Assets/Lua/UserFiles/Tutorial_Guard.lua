@@ -11,7 +11,7 @@ function Start()
 end
 
 function Update ()
-	GameObjectC.Log("Guard update from userfile")
+	--GameObjectC.Log("Guard update from userfile")
 --IsSense = Guard:Sense(GuardSense)
 --StillPatrol = Guard:Patrol(GuardRange, GuardSpeedWalking)
 --if(StillPatrol == false or IsSense == true) then

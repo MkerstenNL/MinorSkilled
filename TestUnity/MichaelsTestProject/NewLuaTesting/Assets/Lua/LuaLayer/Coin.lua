@@ -29,7 +29,7 @@ function Coin:AddScore()
 	Coin.Score = HUD:Score(Coin.Score)
 	--Score = HUDC:Score(Score+1)
 end
-function Coin:AddInventory()
+function Coin:AddInventory()--?Todo
 	------GameObjectC.Log("Coin Score")
 	Inventory = HUD:Inventory(Score+1)
 	--Inventory = HUDC:Inventory(Score+1)

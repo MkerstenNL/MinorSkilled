@@ -21,8 +21,11 @@ function Transform:GetPosition(nameOfOtherObject)
 	else
 		x,y,z = TransformC.GetPositionOther(nameofOtherObject)
 	end
+	if(x==nill)then
+		GameObjectC.Log("What the actual flying fucks")
+	end
 
-		return x,y,z
+	return x,y,z
 end
 
 
