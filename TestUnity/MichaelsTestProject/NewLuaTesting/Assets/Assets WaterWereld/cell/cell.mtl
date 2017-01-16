@@ -1,0 +1,62 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 10.04.2016 23:03:22
+
+newmtl material_1
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka material_1_DiffuseColor_Composite.jpg
+	map_Kd material_1_DiffuseColor_Composite.jpg
+	map_bump -bm 0.3000 material_1_NormalMap_Normal_Bump.jpg
+
+newmtl material_2
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka material_2_DiffuseColor_Composite.jpg
+	map_Kd material_2_DiffuseColor_Composite.jpg
+	map_bump -bm 0.3000 material_2_NormalMap_Normal_Bump.jpg
+
+newmtl material_0
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka material_0_DiffuseColor_Composite.jpg
+	map_Kd material_0_DiffuseColor_Composite.jpg
+	map_bump -bm 0.3000 material_0_NormalMap_Normal_Bump.jpg
+
+newmtl material_3
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka material_3_DiffuseColor_Composite.jpg
+	map_Kd material_3_DiffuseColor_Composite.jpg
+	map_bump -bm 0.3000 material_3_NormalMap_Normal_Bump.jpg

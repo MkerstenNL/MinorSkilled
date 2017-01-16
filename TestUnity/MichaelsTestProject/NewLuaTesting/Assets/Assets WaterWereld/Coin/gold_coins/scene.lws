@@ -1,0 +1,1853 @@
+LWSC
+3
+
+FirstFrame 3
+LastFrame 3
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 60
+PreviewFrameStep 1
+CurrentFrame 3
+FramesPerSecond 25
+
+AddNullObject Null
+ShowObject 6 3
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 -0.12380145 0
+  Key -0.0033680557 0.039999999 0 0 0 0 0 0 0
+  Key 0.0049666236 0.079999998 0 0 0 0 0.0096331043 0 0
+  Key 0.013280323 0.12 0 0 0 0 0.027298687 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 0.011459557 0
+  Key 0.0026750003 0.039999999 0 0 0 0 0.002656552 0 0
+  Key 0.0026750003 0.079999998 0 0 0 0 0 0 0
+  Key 0.0026750003 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 -0.026671605 0
+  Key 5.4681826e-005 0.039999999 0 0 0 0 0 0 0
+  Key 0.021398105 0.079999998 0 0 0 0 0.013233102 0 0
+  Key 0.082101457 0.12 0 0 0 0 0.025695348 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n2.lwo
+ShowObject 6 3
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 0.11594001 0
+  Key -0.0037251974 0.039999999 0 0 0 0 0 0 0
+  Key 0.020199802 0.079999998 0 0 0 0 0.029321378 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  3
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.00099999993 0.039999999 0 0 0 0 0 0 0
+  Key 0.001 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 -0.012797081 0
+  Key 0.00081542693 0.039999999 0 0 0 0 0 0 0
+  Key 0.017840428 0.079999998 0 0 0 0 0.021550344 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  3
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 1.9198622 0.039999999 0 0 0 0 0 0 0
+  Key 1.9198622 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 2
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n5.lwo
+ShowObject 6 3
+SchematicPosition 0.600000 -0.400000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  3
+  Key -0.024225585 0 0 0 0 0 0 0.11594001 0
+  Key -0.0027500002 0.039999999 0 0 0 0 0 0 0
+  Key -0.0042249984 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  3
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0029250002 0.039999999 0 0 0 0 0 0 0
+  Key 0.001 0.079999998 0 0 0 0 -0.0029048277 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  3
+  Key 0.02575139 0 0 0 0 0 0 -0.012797081 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0.027674997 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  3
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 0.95993108 0.039999999 0 0 0 0 0 0 0
+  Key 2.2532203 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 2
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n2.lwo
+ShowObject 6 3
+SchematicPosition 1.200000 -0.800000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.026556769 0 0 0 0 0 0 0.11594001 0
+  Key -0.0015000001 0.039999999 0 0 0 0 0 0 0
+  Key -0.0015000001 0.079999998 0 0 0 0 0 0 0
+  Key -0.0015000001 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.001 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.027319415 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0014749998 0.039999999 0 0 0 0 0 0 0
+  Key 0.0014749998 0.079999998 0 0 0 0 0 0 0
+  Key 0.0014749998 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key -1.3439035 0.12 0 0 0 0 -4.107903 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n1.lwo
+ShowObject 6 3
+SchematicPosition 1.800000 -1.200000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  3
+  Key -0.027140968 0 0 0 0 0 0 0.11594001 0
+  Key -0.0022787428 0.039999999 0 0 0 0 0 0 0
+  Key 0.0081712566 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  3
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0067500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.0029249995 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  3
+  Key 0.028635165 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0034622662 0.039999999 0 0 0 0 0 0 0
+  Key 0.011212266 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  3
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n5.lwo
+ShowObject 6 3
+SchematicPosition 1.800000 -1.200000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.016109601 0.079999998 0 0 0 0 0 0 0
+  Key 0.016109601 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.001 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.050065458 0.079999998 0 0 0 0 0 0 0
+  Key 0.050065458 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key -2.7925267 0.12 0 0 0 0 -5.546536 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 2
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n1.lwo
+ShowObject 6 3
+SchematicPosition 2.400000 -1.600000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.016109601 0.079999998 0 0 0 0 0 0 0
+  Key -0.02489041 0.12 0 0 0 0 -0.040717252 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.0028750002 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.0018620691 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.048690449 0.079999998 0 0 0 0 0 0 0
+  Key 0.067690447 0.12 0 0 0 0 0.018868962 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key 0.38397244 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n1.lwo
+ShowObject 6 3
+SchematicPosition 3.000000 -2.000000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.016534599 0.079999998 0 0 0 0 0 0 0
+  Key 0.0045345984 0.12 0 0 0 0 -0.011917242 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.0048000016 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.0037737947 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.051515449 0.079999998 0 0 0 0 0 0 0
+  Key 0.082515441 0.12 0 0 0 0 0.030786199 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key 5.2359877 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n2.lwo
+ShowObject 6 3
+SchematicPosition 3.600000 -2.400000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.014709597 0.079999998 0 0 0 0 0 0 0
+  Key 0.046709597 0.12 0 0 0 0 0.031779312 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.0067750025 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.0057351748 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.04789044 0.079999998 0 0 0 0 0 0 0
+  Key 0.079390444 0.12 0 0 0 0 0.031282764 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key 0.52359873 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n2.lwo
+ShowObject 6 3
+SchematicPosition 4.200000 -2.800000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.0179346 0.079999998 0 0 0 0 0 0 0
+  Key 0.047934603 0.12 0 0 0 0 0.029793106 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.0087250061 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.0076717301 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.048090447 0.079999998 0 0 0 0 0 0 0
+  Key 0.051590446 0.12 0 0 0 0 0.0034758616 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key -1.4835298 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n2.lwo
+ShowObject 6 3
+SchematicPosition 4.800000 -3.200000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.0146346 0.079999998 0 0 0 0 0 0 0
+  Key -0.0468654 0.12 0 0 0 0 -0.061075862 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.010725006 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.0096579371 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.050190438 0.079999998 0 0 0 0 0 0 0
+  Key 0.047690444 0.12 0 0 0 0 -0.0024827525 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key -3.8746309 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n2.lwo
+ShowObject 6 3
+SchematicPosition 5.400000 -3.600000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.0180596 0.079999998 0 0 0 0 0 0 0
+  Key 0.046559602 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.012600008 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.011520009 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.048115436 0.079999998 0 0 0 0 0 0 0
+  Key 0.024115436 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key 0.34906584 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n1.lwo
+ShowObject 6 3
+SchematicPosition 6.000000 -4.000000
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.0180596 0.079999998 0 0 0 0 0 0 0
+  Key -0.019940397 0.12 0 0 0 0 -0.037737928 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.01460001 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.013506216 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.048215438 0.079999998 0 0 0 0 0 0 0
+  Key 0.094715446 0.12 0 0 0 0 0.046179321 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key -0.43633229 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n1.lwo
+ShowObject 6 3
+SchematicPosition 6.599999 -4.400001
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.0180596 0.079999998 0 0 0 0 0 0 0
+  Key 0.096559592 0.12 0 0 0 0 0.077958614 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.0166 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.015492413 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.048190437 0.079999998 0 0 0 0 0 0 0
+  Key 0.12769043 0.12 0 0 0 0 0.078951724 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key 1.7278759 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n5.lwo
+ShowObject 6 3
+SchematicPosition 7.199999 -4.800001
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.016734602 0.079999998 0 0 0 0 0 0 0
+  Key 0.094234593 0.12 0 0 0 0 0.076965511 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.020575004 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.019440003 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.049065441 0.079999998 0 0 0 0 0 0 0
+  Key 0.098065451 0.12 0 0 0 0 0.048662078 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key 2.0943949 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n2.lwo
+ShowObject 6 3
+SchematicPosition 7.799999 -5.200001
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.019634599 0.079999998 0 0 0 0 0 0 0
+  Key 0.028134599 0.12 0 0 0 0 0.0084413802 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.018600002 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.017478622 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.047140434 0.079999998 0 0 0 0 0 0 0
+  Key 0.14864044 0.12 0 0 0 0 0.10080001 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key -2.7227135 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 1 D:work/_fantasy_CD/_DOSCH_finish/_part2/gold_coins/coin_n2.lwo
+ShowObject 6 3
+SchematicPosition 7.799999 -5.200001
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.034756765 0 0 0 0 0 0 0.11594001 0
+  Key -0.067549996 0.039999999 0 0 0 0 0 0 0
+  Key 0.014584598 0.079999998 0 0 0 0 0 0 0
+  Key -0.032880582 0.12 0 0 0 0 0.078951724 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.00099999993 0 0 0 0 0 0 0.048704453 0
+  Key 0.0048500006 0.039999999 0 0 0 0 0 0 0
+  Key 0.022574998 0.079999998 0 0 0 0 -0.0038234489 0 0
+  Key 0.001 0.12 0 0 0 0 -0.021426205 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.025969416 0 0 0 0 0 0 -0.012797081 0
+  Key 0.0173 0.039999999 0 0 0 0 0 0 0
+  Key 0.049965438 0.079999998 0 0 0 0 0 0 0
+  Key 0.1535425 0.12 0 0 0 0 -0.05561379 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 1.9198622 0 0 0 0 0 0 -5.0631366 0
+  Key 2.7925267 0.039999999 0 0 0 0 0 0 0
+  Key 2.7925267 0.079999998 0 0 0 0 0 0 0
+  Key -1.7278759 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 1.5680739 0
+  Key 0 0.039999999 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.039999999 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 2
+ShadowOptions 7
+
+AmbientColor 1 1 1
+AmbientIntensity 0
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  3
+  Key 0.06735763 0 0 0 0 0 0 0.24927661 0
+  Key 0.31749979 0.079999998 0 0 0 0 0.36376148 0 0
+  Key 0.61299986 0.12 0 0 0 0 0.066041358 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  3
+  Key 0.0812518 0 0 0 0 0 0 0.79274702 0
+  Key 0.87675142 0.079999998 0 0 0 0 0.57466632 0 0
+  Key 0.94325131 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  3
+  Key -0.024449097 0 0 0 0 0 0 -0.38321984 0
+  Key -0.40899956 0.079999998 0 0 0 0 -0.32536694 0 0
+  Key -0.51249951 0.12 0 0 0 0 0.12761378 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  3
+  Key -1.2226101 0 0 0 0 0 0 0.59249145 0
+  Key -0.62806141 0.079999998 0 0 0 0 0.28861749 0 0
+  Key -0.78968388 0.12 0 0 0 0 -0.19099222 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  3
+  Key 0.84806049 0 0 0 0 0 0 0.17545883 0
+  Key 1.0241286 0.079999998 0 0 0 0 -0.0059359469 0 0
+  Key 0.83915657 0.12 0 0 0 0 0.043608502 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  3
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  3
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+HController 1
+PController 1
+TargetItem 10000000
+LightColor 1 1 1
+LightIntensity 0.95
+AffectCaustics 1
+LightType 2
+LightConeAngle 35
+LightEdgeAngle 15
+ShadowType 2
+ShadowMapSize 3000
+UseConeAngle 1
+ShadowFuzziness 3
+
+AddLight
+LightName Light
+ShowLight 1 5
+SchematicPosition 0.600000 -0.400000
+LightMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  2
+  Key 0.13024899 0 0 0 0 0 0 -0.56453985 0
+  Key -0.43625107 0.079999998 0 0 0 0 -0.56453985 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  2
+  Key 0.14900118 0 0 0 0 0 0 0 0
+  Key 0.14900118 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  2
+  Key -0.12450042 0 0 0 0 0 0 0.32487199 0
+  Key 0.2014996 0.079999998 0 0 0 0 0.32487199 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  2
+  Key -0.80795997 0 0 0 0 0 0 -3.5047114 0
+  Key -4.3248405 0.079999998 0 0 0 0 -3.5047114 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  2
+  Key 0.69096118 0 0 0 0 0 0 -0.39169219 0
+  Key 0.29790896 0.079999998 0 0 0 0 -0.39169219 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  2
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  2
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  2
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  2
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+HController 1
+PController 1
+TargetItem 10000000
+LightColor 1 1 1
+LightIntensity 0.35
+AffectCaustics 1
+LightType 2
+LightConeAngle 45
+LightEdgeAngle 20
+ShadowType 0
+
+AddCamera
+CameraName Camera
+ShowCamera 1 2
+CameraMotion
+NumChannels 6
+Channel 0
+{ Envelope
+  4
+  Key -0.027616197 0 0 0 0 0 0 -0.95591062 0
+  Key -0.037815522 0.039999999 0 0 0 0 -0.0073450627 0 0
+  Key -0.05020602 0.079999998 0 0 0 0 0 0 0
+  Key -0.017253876 0.12 0 0 0 0 -0.027018301 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.048078842 0 0 0 0 0 0 0.30597687 0
+  Key 0.044453815 0.039999999 0 0 0 0 -0.011867595 0 0
+  Key 0.081828825 0.079999998 0 0 0 0 0 0 0
+  Key 0.40032879 0.12 0 0 0 0 0.1728 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key -0.026915852 0 0 0 0 0 0 -0.29106042 0
+  Key -0.027944438 0.039999999 0 0 0 0 -0.0038862452 0 0
+  Key -0.022978311 0.079999998 0 0 0 0 0 0 0
+  Key 0.049458068 0.12 0 0 0 0 0.00067576871 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 0.7982403 0 0 0 0 0 0 0 0
+  Key 0.88829523 0.039999999 0 0 0 0 -0.00067640503 0 0
+  Key 0.89342725 0.079999998 0 0 0 0 0 0 0
+  Key 0.75202543 0.12 0 0 0 0 0.18836781 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0.89478731 0 0 0 0 0 0 0 0
+  Key 0.75509083 0.039999999 0 0 0 0 -0.2457419 0 0
+  Key 0.8410179 0.079999998 0 0 0 0 0 0 0
+  Key 1.4588614 0.12 0 0 0 0 0.37424886 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key -0.0069813663 0 0 0 0 0 0 0 0
+  Key -0.0069813663 0.039999999 0 0 0 0 0 0 0
+  Key -0.0069813663 0.079999998 0 0 0 0 0 0 0
+  Key -0.0069813663 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 24
+HController 1
+PController 1
+TargetItem 10000000
+ZoomFactor 3.2
+ResolutionMultiplier 1.0
+FrameSize 1600 1600
+PixelAspect 1
+MaskPosition 0 0 800 600
+MotionBlur 0
+FieldRendering 0
+
+ApertureHeight 0.015
+Antialiasing 1
+EnhancedAA 1
+AdaptiveSampling 1
+AdaptiveThreshold 0.1
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 0.1569 0.3137
+SkyColor 0.4706 0.7059 0.9412
+GroundColor 0.1961 0.1569 0.1176
+NadirColor 0.3922 0.3137 0.2353
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+GlowEffect 1
+GlowIntensity 0.5
+GlowRadius 8
+Plugin ImageFilterHandler 1 LW_Bloom
+{ Options
+  3
+  { Settings
+    0
+    0
+    1
+    0
+    0
+    1
+    ""
+  }
+  { AlternatesTwo
+    0
+    0
+    0
+    0
+    ""
+  }
+  { Variants
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.94999999
+        0
+      }
+    }
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.55000001
+        0
+      }
+    }
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        35
+        0
+      }
+    }
+  }
+  { ColorTexture
+    0
+  }
+}
+EndPlugin
+
+RenderMode 2
+RayTraceEffects 1
+RayRecursionLimit 16
+RayTraceOptimization 1
+DataOverlayLabel  
+OutputFilenameFormat 1
+SaveRGB 1
+SaveRGBImagesPrefix D:\work\_fantasy_CD\_shoot final\tif\gold_coins
+RGBImageSaver LW_TIFF24(.tif)
+SaveAlpha 0
+
+ViewConfiguration 0
+DefineView 0
+ViewType 9
+ViewLevel 2
+ViewAimpoint 0.02340006 0.008674403 0.03777475
+ViewZoomFactor 4.387211
+
+GridNumber 50
+GridSize 0.1
+CameraViewBG 0
+ShowMotionPath 1
+ShowFogRadius 1
+ShowFogEffect 1
+ShowSafeAreas 0
+ShowFieldChart 0
+
+CurrentObject 0
+CurrentLight 0
+CurrentCamera 0
+GraphEditorData
+{ GraphEd_Favorites
+}
+{ GE_Expression_Lib
+  1
+}
