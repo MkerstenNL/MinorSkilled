@@ -2,7 +2,7 @@ GuardRange = 30
 GuardSense = 3
 GuardSpeedRunning = 2
 GuardSpeedWalking = 1
-
+inRange = false
 
 function Start()
 	Guard:Patrol (GuardRange, GuardSpeedWalking)
@@ -11,7 +11,7 @@ function Start()
 end
 
 function Update ()
-	inRange = false
+	
 	inRange = Guard:CheckRangeTarget ("Player")
 	--GameObjectC.Log ("Userfile updating")
 	if(inRange) then

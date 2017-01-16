@@ -10,7 +10,7 @@ function Door:Update()
 
 end
 
-function Door:Interactive()
+function Door:Interact()
 	if(Door.Opened==true)then Close() return"Door Already open. Closing now"end
 	------GameObjectC.Log("Opening Door")
 	Door.Opened = true

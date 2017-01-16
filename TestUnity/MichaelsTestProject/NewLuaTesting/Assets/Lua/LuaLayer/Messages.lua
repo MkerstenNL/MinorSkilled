@@ -11,13 +11,13 @@ function OnHit (Hit)
 	M.Message("Try to escape the prison the door looks unguarded",0)
 	end
 	if(Hit == "Door") then
-	M.Message("Try opening the door by typing Door:Interactive()",1)
+	M.Message("Try opening the door by typing Door:Interact()",1)
 	end
 	if(Hit == "triggerWalkedThroughDoorLevel1") then
-	M.Message("Good Job. You used a function for an object. Is that a coin? Free money! Let's pick it up.",0)
+	M.Message("Good Job. You used the function interact for an object. Is that a coin? Free money! Let's pick it up.",0)
 	end
 	if(Hit == "TriggerLevel1Coin") then
-	M.Message("Tip:Coin.Interactive()",1)
+	M.Message("Tip:Coin.Interact()",1)
 	end
 	if(Hit == "TriggerPickedUpCoin") then
 	M.Message("Nice you have some money now and again you used the same function but for another object that does something else. Let's continue.",0)
