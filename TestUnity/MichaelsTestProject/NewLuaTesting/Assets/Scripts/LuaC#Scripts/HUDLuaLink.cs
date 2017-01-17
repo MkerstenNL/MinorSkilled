@@ -70,6 +70,7 @@ public class HUDLuaLink : LuaLink {
     public int Inventory(ILuaState state)
     {
         _inventory.Add(_lua.ToString(-1));
+        _lua.SetTop(0);
         return 0;
     }
 }

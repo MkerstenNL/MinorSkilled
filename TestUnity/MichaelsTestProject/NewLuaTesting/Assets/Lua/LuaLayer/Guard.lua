@@ -66,7 +66,11 @@ function Guard:Patrol(guardRange,guardSpeedWalking)
 
 		Guard.targetPos = Guard.endPosition
 		--GameObjectC.Log("Patrol range set"..Guard.targetPosition)
+		elseif Guard.targetPos.x ~= Guard.startPosition.x or Guard.targetPos.x~= Guard.endPosition.x then
+		Guard.targetPos = Guard.endPosition
+
 	end
+
 
 
 end
