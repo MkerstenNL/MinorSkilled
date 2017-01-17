@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 0fb0f0a8d3aea124f8c62f935f3c1d5e
+timeCreated: 1484574691
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BSP
+    100002: Null1_Cloner_11
+    100004: Null1_Cube2
+    100006: Null1_Cube_12
+    100008: Null1_Cube_21
+    100010: Null1_Cube_31
+    100012: Null1_Cube_41
+    100014: Null1_Cube_52
+    100016: Null1_Null2_Cloner_12
+    100018: Null1_Null2_Cube
+    100020: Null1_Null2_Cube_11
+    100022: Null1_Null2_Cube_22
+    100024: Null1_Null2_Cube_3
+    100026: Null1_Null2_Cube_42
+    100028: Null1_Null2_Cube_51
+    100030: Null1_Null_1_Cloner_1
+    100032: Null1_Null_1_Cube1
+    100034: Null1_Null_1_Cube_1
+    100036: Null1_Null_1_Cube_2
+    100038: Null1_Null_1_Cube_32
+    100040: Null1_Null_1_Cube_4
+    100042: Null1_Null_1_Cube_5
+    100044: Plane
+    100046: //RootNode
+    400000: BSP
+    400002: Null1_Cloner_11
+    400004: Null1_Cube2
+    400006: Null1_Cube_12
+    400008: Null1_Cube_21
+    400010: Null1_Cube_31
+    400012: Null1_Cube_41
+    400014: Null1_Cube_52
+    400016: Null1_Null2_Cloner_12
+    400018: Null1_Null2_Cube
+    400020: Null1_Null2_Cube_11
+    400022: Null1_Null2_Cube_22
+    400024: Null1_Null2_Cube_3
+    400026: Null1_Null2_Cube_42
+    400028: Null1_Null2_Cube_51
+    400030: Null1_Null_1_Cloner_1
+    400032: Null1_Null_1_Cube1
+    400034: Null1_Null_1_Cube_1
+    400036: Null1_Null_1_Cube_2
+    400038: Null1_Null_1_Cube_32
+    400040: Null1_Null_1_Cube_4
+    400042: Null1_Null_1_Cube_5
+    400044: Plane
+    400046: //RootNode
+    2300000: BSP
+    2300002: Null1_Cloner_11
+    2300004: Null1_Cube2
+    2300006: Null1_Cube_12
+    2300008: Null1_Cube_21
+    2300010: Null1_Cube_31
+    2300012: Null1_Cube_41
+    2300014: Null1_Cube_52
+    2300016: Null1_Null2_Cloner_12
+    2300018: Null1_Null2_Cube
+    2300020: Null1_Null2_Cube_11
+    2300022: Null1_Null2_Cube_22
+    2300024: Null1_Null2_Cube_3
+    2300026: Null1_Null2_Cube_42
+    2300028: Null1_Null2_Cube_51
+    2300030: Null1_Null_1_Cloner_1
+    2300032: Null1_Null_1_Cube1
+    2300034: Null1_Null_1_Cube_1
+    2300036: Null1_Null_1_Cube_2
+    2300038: Null1_Null_1_Cube_32
+    2300040: Null1_Null_1_Cube_4
+    2300042: Null1_Null_1_Cube_5
+    2300044: Plane
+    3300000: BSP
+    3300002: Null1_Cloner_11
+    3300004: Null1_Cube2
+    3300006: Null1_Cube_12
+    3300008: Null1_Cube_21
+    3300010: Null1_Cube_31
+    3300012: Null1_Cube_41
+    3300014: Null1_Cube_52
+    3300016: Null1_Null2_Cloner_12
+    3300018: Null1_Null2_Cube
+    3300020: Null1_Null2_Cube_11
+    3300022: Null1_Null2_Cube_22
+    3300024: Null1_Null2_Cube_3
+    3300026: Null1_Null2_Cube_42
+    3300028: Null1_Null2_Cube_51
+    3300030: Null1_Null_1_Cloner_1
+    3300032: Null1_Null_1_Cube1
+    3300034: Null1_Null_1_Cube_1
+    3300036: Null1_Null_1_Cube_2
+    3300038: Null1_Null_1_Cube_32
+    3300040: Null1_Null_1_Cube_4
+    3300042: Null1_Null_1_Cube_5
+    3300044: Plane
+    4300000: BSP
+    4300002: Null1_Cloner_11
+    4300004: Null1_Cube2
+    4300006: Null1_Cube_12
+    4300008: Null1_Cube_21
+    4300010: Null1_Cube_31
+    4300012: Null1_Cube_41
+    4300014: Null1_Cube_52
+    4300016: Null1_Null2_Cloner_12
+    4300018: Null1_Null2_Cube
+    4300020: Null1_Null2_Cube_11
+    4300022: Null1_Null2_Cube_22
+    4300024: Null1_Null2_Cube_3
+    4300026: Null1_Null2_Cube_42
+    4300028: Null1_Null2_Cube_51
+    4300030: Null1_Null_1_Cloner_1
+    4300032: Null1_Null_1_Cube1
+    4300034: Null1_Null_1_Cube_1
+    4300036: Null1_Null_1_Cube_2
+    4300038: Null1_Null_1_Cube_32
+    4300040: Null1_Null_1_Cube_4
+    4300042: Null1_Null_1_Cube_5
+    4300044: Plane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

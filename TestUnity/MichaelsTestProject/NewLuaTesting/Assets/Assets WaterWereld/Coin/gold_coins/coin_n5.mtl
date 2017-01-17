@@ -1,0 +1,26 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration 
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+newmtl coin2
+	 Ka 0 0 0
+	 Kd 0.784314 0.784314 0.784314
+	 Ks 1 1 1
+	 illum 2
+	 Ns 22.6274
+map_Kd coin2.jpg
+map_bump coin2_b.jpg
+bump coin2_b.jpg
+map_kS coin2_s.jpg
+newmtl coin1
+	 Ka 0 0 0
+	 Kd 0.784314 0.784314 0.784314
+	 Ks 1 1 1
+	 illum 2
+	 Ns 22.6274
+map_Kd coin3.jpg
+map_bump coin3_b.jpg
+bump coin3_b.jpg
+map_kS coin3_s.jpg
