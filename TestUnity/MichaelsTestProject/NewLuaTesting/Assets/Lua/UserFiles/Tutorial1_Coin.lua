@@ -1,1 +1,1 @@
-Coin:Interact()
+ss

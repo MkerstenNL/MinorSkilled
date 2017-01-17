@@ -1,12 +1,12 @@
-GuardRange = 30
-GuardSense = 3
-GuardSpeedRunning = 2
-GuardSpeedWalking = 1
+Range = 5
+SeePerson = 10
+SpeedRunning = 1
+SpeedWalking = 0.5
 inRange = false
 
 function Start()
-	Guard:Patrol (GuardRange, GuardSpeedWalking)
-	Guard:Sense (GuardSense)
+	Guard:Patrol (Range, SpeedWalking)
+	Guard:Sense (SeePerson)
 	--GameObjectC.Log("Guard Initialized")
 end
 
@@ -15,10 +15,10 @@ function Update ()
 	inRange = Guard:CheckRangeTarget ("Player")
 	--GameObjectC.Log ("Userfile updating")
 	if(inRange) then
-		Guard:Chase ("Player", GuardSpeedRunning)
+		Guard:Chase ("Player", SpeedRunning)
 	--GameObjectC.Log("Should chase")
 	else
-		Guard:Patrol (GuardRange, GuardSpeedWalking)
+		Guard:Patrol (Range, SpeedWalking)
 		--GameObjectC.Log("Should Patrol")
 	end
 

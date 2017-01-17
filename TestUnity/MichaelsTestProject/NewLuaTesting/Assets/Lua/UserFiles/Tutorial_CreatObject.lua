@@ -1,4 +1,4 @@
-x, y, z = Transform:GetPosition()
-x = x + 10
-z = z + 10
+x = 11
+y = 8
+z = 360
 World:CreateObject('Car',x,y,z)

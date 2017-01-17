@@ -70,7 +70,7 @@ public abstract class LuaLink : MonoBehaviour {
             return 0;
         }
         object message = state.ToObject(-1);
-        Debug.Log(message.ToString());
+        //Debug.Log(message.ToString());
         _lua.SetTop(0);
         //_lua.PushString("operation succesful");
         return 0;

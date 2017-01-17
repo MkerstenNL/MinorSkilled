@@ -1,6 +1,6 @@
 function OnHit (Hit)
 	if(Hit == "StartTrigger") then
-	M.Message("Why do you need to be in a holding cell. You did nothing they tricked you. Let's to to escape door looks unguarded. Maybe you can open it.",0)
+	M.Message("Why do you need to be in a holding cell. You did nothing they tricked you. Let's try to escape the door looks unguarded. Maybe you can open it.",0)
 	end
 	if(Hit == "Door") then
 	M.Message("Door opens on command. Try typing Door:Interact() to open the door.",1)
@@ -72,7 +72,7 @@ function OnHit (Hit)
 	M.Message("YOU DID IT! You passed an object even though it's still there. That is called a collider that wouldn't let you pass. Now that you said that it was not a collider you were able to get through. Now get out fast! Get to the road",0)
 	end
 	if(Hit == "CreateObjectTrigger") then
-	M.Message("Now we need a car to escape quickly. I have a car available for you. It is only not created! CreateObject('car')",1)
+	M.Message("Now we need a car to escape quickly. I have a car available for you. It is only not created! CreateObject('car',x,y,z) X,Y,Z is the position in the world. But I already did that for you.",1)
 	end
 	if(Hit == "InteractCarTrigger") then
 	M.Message("You should be able to do this now!",1)
