@@ -47,12 +47,12 @@ public class MovementControllerPlayer : MonoBehaviour {
     void rotate() {
         float x = Input.GetAxis("Mouse X");
         float y = Input.GetAxis("Mouse Y");
-        _cam.transform.Rotate(-1*y,0, 0);
+        //_cam.transform.Rotate(-1*y,0, 0);
         transform.Rotate(0, x, 0);
-        if ( _cam.transform.rotation.eulerAngles.x > 60&& _cam.transform.rotation.eulerAngles.x <120 ) {
-            _cam.transform.rotation = Quaternion.Euler(new Vector3(60, 0, 0));
-        } else if ( _cam.transform.rotation.eulerAngles.x < 300 && _cam.transform.rotation.eulerAngles.x > 120 ) {
-            _cam.transform.rotation = Quaternion.Euler(new Vector3(300, 0, 0));
-        }
+        //if ( _cam.transform.rotation.eulerAngles.x > 60&& _cam.transform.rotation.eulerAngles.x <120 ) {
+        //    _cam.transform.rotation = Quaternion.Euler(new Vector3(60, 0, 0));
+        // if ( _cam.transform.rotation.eulerAngles.x < 300 && _cam.transform.rotation.eulerAngles.x > 120 ) {
+         //   _cam.transform.rotation = Quaternion.Euler(new Vector3(300, 0, 0));
+       // }
     }
 }
