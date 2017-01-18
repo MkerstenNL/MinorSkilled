@@ -88,10 +88,10 @@ public class RigidBodyLink : LuaLink {
             return 0;
         }
         _lua.SetTop(0);
-        //_lua.PushNumber(dir.x);
-        //_lua.PushNumber(dir.y);
-        //_lua.PushNumber(dir.z);
-        return 0;
+        _lua.PushNumber(dir.x);
+        _lua.PushNumber(dir.y);
+        _lua.PushNumber(dir.z);
+        return 3;
     }
 
     //direction speed time

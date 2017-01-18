@@ -13,8 +13,10 @@ public class MovementScript : MonoBehaviour {
     Rigidbody _rigidBody;
     List<MovementData> _movements = new List<MovementData>();
     string lastHit;
+
 	// Use this for initialization
 	void Awake () {
+
         if ( _rigidBody == null ) {
             _rigidBody = gameObject.GetComponent<Rigidbody>();
             if ( _rigidBody == null ) {
@@ -47,6 +49,7 @@ public class MovementScript : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        
         Vector3 newVec = Vector3.zero;
         //newVec.y = _rigidBody.velocity.y;
         int j = -1;
@@ -63,7 +66,7 @@ public class MovementScript : MonoBehaviour {
             _movements.Remove(_movements[j]);
         }
 
-        
+        //Debug.Log(newVec.x +"            "+newVec.z );
         _rigidBody.velocity = newVec;
     }
 }
