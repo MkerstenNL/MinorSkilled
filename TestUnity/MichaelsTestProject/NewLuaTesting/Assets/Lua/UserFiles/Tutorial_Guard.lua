@@ -1,7 +1,7 @@
 Range = 5
 SeePerson = 10
-SpeedRunning = 1
-SpeedWalking = 0.5
+SpeedRunning = 5
+SpeedWalking = 2.5
 inRange = false
 
 function Start()
@@ -11,9 +11,8 @@ function Start()
 end
 
 function Update ()
-	
+	inRange= false
 	inRange = Guard:CheckRangeTarget ("Player")
-	--GameObjectC.Log ("Userfile updating")
 	if(inRange) then
 		Guard:Chase ("Player", SpeedRunning)
 	--GameObjectC.Log("Should chase")

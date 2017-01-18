@@ -93,10 +93,10 @@ function Guard:CheckRangeTarget(x,z)
 	p=1
 	if(type(x) == "string")then
 		x,y,z = Transform:GetPosition(x)
-		p=Guard.sightRange
+		p = Guard.sightRange
 	end
 
-	GameObjectC.Log("CheckingRange")
+	--GameObjectC.Log("CheckingRange")
 	if(Guard.targetPos~=nil)then
 		local diffX =x-Guard.currentPos.x
 		local diffz = z -Guard.currentPos.z
@@ -128,8 +128,8 @@ function Guard:UpdatePatrolState()
 	local length = math.sqrt(diffX*diffX + diffz*diffz)
 	local normx = diffX/length
 	local normz = diffz/length
-	normx = normx*Guard.speed
-	normz = normz*Guard.speed
+	normx = normx*Guard.speed/60
+	normz = normz*Guard.speed/60
 	--if(state=="Evade")then
 	--	normx = normx *-1
 	--	normz = normz *-1
@@ -140,14 +140,14 @@ end
 
 function Guard:UpdateChaseAndEvadeState()
 
-	Guard.currentPos.x, temp, Guard.currentPos.z = Transform:GetPosition(Guard.targetName)
+	Guard.targetPos.x, temp, Guard.targetPos.z = Transform:GetPosition(Guard.targetName)
 	local diffX = Guard.targetPos.x-Guard.currentPos.x
 	local diffz = Guard.targetPos.z -Guard.currentPos.z
 	local length = math.sqrt(diffX*diffX + diffz*diffz)
 	local normx = diffX/length
 	local normz = diffz/length
-	normx = normx*Guard.speed
-	normz = normz*Guard.speed
+	normx = normx*Guard.speed/60
+	normz = normz*Guard.speed/60
 	--if(state=="Evade")then
 	--	normx = normx *-1
 	--	normz = normz *-1
