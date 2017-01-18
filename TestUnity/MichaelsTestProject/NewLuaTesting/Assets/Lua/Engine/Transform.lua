@@ -67,8 +67,8 @@ function Transform:Teleport (x, y, z, distance)
 		distance = y
 		x, y, z = TransformC.GetDirection (x)
 		local oldx,oldy,oldz = TransformC.GetPosition()
-		TransformC.Log(""..y)
-		TransformC.Log(""..oldx)
+		--TransformC.Log(""..y)
+		--TransformC.Log(""..oldx)
 		x = x * distance + oldx
 		y = y * distance + oldy
 		z = z * distance + oldz

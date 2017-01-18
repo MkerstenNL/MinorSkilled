@@ -127,6 +127,7 @@
     <Compile Include="Assets\UniLua\Undump.cs" />
     <Compile Include="Assets\UniLua\Util.cs" />
     <Compile Include="Assets\UniLua\VM.cs" />
+    <Compile Include="Assets\hitguardscript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Api.txt" />
