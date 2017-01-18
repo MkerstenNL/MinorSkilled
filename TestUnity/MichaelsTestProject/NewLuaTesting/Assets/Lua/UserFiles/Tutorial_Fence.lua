@@ -1,1 +1,1 @@
-www
+Fence:TurnOnCollider(false)
