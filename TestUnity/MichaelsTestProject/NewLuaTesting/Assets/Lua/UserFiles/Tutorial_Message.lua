@@ -1,4 +1,4 @@
-Status = "clean"
+Status = "dirty"
 
 if(Status == "dirty") then
 MessageBoard:NoMessage(Status)

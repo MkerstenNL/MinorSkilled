@@ -55,9 +55,9 @@ function OnHit (Hit)
 	if(Hit == "HitByGuard") then
 	M.Message("Well they found you. Now we can say that the guards don't have to chase you. But wouldn't it be fun if they run away instead? Evade you instead of Chase you.",1)
 	end
-	
+	--Not perfect explained
 	if(Hit == "BigGuardTrigger") then
-	M.Message("Wow he is big!. Let's see what changed. Not everything is changed when facing another guard and what are Update en Start doing? Start can be used set things that are needed once like for the Update. Update is called every time. That means that if you add 1 to a variable. It will do this every time.",0)
+	M.Message("Wow he is big!. Let's see what changed. Not everything is changed when facing another guard and what are Update en Start doing? Start can be used set things that are needed once. Update is called every time. That means that if you add 1 to speed. It will go faster every time.",0)
 	end
 	if(Hit == "FenceTrigger") then
 	M.Message("Freedom is on the other side of the fence!",0)
@@ -82,7 +82,7 @@ function OnHit (Hit)
 	end
 	
 	if(Hit == "TriggerLevel2Coin") then
-	M.Message("I think you know what you need to do now.",1)
+	M.Message("Pick up the coin you need how to do it.",1)
 	end
 	if(Hit == "TriggerLevel3Coin") then
 	M.Message("You're still reading this? Expect to something to change?",1)

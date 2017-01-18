@@ -87,11 +87,13 @@ public class GameObjectLuaLink : LuaLink {
             return 0;
         }
         string textLua = _lua.ToString(-1);
-        Text[] texts = GameObject.Find("MessageCanvas").GetComponentsInChildren<Text>();
-        foreach (Text text in texts)
-        {
-            text.text = textLua;
-        }
+        GameObject.Find("Message").GetComponent<MeshRenderer>().material = Resources.Load("MessageBoardMat") as Material;
+        //Text[] texts = GameObject.Find("MessageCanvas").GetComponentsInChildren<Text>();
+        // object messageboard = Resources.Load("MessageBoard");
+        //foreach (Text text in texts)
+        //{
+        //    text.text = textLua;
+        //}
         return 0;
     }
 }
