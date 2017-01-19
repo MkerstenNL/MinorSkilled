@@ -1,22 +1,26 @@
-GuardRange = 4
+Range = 4
 GuardSense = 6
-GuardSpeedRunning = 3
-GuardSpeedWalking = 0
-
+SpeedRunning = 3
+SpeedWalking = 1
+inRange = false
 
 function Start()
-
+	Guard:Patrol (Range, SpeedWalking)
+	Guard:Sense (SeePerson)
+	GameObjectC.Log("BigGuard Initialized")
 end
 
-function Update()
-IsSense = Guard:Sense(GuardSense)
-StillPatrol = Guard:Patrol(GuardRange, GuardSpeedWalking)
-	if(StillPatrol == false or IsSense == true) then
-		StillChasing = Guard:Chase("Player",GuardSpeedRunning)
-		if(Guard.Hit() == "Player") then
-			Player:TeleportTo(10,1,10)
-		end
+function Update ()
+
+	inRange = Guard:CheckRangeTarget ("Player")
+	if(inRange) then
+	GameObjectC.Log("ZIT IN DE INRANGE")
+		Guard:Chase ("Player", SpeedRunning)
 	else
-		Guard:Patrol(GuardRange,GuardSpeedWalking)
+	GameObjectC.Log("NU IN DE ELSE")
+		Guard:Patrol (Range, SpeedWalking)
+		--GameObjectC.Log("Should Patrol")
 	end
+
+
 end

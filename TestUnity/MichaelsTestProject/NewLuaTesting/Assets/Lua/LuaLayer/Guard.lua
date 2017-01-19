@@ -50,7 +50,7 @@ end
 function Guard:Patrol(guardRange,guardSpeedWalking)
 	
 	Guard.speed = guardSpeedWalking
-	--GameObjectC.Log ("GuardRange = "..Guard.endPosition.x)
+	GameObjectC.Log ("GuardRange = "..Guard.endPosition.x)
 	if(Guard.endPosition.x==0)then
 		
 		local x,y,z = Transform:Forward()

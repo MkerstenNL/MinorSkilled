@@ -11,7 +11,6 @@ function Start()
 end
 
 function Update ()
-	inRange= false
 	inRange = Guard:CheckRangeTarget ("Player")
 	if(inRange) then
 		Guard:Chase ("Player", SpeedRunning)

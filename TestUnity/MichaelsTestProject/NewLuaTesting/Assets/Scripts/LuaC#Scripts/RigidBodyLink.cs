@@ -78,7 +78,7 @@ public class RigidBodyLink : LuaLink {
             dir = Vector3.forward;
             break;
 
-            case "Back":
+            case "Backward":
             dir = Vector3.back;
             break;
 

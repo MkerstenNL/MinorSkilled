@@ -1,1 +1,1 @@
-Boat:Move("Forward",100)
+Boat:Move("Backward",10)

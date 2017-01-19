@@ -45,7 +45,7 @@ public class MovementScript : MonoBehaviour {
         lastHit = col.gameObject.name;
         _movements.Clear();
         _rigidBody.angularVelocity = Vector3.zero;
-
+        _rigidBody.velocity = Vector3.zero;
     }
 
     void FixedUpdate() {

@@ -1,12 +1,12 @@
 function OnHit (Hit)
 	if(Hit == "StartTrigger") then
-	M.Message("Why do you need to be in a holding cell. You did nothing they tricked you. Let's try to escape the door looks unguarded. Maybe you can open it.",0)
+	M.Message("Why do you need to be in the holding cell. You did nothing, they tricked you. Let's try to escape the door looks unguarded. Maybe you can open it.",0)
 	end
 	if(Hit == "Door") then
 	M.Message("Door opens on command. Try typing Door:Interact() to open the door.",1)
 	end
 	if(Hit == "triggerWalkedThroughDoorLevel1") then
-	M.Message("Good Job. You used the function interact for the door object. Is that a coin? Free money! Let's pick it up.",0)
+	M.Message("Good Job. You used the function interact for the door object.",0)
 	end
 	--Needs to be created
 	if(Hit == "triggerSeeCoin") then
@@ -25,13 +25,13 @@ function OnHit (Hit)
 	M.Message("Hee, someone programmed the boat that is was going in your direction. Now you need to go the opposite direction. If there is Backwards, maybe there is also Up, Down, Forward, Left en Right",1)
 	end
 	if(Hit == "triggerWaterBoatEndLevel3") then
-	M.Message("Using the function Move with parameters. Nice! but what did the text and number show you? The text was the direction and the number the amount in meters.",0)
+	M.Message("Using the function Move with parameters. Nice! but what did the text and number show you? The text was the direction and the number the speed.",0)
 	end
 	if(Hit == "triggerLevel4") then
-	M.Message("Did you see that? I think I saw a coin on the way here. That's unfair you weren't able to get there. Maybe you can go Towards the Coin, but how to get back? You can continue if you want to.",0)
+	M.Message("Did you see that? I think I saw a coin on the way here. That's unfair you weren't able to get there. Maybe you can use other directions, but how to get back? You can continue if you want to.",0)
 	end
 	if(Hit == "TriggerLevel4Coin") then
-	M.Message("So you went for the coin and used the GameObject as direction. But how to get back. Try more then just one line of code.",1)
+	M.Message("So you went for the coin and used the more directions. But how to get back. Try more then just one line of code. To go faster.",1)
 	end
 	if(Hit == "triggerLevelCoinEnd4") then
 	M.Message("You were able to get back. You used 2 lines of code. Now you know that there is more than only one line. Don't forget the choice that you made! Some functions gives you also a choice. Instead of direction you gave an object.",0)
@@ -44,7 +44,7 @@ function OnHit (Hit)
 	end
 	--triggered after sign completed
 	if(Hit == "TriggerMessageComplete") then
-	M.Message("You did it! You changed a variable to change the if. Now there is more if and variables.",0)
+	M.Message("You did it! You changed a variable to change the if statement. Now there is more if and variables.",0)
 	end
 	
 	if(Hit == "BeforeGuardTrigger") then
@@ -52,7 +52,7 @@ function OnHit (Hit)
 	end
 	
 	--Triggered when guard caught you.
-	if(Hit == "HitByGuard") then
+	if(Hit == "Guard") then
 	M.Message("Well they found you. Now we can say that the guards don't have to chase you. But wouldn't it be fun if they run away instead? Evade you instead of Chase you.",1)
 	end
 	--Not perfect explained
