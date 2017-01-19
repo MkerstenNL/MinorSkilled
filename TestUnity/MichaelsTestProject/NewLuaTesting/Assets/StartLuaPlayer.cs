@@ -11,10 +11,11 @@ public class StartLuaPlayer : MonoBehaviour {
 	void Start () {
         if (OnTrigger)return;
         layer.Init();
+        Debug.Log(layer.GetFile()+"dsfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd");
 	}
 
     void OnTriggerEnter(Collider col) {
-        if(!OnTrigger)return;
+        if(!OnTrigger&& col.gameObject.tag=="Player")return;
         layer.Init();
 
     }

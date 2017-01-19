@@ -21,6 +21,9 @@ public class TopLevelLua : MonoBehaviour {
     // Use this for initialization
     public void Init() {
         Debug.Assert(topLevelFile != "");
+        if ( topLevelFile == "Tutorial1_Boat" ) {
+            Debug.LogError("boat");
+        }
         _gameobjectLua = GetComponent<GameObjectLuaLink>();
 
         _layer = GetComponent<Lualayer>();
