@@ -6,11 +6,11 @@ public class MovementControllerPlayer : MonoBehaviour {
     Rigidbody _rigidBody;
     [SerializeField]GameObject _cam;
     ProgrammingTool programmingTool;
+    private bool _canJump = true;
     // Use this for initialization
     void Start() {
         _rigidBody = GetComponent<Rigidbody>();
         programmingTool = GetComponent<ProgrammingTool>();
-        
     }
 
     void Update() {
@@ -40,7 +40,11 @@ public class MovementControllerPlayer : MonoBehaviour {
         }
 
         if ( Input.GetKeyDown(KeyCode.Space) ) {
-            _rigidBody.AddForce(Vector3.up * 5000);
+            if (_canJump)
+            {
+                _rigidBody.AddForce(Vector3.up * 4000);
+                _canJump = false;
+            }
         }
     }
 
@@ -55,4 +59,11 @@ public class MovementControllerPlayer : MonoBehaviour {
          //   _cam.transform.rotation = Quaternion.Euler(new Vector3(300, 0, 0));
        // }
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        _canJump = true;
+    }
+
+
 }

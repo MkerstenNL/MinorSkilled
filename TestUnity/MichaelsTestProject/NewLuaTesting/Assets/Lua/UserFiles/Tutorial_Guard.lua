@@ -13,7 +13,7 @@ end
 function Update ()
 	inRange = Guard:CheckRangeTarget ("Player")
 	if(inRange) then
-		Guard:Chase ("Player", SpeedRunning)
+		Guard:Evade ("Player", SpeedRunning)
 	--GameObjectC.Log("Should chase")
 	else
 		Guard:Patrol (Range, SpeedWalking)

@@ -76,6 +76,19 @@ function Guard:Patrol(guardRange,guardSpeedWalking)
 
 end
 
+function Guard:Bribe (money)
+
+	if(money == 3) then	
+	guardSpeedRunning = 10
+	gameObject = "Player"
+	Guard.speed = guardSpeedRunning
+	Guard.state = "Chase"
+	Guard.targetName = gameObject
+	end
+
+--GameObject:Chase (gameObject,guardSpeedRunning)
+end
+
 function Guard:Chase (gameObject, guardSpeedRunning)
 	Guard.speed = guardSpeedRunning
 	Guard.state = "Chase"

@@ -8,7 +8,6 @@ function OnHit (Hit)
 	if(Hit == "triggerWalkedThroughDoorLevel1") then
 	M.Message("Good Job. You used the function interact for the door object.",0)
 	end
-	--Needs to be created
 	if(Hit == "triggerSeeCoin") then
 	M.Message("Is that a coin? Free money! Let's pick it up. You can use as much as possible if you want to survive outside.",0)
 	end
@@ -22,7 +21,7 @@ function OnHit (Hit)
 	M.Message("The boat is coming our way. Someone is trying to help you. How does the boat operate?",0)
 	end
 	if(Hit == "Boat") then
-	M.Message("Hee, someone programmed the boat that is was going in your direction. Now you need to go the opposite direction. If there is Backwards, maybe there is also Up, Down, Forward, Left en Right",1)
+	M.Message("Hee, someone programmed the boat that is was going in your direction. Now you need to go the opposite direction. If there is Backwards, maybe there is also Forward.",1)
 	end
 	if(Hit == "triggerWaterBoatEndLevel3") then
 	M.Message("Using the function Move with parameters. Nice! but what did the text and number show you? The text was the direction and the number the speed.",0)
@@ -53,7 +52,10 @@ function OnHit (Hit)
 	
 	--Triggered when guard caught you.
 	if(Hit == "Guard") then
-	M.Message("Well they found you. Now we can say that the guards don't have to chase you. But wouldn't it be fun if they run away instead? Evade you instead of Chase you.",1)
+	M.Message("Well they found you. Wouldn't it be fun if they run away instead? Evade you instead of Chase you.",1)
+	end
+	if(Hit == "BigGuard") then
+	M.Message("Well they found you. Wouldn't it be fun if they run away instead? Evade you instead of Chase you.",1)
 	end
 	--Not perfect explained
 	if(Hit == "BigGuardTrigger") then
@@ -78,7 +80,7 @@ function OnHit (Hit)
 	M.Message("You should be able to do this now!",1)
 	end
 	if(Hit == "EndAlphaGame") then
-	M.Message("Congratz! You have finished the Alpha. We changed a lot but hoped that you learned anything. Might be not much, but if you liked? Try real programming. P.S. The person that was helping you was me and I am you!",0)
+	M.Message("Congratz! You have finished the Alpha. We changed a lot but hoped that you learned anything. Might be not much, but if you liked? Try real programming.",0)
 	end
 	
 	if(Hit == "TriggerLevel2Coin") then
