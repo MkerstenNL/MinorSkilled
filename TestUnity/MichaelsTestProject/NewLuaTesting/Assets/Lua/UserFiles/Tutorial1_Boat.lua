@@ -1,1 +1,1 @@
-Move("Toward","Coin")
+Boat:Move("Backward",10)
