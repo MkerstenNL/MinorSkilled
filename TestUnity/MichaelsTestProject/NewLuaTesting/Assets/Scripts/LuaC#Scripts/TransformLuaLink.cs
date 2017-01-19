@@ -121,7 +121,7 @@ public class TransformLuaLink : LuaLink {
             //_lua.PushString("Incorrect number of arguments");
             return 0;
         }
-        Debug.Log("Setting position");
+        //Debug.Log("Setting position");
         Vector3 newPos = Vector3.zero;
         newPos.z = (float)_lua.ToNumber(3);
         newPos.y = (float) _lua.ToNumber(2);

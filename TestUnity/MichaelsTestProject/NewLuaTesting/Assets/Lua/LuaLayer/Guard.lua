@@ -50,7 +50,7 @@ end
 function Guard:Patrol(guardRange,guardSpeedWalking)
 	
 	Guard.speed = guardSpeedWalking
-	GameObjectC.Log ("GuardRange = "..Guard.endPosition.x)
+	--GameObjectC.Log ("GuardRange = "..Guard.endPosition.x)
 	if(Guard.endPosition.x==0)then
 		
 		local x,y,z = Transform:Forward()
@@ -125,7 +125,7 @@ function Guard:CheckRangeTarget(x,z)
 end
 
 function Guard:UpdatePatrolState()
-	GameObjectC.Log("TargetPos"..Guard.targetPos.x)
+	--GameObjectC.Log("TargetPos"..Guard.targetPos.x)
 	if(Guard:CheckRangeTarget(Guard.targetPos.x,Guard.targetPos.z))then
 		if(Guard.targetPos == Guard.endPosition)then
 			Guard.tempEndPosition = Guard.endPosition
@@ -140,7 +140,7 @@ function Guard:UpdatePatrolState()
 
 	else 
 	
-	GameObjectC.Log("Testing else")
+	--GameObjectC.Log("Testing else")
 	end
 	--GameObjectC.Log("Testing sdfffffffffffffffffffffffffffffffffffffffffffffff")
 	Guard.currentPos.x, temp, Guard.currentPos.z = Transform:GetPosition()
