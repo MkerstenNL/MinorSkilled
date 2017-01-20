@@ -8,8 +8,7 @@ function World:Update ()
 	GameObjectC.Log("World update")
 end
 
-function World:CreateObject (prefabName, LocationX, LocationY, LocationZ)
-	GameObjectC.Log("Creating Car Fuck Unity 2.0")
+function World:Call (prefabName, LocationX, LocationY, LocationZ)
 	WorldEngine:CreateObject(prefabName, LocationX,LocationY,LocationZ)
 end
 

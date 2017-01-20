@@ -56,27 +56,26 @@ public class SapphiArtChan_AnimManager : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             _SapphiArtChanAnimation = "walk";
-            _SapphiArtChanAnimator.SetBool("param_idletowalk", true);
+            _SapphiArtChanAnimator.Play(_SapphiArtChanAnimation);
         }
 
         //RUN
         else if (Input.GetKey(KeyCode.W))
         {
-            Debug.Log("Duurt het zo lang?");
             _SapphiArtChanAnimation = "running";
-            _SapphiArtChanAnimator.SetBool("param_idletorunning", true);
+            _SapphiArtChanAnimator.Play(_SapphiArtChanAnimation);
         }
 
         //JUMP
         else if (Input.GetKey(KeyCode.Space))
         {
             _SapphiArtChanAnimation = "jump";
-            _SapphiArtChanAnimator.SetBool("param_idletojump", true);
+            _SapphiArtChanAnimator.Play(_SapphiArtChanAnimation);
         }
         else
         {
             _SapphiArtChanAnimation = "idle";
-            _SapphiArtChanAnimator.SetBool("param_toidle", true);
+            _SapphiArtChanAnimator.Play(_SapphiArtChanAnimation);
         }
     }
 
@@ -103,14 +102,14 @@ public class SapphiArtChan_AnimManager : MonoBehaviour
     void Update()
     {
         //Get Animation from UI
-        GetAnimation();
+        //GetAnimation();
 
         //Set New Animation
         //if (_SapphiArtChanLastAnimation != _SapphiArtChanAnimation)
         SetAnimation();
         //else
         //{
-        ReturnToIdle();
+        //ReturnToIdle();
         //}
 
     }
