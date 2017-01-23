@@ -10,7 +10,9 @@ public class PlayerHitScript : LuaLink
 
     NameFuncPair[] _lib = new NameFuncPair[1];
     [SerializeField]
-    private InputField input;
+    private InputField _input;
+    [SerializeField]
+    private GameObject _messageCanvas;
 
     void Start()
     {
@@ -46,13 +48,16 @@ public class PlayerHitScript : LuaLink
         if (tip == 1)
         {
             //Debug.Log(GameObject.Find("Tip"));
-            input.GetComponentInChildren<Text>().text = message;
+            _input.GetComponentInChildren<Text>().text = message;
+            _messageCanvas.active = false;
             //GameObject.Find("TipText").GetComponent<Text>().text = message;
             //Debug.Log(GameObject.Find("Tiptext").GetComponent<Text>().text);
         }
         else
         {
-            GameObject.Find("Messagtext").GetComponent<Text>().text = message;
+            _messageCanvas.active = true;
+            _messageCanvas.GetComponentInChildren<Text>().text = message;
+            //GameObject.Find("Messagtext").GetComponent<Text>().text = message;
         }
     }
 

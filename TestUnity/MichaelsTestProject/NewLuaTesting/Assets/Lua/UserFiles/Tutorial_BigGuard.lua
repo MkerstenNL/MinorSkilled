@@ -13,7 +13,7 @@ function Update ()
 
 	inRange = Guard:CheckRangeTarget ("Player")
 	if(inRange) then
-		Guard:Evade ("Player", SpeedRunning)
+		Guard:Chase ("Player", SpeedRunning)
 	else
 		Guard:Patrol (Range, SpeedWalking)
 	end

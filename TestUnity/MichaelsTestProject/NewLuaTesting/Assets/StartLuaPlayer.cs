@@ -15,7 +15,7 @@ public class StartLuaPlayer : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider col) {
-        if(!OnTrigger&& col.gameObject.tag=="Player")return;
+        if(!OnTrigger|| col.gameObject.tag!="Player")return;
         layer.Init();
 
     }

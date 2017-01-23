@@ -82,7 +82,7 @@ function Guard:Bribe (money)
 	guardSpeedRunning = 10
 	gameObject = "Player"
 	Guard.speed = guardSpeedRunning
-	Guard.state = "Chase"
+	Guard.state = "Evade"
 	Guard.targetName = gameObject
 	end
 

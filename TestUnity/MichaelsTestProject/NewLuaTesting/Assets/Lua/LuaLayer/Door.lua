@@ -14,7 +14,7 @@ function Door:Interact()
 	if(Door.Opened==true)then Close() return"Door Already open. Closing now"end
 	------GameObjectC.Log("Opening Door")
 	Door.Opened = true
-	Transform:Teleport("Right",5)
+	Transform:Teleport("Right",500)
 	------GameObjectC.Log("Door openend")
 end
 

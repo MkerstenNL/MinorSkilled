@@ -22,7 +22,7 @@ public class TopLevelLua : MonoBehaviour {
     public void Init() {
         Debug.Assert(topLevelFile != "");
         if ( topLevelFile == "Tutorial1_Boat" ) {
-            Debug.LogError("boat");
+            //Debug.LogError("boat");
         }
         _gameobjectLua = GetComponent<GameObjectLuaLink>();
 
