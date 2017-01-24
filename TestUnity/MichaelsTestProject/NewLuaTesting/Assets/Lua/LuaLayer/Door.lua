@@ -21,7 +21,7 @@ end
 function Door:Close()
 	if(Door.Opened==false)then return"Door Already Closed."end
 	Door.Opened = false
-	Transform:Teleport ("Left", 5)
+	Transform:Teleport ("Left", 500)
 end
 
 return Door

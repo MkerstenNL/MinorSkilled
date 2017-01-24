@@ -32,6 +32,7 @@ public class RigidBodyLink : LuaLink {
         regFunction("RigidBodyC", "UseGravity",     UseGravity);
         regFunction("RigidBodyC", "GetPosition",    GetPosition);
         regFunction("RigidBodyC", "TurnOnCollider", TurnOnCollider);
+        regFunction("RigidBodyC", "SetPlayerAsChild", SetPlayerAsChild);
         foreach ( KeyValuePair<string, List<NameFuncPair>> lib in _libs ) {
             _lua.L_NewLib(lib.Value.ToArray());
             _lua.SetGlobal(lib.Key);
@@ -188,6 +189,18 @@ public class RigidBodyLink : LuaLink {
         {
             MoreColliders[0].enabled = _lua.ToBoolean(-1);
         }
+        return 0;
+    }
+
+    public int SetPlayerAsChild(ILuaState state)
+    {
+        if (state.GetTop() != 0)
+        {
+            _lua.SetTop(0);
+            //state.PushString("Invalid amount of parameters. function requires 0");
+            return 0;
+        }
+        GameObject.FindGameObjectWithTag("Player").transform.parent = this.transform;
         return 0;
     }
 

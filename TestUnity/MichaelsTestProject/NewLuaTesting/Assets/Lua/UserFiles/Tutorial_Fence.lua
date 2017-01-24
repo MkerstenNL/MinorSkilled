@@ -1,1 +1,1 @@
-Fence:TurnOnCollider(false)
+Fence:Interact()

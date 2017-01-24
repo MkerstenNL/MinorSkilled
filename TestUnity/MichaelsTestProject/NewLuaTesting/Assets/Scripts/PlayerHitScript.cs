@@ -41,6 +41,35 @@ public class PlayerHitScript : LuaLink
             lua.SetTop(0);
         }
 
+        if (other.name == "Boat")
+        {
+            Collider[] colliders = other.GetComponents<Collider>();
+            foreach (Collider collider in colliders)
+            {
+                if (collider.isTrigger)
+                {
+                    collider.enabled = false;
+                }
+            }
+        }
+        if (other.name == "TriggerLevel5Coin")
+        {
+            //reset after bribing the woman guard
+            GameObject.Find("ScoreText").GetComponent<Text>().text = "Coins: 0";
+        }
+
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.name == "Boat")
+        {
+            Collider[] colliders = other.gameObject.GetComponents<Collider>();
+            foreach (Collider collider in colliders)
+            {
+                collider.enabled = true;
+            }
+        }
     }
     void Message(string message, int tip)
     {

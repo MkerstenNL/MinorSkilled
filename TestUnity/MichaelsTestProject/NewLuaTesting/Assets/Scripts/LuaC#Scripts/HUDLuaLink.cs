@@ -61,7 +61,15 @@ public class HUDLuaLink : LuaLink {
         _score = (int)_lua.ToNumber(-1);
         string[] sub = GameObject.Find("ScoreText").GetComponent<Text>().text.Split(':');
         sub[1] = sub[1].Replace(" ", "");
-        GameObject.Find("ScoreText").GetComponent<Text>().text = "Score: " + (_score+ Convert.ToInt32(sub[1]));
+        if (_score == -3)
+        {
+            _score = Convert.ToInt32(sub[1]) + _score;
+            if (_score < 0)
+            {
+                return 1;
+            }
+        }
+        GameObject.Find("ScoreText").GetComponent<Text>().text = "Coins: " + (_score+ Convert.ToInt32(sub[1]));
         //_score = _score + _score;
         _lua.SetTop(0);
         _lua.PushNumber(_score);

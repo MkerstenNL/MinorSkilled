@@ -10,6 +10,8 @@ public class TopLevelLua : MonoBehaviour {
     [SerializeField]
     string topLevelFile = "";
     Lualayer _layer;
+
+    public string TopLevelFile { set { topLevelFile = value; } }
     public string file {
         get {
             return topLevelFile;

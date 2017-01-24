@@ -21,10 +21,10 @@ function OnHit (Hit)
 	M.Message("The boat is coming our way. Someone is trying to help you.",0)
 	end
 	if(Hit == "Boat") then
-	M.Message("Hint - Move the boat forward with a speed of 10. Boat:Move('Forward',10)",1)
+	M.Message("Hint - Move the boat forward with a speed of 5. Boat:Move('Forward',5) in the field on the left. Don't go harder you need to get your balance.",1)
 	end
 	if(Hit == "triggerWaterBoatEndLevel3") then
-	M.Message("We are on the other side, We moved the boat using speed.",0)
+	M.Message("We are going to the other side, we moved the boat using speed.",0)
 	end
 	-- if(Hit == "triggerLevel4") then
 	-- M.Message("Did you see that? I think I saw a coin on the way here. That's unfair you weren't able to get there. Maybe you can use other directions, but how to get back? You can continue if you want to.",1)
@@ -39,59 +39,59 @@ function OnHit (Hit)
 	M.Message("There is a messageboard. Maybe we there is a hint how to get pass the guards?",0)
 	end
 	if(Hit == "TriggerMessage") then
-	M.Message("Hint - The sign is dirt and wouldn't show the text. ",1)
+	M.Message("Hint - The sign is dirty and wouldn't show the text. If the status is clean. It will clean itself.",1)
 	end
 	--triggered after sign completed
 	if(Hit == "TriggerMessageComplete") then
-	M.Message("You did it! You changed a variable to change the if statement. Now there is more if and variables.",1)
+	M.Message("Good job. Maybe this can help you slip by the guards. They start in patrol and doing that till thy see you, but will chase you if you are in range.",0)
 	end
 	if(Hit == "BeforeGuardTrigger") then
-	M.Message("I hope you read the sign. There might be a usefull hint.",1)
+	M.Message("I hope you read the sign. There might be a usefull hint.",0)
 	end
 	
 	--Triggered when guard caught you.
 	if(Hit == "Guard") then
-	M.Message("Well they found you. Wouldn't it be fun if they run away instead? Evade you instead of Chase you.",1)
+	M.Message("Hint - You got caught. Remember the hint. They will chase you because of the Update function. Make from Chase -> Evade and see what happens when you are close to them.",1)
 	end
 	if(Hit == "BigGuard") then
-	M.Message("Well they found you. Wouldn't it be fun if they run away instead? Evade you instead of Chase you.",1)
+	M.Message("Hint - She didn't run away from you and set you back to the boat to tell you to get back, but she didn't took your money. Try to Bribe her with the 3 coins you've found.It only needs to happens once. We can use Start function for that. bribed = GuardGirl:Bribe(3).",1)
 	end
 	--Not perfect explained
 	if(Hit == "BigGuardTrigger") then
-	M.Message("Wow he is big!. Let's see what changed. Not everything is changed when facing another guard and what are Update en Start doing? Start can be used set things that are needed once. Update is called every time. That means that if you add 1 to speed. It will go faster every time.",1)
+	M.Message("A policewoman! I don't think she will evade you. Some say that women have better eye sight. You better watch out.",0)
 	end
 	if(Hit == "FenceTrigger") then
-	M.Message("Freedom is on the other side of the fence!",1)
+	M.Message("Freedom is on the other side of the fence!",0)
 	end
 	if(Hit == "FenceHitTrigger") then
-	M.Message("The fence it to high to climb over and no door to open. Why can't you open the script editor to change the fence? Try walking along the fence for a weak spot.",1)
+	M.Message("Hint - Only have to open the fence. Try interact with it.",1)
 	end
-	if(Hit == "FenceHitScriptTrigger") then
-	M.Message("You found the weak spot. real life can be a bitch sometimes, Luckily this is a game. Why not trying to get through? TurnOnCollider(TrueOrFalse)?",1)
-	end
+	-- if(Hit == "FenceHitScriptTrigger") then
+	-- M.Message("You found the weak spot. real life can be a bitch sometimes, Luckily this is a game. Why not trying to get through? TurnOnCollider(TrueOrFalse)?",1)
+	-- end
 	if(Hit == "FreedomTrigger") then
-	M.Message("YOU DID IT! You passed an object even though it's still there. That is called a collider that wouldn't let you pass. Now that you said that it was not a collider you were able to get through. Now get out fast! Get to the road",1)
+	M.Message("YOU DID IT! Now get out fast! Get to the road",0)
 	end
 	if(Hit == "CreateObjectTrigger") then
-	M.Message("Now we need a car to escape quickly. I have a car available for you. It is only not created! CreateObject('car',x,y,z) X,Y,Z is the position in the world. But I already did that for you.",1)
+	M.Message("Hint - Call the car! World:Call('car',x,y,z) X,Y,Z is the position in the world. I already did that for you.",1)
 	end
 	if(Hit == "InteractCarTrigger") then
-	M.Message("You should be able to do this now!",1)
+	M.Message("Hint - You should be able to do this now! Interact with the car to escape",1)
 	end
 	if(Hit == "EndAlphaGame") then
-	M.Message("Congratz! You have finished the Alpha. We changed a lot but hoped that you learned anything. Might be not much, but if you liked? Try real programming.",1	)
+	M.Message("Congratz! You have finished the Alpha. We changed a lot but hoped that you learned anything. Might be not much, but if you liked? Try real programming.",0)
 	end
 	
 	if(Hit == "TriggerLevel2Coin") then
-	M.Message("Pick up the coin you need how to do it.",1)
+	M.Message("Hint - Pick up the coin you need how to do it.",1)
 	end
 	if(Hit == "TriggerLevel3Coin") then
-	M.Message("You're still reading this? Expect to something to change?",1)
+	M.Message("Hint - You're still reading this? Expect to something to change?",1)
 	end
 	if(Hit == "TriggerLevel5Coin") then
-	M.Message("Collecting coins I see and still thinks that I have another hint for you.",1)
+	M.Message("Hint - Collect the coin.",1)
 	end
 	if(Hit == "TriggerLevel6Coin") then
-	M.Message("Almost free and still reading this. No more tips anymore for the coins. You know what to do.",1)
+	M.Message("Hint - Collect the coin.",1)
 	end
 end

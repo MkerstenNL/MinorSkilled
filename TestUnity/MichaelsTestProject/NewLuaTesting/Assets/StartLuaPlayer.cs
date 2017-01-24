@@ -7,8 +7,10 @@ public class StartLuaPlayer : MonoBehaviour {
     [SerializeField]
     TopLevelLua layer;
 
-	// Use this for initialization
-	void Start () {
+    public string Layername { get { return layer.name; } }
+
+    // Use this for initialization
+    void Start () {
         if (OnTrigger)return;
         layer.Init();
         Debug.Log(layer.GetFile()+"dsfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd");
@@ -19,6 +21,4 @@ public class StartLuaPlayer : MonoBehaviour {
         layer.Init();
 
     }
-	
-
 }

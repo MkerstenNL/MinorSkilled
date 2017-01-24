@@ -90,12 +90,6 @@ public class GameObjectLuaLink : LuaLink {
         GameObject.Find("Message").GetComponent<MeshRenderer>().material = Resources.Load("MessageBoardMat") as Material;
         GameObject.Find("MessageDirty").GetComponent<MeshRenderer>().enabled = false;
         GameObject.Find("TriggerMessageComplete").AddComponent<BoxCollider>().isTrigger = true;
-        //Text[] texts = GameObject.Find("MessageCanvas").GetComponentsInChildren<Text>();
-        // object messageboard = Resources.Load("MessageBoard");
-        //foreach (Text text in texts)
-        //{
-        //    text.text = textLua;
-        //}
         return 0;
     }
 }

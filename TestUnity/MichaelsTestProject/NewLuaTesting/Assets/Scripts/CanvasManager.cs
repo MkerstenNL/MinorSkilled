@@ -20,7 +20,18 @@ public class CanvasManager : MonoBehaviour {
         this.gameObject.SetActive(true);
         StreamReader sr = new StreamReader(_lua.FileName);
         string s = sr.ReadToEnd();
-        _input.text = s;
+        if (_lua.file == "Tutorial_Guard" || _lua.file == "Tutorial_BigGuard" || _lua.file == "Tutorial_Message" || _lua.file == "Tutorial_CreateObject")
+        {
+            string newPath = _lua.FileName.Replace(".lua", "_Restart.lua");
+            string restartText = File.ReadAllText(newPath);
+            //StreamReader srRestart = new StreamReader(newPath);
+            //string restartText = sr.ReadToEnd();
+            _input.text = restartText;
+        }
+        else
+        {
+            _input.text = "";
+        }
         sr.Close();
         currentLuaFile = _lua;
         
