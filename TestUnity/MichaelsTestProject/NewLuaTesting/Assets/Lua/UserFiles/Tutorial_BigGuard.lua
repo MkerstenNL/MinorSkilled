@@ -8,6 +8,7 @@ bribed = "false"
 function Start()
 	GuardGirl:Patrol (Range, SpeedWalking)
 	GuardGirl:Sense (SeePerson)
+GuardGirl:Bribe(3)
 end
 
 function Update ()

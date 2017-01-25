@@ -21,7 +21,7 @@ function OnHit (Hit)
 	M.Message("The boat is coming our way. Someone is trying to help you.",0)
 	end
 	if(Hit == "Boat") then
-	M.Message("Hint - Move the boat forward with a speed of 5. Boat:Move('Forward',5) in the field on the left. Don't go harder you need to get your balance.",1)
+	M.Message("Hint - Move the boat forward with a speed of 5. Boat:Move('Forward',5) in the field on the left. Don't go harder you need to hold your balance.",1)
 	end
 	if(Hit == "triggerWaterBoatEndLevel3") then
 	M.Message("We are going to the other side, we moved the boat using speed.",0)
